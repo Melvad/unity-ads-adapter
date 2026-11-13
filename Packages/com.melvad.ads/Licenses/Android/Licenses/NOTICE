@@ -1,0 +1,17 @@
+Melvad Android Ads SDK 1.0.3
+
+Melvad SDK components are covered by the Melvad SDK License in ../LICENSE.
+Bundled third-party components retain their respective licenses:
+
+- IAB Open Measurement Native-App SDK 1.6.12 (embedded library and native Service): Native-OMSDK-LICENSE
+- IAB SafeFrame: safeframe-LICENSE.txt
+- @dailymotion/vast-client and @xmldom/xmldom: THIRD_PARTY_NOTICES.txt
+- Shaka Player: vendor-SHAKA-LICENSE
+- IAB Open Measurement components: vendor-OMID-LICENSE and vendor-OMSDK-SERVICE-LICENSE
+
+The native Prebid Mobile Android dependency is resolved from Maven Central
+under Apache License 2.0; see Prebid-LICENSE. AndroidX, Kotlin and Google Play
+services dependencies are resolved by Gradle from their original repositories
+and retain their own licenses and notices. They are not repackaged in this AAR.
+
+Retain the supplied license texts and notices when distributing your application.

@@ -1,0 +1,402 @@
+{
+  "version": "0.1.0-preview.1",
+  "distribution": "binary",
+  "sourceRevision": "172e0f41577e3875b400d8afc988aef5a7244ab5",
+  "unity": "6000.6.9f1",
+  "nativeSDKs": {
+    "android": "1.0.3",
+    "ios": "1.0.3"
+  },
+  "assets": {
+    "com.melvad.ads-0.1.0-preview.1.tgz": {
+      "sha256": "3e0472b6be6eac5d1b69e75986e56bf9c0e3308faa692cc5424c67009897c6dc",
+      "size": 7294748
+    },
+    "MelvadAds-0.1.0-preview.1.unitypackage": {
+      "sha256": "b5c1a5fe94eee1ca86b84f90dd6a408aedd995936188469d20400bdcfb4e97ac",
+      "size": 7314836
+    }
+  },
+  "files": [
+    {
+      "path": "Packages/com.melvad.ads/Editor/Android/Melvad.Ads.Editor.dll",
+      "size": 12288,
+      "sha256": "ea8fc398ad410480ac1bfed4181192f81c6dd405a0dbc8294f067f86b1b8863a"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Editor/Android/Melvad.Ads.Editor.dll.meta",
+      "size": 716,
+      "sha256": "95589fa384e963f6b961096f0aedb0b1046e116f610a0508d3b705e66f82d5df"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Editor/Android.meta",
+      "size": 169,
+      "sha256": "317b8071e3ab86061fd5deca142024fcc4ba535b2867c729eee96df441582f7c"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Editor/iOS/Melvad.Ads.Editor.dll",
+      "size": 11776,
+      "sha256": "8007862525a7391eef3b0c54d75d38f3eed8983c09b5751dae9ff78e22bc1007"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Editor/iOS/Melvad.Ads.Editor.dll.meta",
+      "size": 712,
+      "sha256": "1c024d789e3797badfc1f87f4b87e71e0fe856e9a1c5408a375d9f2ea02f88e0"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Editor/iOS.meta",
+      "size": 169,
+      "sha256": "28706066121ff66ccef2f2857b3d962ccb764c2970b0c9db575cff8165207ebb"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Editor.meta",
+      "size": 169,
+      "sha256": "f807470927ee72548bc5e423e59481fd0acff81baccdc0b7e29582cc35385cdd"
+    },
+    {
+      "path": "Packages/com.melvad.ads/LICENSE",
+      "size": 5078,
+      "sha256": "71bc820f26a46fefb18a0eb391671fd23b9a63fe9d3e6c6d22e9e2ff61368536"
+    },
+    {
+      "path": "Packages/com.melvad.ads/LICENSE.meta",
+      "size": 152,
+      "sha256": "32c0f02c593baec70e6446b03d6f0f029bf8353828d6d9c51f2d6cd6c8d1ea77"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/LICENSE",
+      "size": 5078,
+      "sha256": "71bc820f26a46fefb18a0eb391671fd23b9a63fe9d3e6c6d22e9e2ff61368536"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/LICENSE.meta",
+      "size": 152,
+      "sha256": "e4dcd0cb1f52cc59e8c84b50cc230a901acec7999cb96109c6bf848bf651d699"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/NOTICE",
+      "size": 907,
+      "sha256": "fb376aa0088b612531c26f4cdeeaecee42c8a4e8f0ea7575807351bec53ac8e8"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/NOTICE.meta",
+      "size": 152,
+      "sha256": "166689956473a50a011dee07086c12025e2f9383ab2c48fefcb5a13c7271281d"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/Native-OMSDK-LICENSE",
+      "size": 24673,
+      "sha256": "8f475f6130f87e4394babe6f74a388d08a8a82abd492e7c96b0c5c783244c0ab"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/Native-OMSDK-LICENSE.meta",
+      "size": 152,
+      "sha256": "1819609a806a89e22df949912a4fa3644640da91a1dce11a4b49986ae55615e9"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/Prebid-LICENSE",
+      "size": 11357,
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/Prebid-LICENSE.meta",
+      "size": 152,
+      "sha256": "bc35285b87f90aa0a643a8a409f225ab3176f29c7be62ee9f8f41da943ca757c"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/THIRD_PARTY_NOTICES.txt",
+      "size": 2439,
+      "sha256": "6e4bc2373236b1faa629f2b915afbbdf7c5bb5bce7f8bfdf18cd9e4d277a6d7f"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/THIRD_PARTY_NOTICES.txt.meta",
+      "size": 152,
+      "sha256": "a854fb99698744a0a438c903ead021af022f188bd848014132c863815fea75c7"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/safeframe-LICENSE.txt",
+      "size": 1301,
+      "sha256": "98f13acb5563f5ae38d00f9742775b0ca2e6b2759e0d997dd02b5404cb884345"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/safeframe-LICENSE.txt.meta",
+      "size": 152,
+      "sha256": "d4e5eb733de05aff8ecca273b75a424bffafa1ec082f59af66f71bab36fd6c68"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/vendor-OMID-LICENSE",
+      "size": 11365,
+      "sha256": "fb830eb186829cddcbc3aa93cefd97c55f9de09d1c228d5e781c2a8b60d492f7"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/vendor-OMID-LICENSE.meta",
+      "size": 152,
+      "sha256": "edad90e17c93ca2bf88ba52e2f3ddb3c845ebdd94ea98500b8536f6a1bf02d0d"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/vendor-OMSDK-SERVICE-LICENSE",
+      "size": 24647,
+      "sha256": "fbb01ccec19549a7e04c35b17395fbdc3f6077f94a6097c90910d1f121b2bf4f"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/vendor-OMSDK-SERVICE-LICENSE.meta",
+      "size": 152,
+      "sha256": "a0ed5968da01af554c18ab8f606328a9b9ac0850c170a65412a2c77d230897f4"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/vendor-SHAKA-LICENSE",
+      "size": 14924,
+      "sha256": "20ce2eba547fd0a8c4023511c003eabe510982a335cccd4e270f1f55ffbd2250"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/vendor-SHAKA-LICENSE.meta",
+      "size": 152,
+      "sha256": "287700de28b1464bfcc1b115d16583ae157fd50d814af887a3f1f76fe2dfc32d"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses.meta",
+      "size": 169,
+      "sha256": "800ee9284dad81488a218b54e5230c1741c83367e28a6e4462b056c72b4fb2c0"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android.meta",
+      "size": 169,
+      "sha256": "3d3c85fdaec3a92b11ab57dc282d7285029333d399e0234948e85d5c30bf745d"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/iOS/LICENSE",
+      "size": 5078,
+      "sha256": "71bc820f26a46fefb18a0eb391671fd23b9a63fe9d3e6c6d22e9e2ff61368536"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/iOS/LICENSE.meta",
+      "size": 152,
+      "sha256": "90f1be03187cf0e49590f04a1af5ef0826e0c8a6b2290f47a451b6a3abbd1f00"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/NOTICE",
+      "size": 764,
+      "sha256": "f74e76630cbcc3b7e3443c202d718b760c85bb7b33f1260fcb809a9fe74e6219"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/NOTICE.meta",
+      "size": 152,
+      "sha256": "111b0055c9be93d6d02cf1fa400eccaff04c3b2288ec78a267de0f94ba06f40a"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/Native-OMSDK-LICENSE",
+      "size": 24673,
+      "sha256": "8f475f6130f87e4394babe6f74a388d08a8a82abd492e7c96b0c5c783244c0ab"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/Native-OMSDK-LICENSE.meta",
+      "size": 152,
+      "sha256": "74fab3b8f776f18ead49568c269026a8ec054913718764b79ba706fc047f1856"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/Prebid-LICENSE",
+      "size": 11357,
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/Prebid-LICENSE.meta",
+      "size": 152,
+      "sha256": "ad642c018609da0718c6e6a4bf9d4a415d15fdc262a8d47655b3346ae1c3bb0f"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/THIRD_PARTY_NOTICES.txt",
+      "size": 2459,
+      "sha256": "1cef4418e08a5dc389f85afe54eb2a9aa7792cef1e4182e2a6d39930381755e4"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/THIRD_PARTY_NOTICES.txt.meta",
+      "size": 152,
+      "sha256": "3051491c9552966ef1227768c648ddf07ebab58c613be58ec5399aea1b063cd7"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/safeframe-LICENSE.txt",
+      "size": 1301,
+      "sha256": "98f13acb5563f5ae38d00f9742775b0ca2e6b2759e0d997dd02b5404cb884345"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/safeframe-LICENSE.txt.meta",
+      "size": 152,
+      "sha256": "0c16bff0468571cd53fbe2e31e7ff933b827ed3c688e115c560f35a3b27d19f3"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/vendor-SHAKA-LICENSE",
+      "size": 14924,
+      "sha256": "20ce2eba547fd0a8c4023511c003eabe510982a335cccd4e270f1f55ffbd2250"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/vendor-SHAKA-LICENSE.meta",
+      "size": 152,
+      "sha256": "4a1264c587b8104c36a0010d1af31fb0b3ae6eca696092d6ec8d5cf9061ffd18"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses.meta",
+      "size": 169,
+      "sha256": "82b9aa0198e4ccdafbc3783727a76b5ee466ac9dc75acf068550455e10298cfa"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/iOS.meta",
+      "size": 169,
+      "sha256": "1f1181f3a2c7f64cb9e8387ea32a3ecf621b0680d0bf89b68e55036077890976"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses.meta",
+      "size": 169,
+      "sha256": "8b74257d79e954f1cb35ed9125a7a47cd7658a976c7ddc3ed93a54f75d23caa4"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Native/Android.zip",
+      "size": 799856,
+      "sha256": "af91ef3c484f00c6f6b44b0219c1fb9f9328a637dee2fd73aa729a297987a082"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Native/Android.zip.meta",
+      "size": 152,
+      "sha256": "fbaf5ad0afed479b8fb433ffbceb50e653dad5b12995f90269021d3c3e707325"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Native/iOS.zip",
+      "size": 6539725,
+      "sha256": "5115ed6c7e8712bcec11f6332f4001dbab8bbf23fad1ef6d75bdfc6f3422f078"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Native/iOS.zip.meta",
+      "size": 152,
+      "sha256": "e84d0ba1c92691ab7882af89c93c6819dcfc84ddadad2bb4be5036b9c4bcaf7f"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Native.meta",
+      "size": 169,
+      "sha256": "a415a25b1e8dccc5f3a663413062e3f85c95e97eeb94ab38c9ff176c5cbb0002"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Plugins/Android/MelvadUnityBridge.aar",
+      "size": 8086,
+      "sha256": "bbcf903072bb41c67a5aa989a432b0a0e1dde4bfb2c7c9df0387101d0edcc43d"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Plugins/Android/MelvadUnityBridge.aar.meta",
+      "size": 699,
+      "sha256": "83fd69399189f37bcb9f2c867d1451504e73ab97cb6f1eedc466fbd8b79c70ae"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Plugins/Android.meta",
+      "size": 169,
+      "sha256": "47f4509708723e20f6f37b4dc10710facf8a65efd652192873e3531437229bfc"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Plugins.meta",
+      "size": 169,
+      "sha256": "46b7920a4d16064c8d3797b481eadc8a079024224d20387c407e595093fbb4fe"
+    },
+    {
+      "path": "Packages/com.melvad.ads/README.md",
+      "size": 2917,
+      "sha256": "7a1686ea3b6f29c6f7087cd64c00e19b999f81302e6f0a655b13f14cd0e4dd05"
+    },
+    {
+      "path": "Packages/com.melvad.ads/README.md.meta",
+      "size": 152,
+      "sha256": "42c4b58ba97e688b16acb4234b9cab01d56508a35af33ecf4a00a7b6bee3aca2"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Runtime/Android/Melvad.Ads.dll",
+      "size": 23552,
+      "sha256": "52c5e7dd7f89ee26d286e086ebf54e9a28f0839a473c6765e25f773210d61e67"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Runtime/Android/Melvad.Ads.dll.meta",
+      "size": 716,
+      "sha256": "0c4d1375394c9f6a3f8ebaf4346c092053fe1e86ab91dfbd61a1bb523ae998fb"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Runtime/Android.meta",
+      "size": 169,
+      "sha256": "246dfb0b84492a55e997c80bb46f74de0bcc8799f31d10362cfe42f7bf809099"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Runtime/Unity/Melvad.Ads.dll",
+      "size": 24576,
+      "sha256": "41c6a72710ab887ec113b747afc6c995a0145a89368a9130cd52a3cac1d70559"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Runtime/Unity/Melvad.Ads.dll.meta",
+      "size": 734,
+      "sha256": "358285f7fd81343a7aed3b339e12921314a6b4da2235917dfb8a12c4f230d13d"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Runtime/Unity.meta",
+      "size": 169,
+      "sha256": "7723b16b2724a9c30af1441003d5ab82cf6e22831d2a355d8679234148236bfc"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Runtime/iOS/Melvad.Ads.dll",
+      "size": 23552,
+      "sha256": "48936452445fd2a247b7ccb8459139327c4a6f66bf2e57f3e9aa2e6e69515ba5"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Runtime/iOS/Melvad.Ads.dll.meta",
+      "size": 712,
+      "sha256": "548dd468f318bd4dc4c90f3945e156a6bd9be106ddc6f57bba3b133ac7496b1f"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Runtime/iOS.meta",
+      "size": 169,
+      "sha256": "bc645f7313b54ca7bbf0198f5b4c14bc4b36cefc8fa6743e50562bcde5019e45"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Runtime/link.xml",
+      "size": 67,
+      "sha256": "aac18e48f727b64a47d47d0c9f49f6d81af745f994d671d7478eb77cb4324108"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Runtime/link.xml.meta",
+      "size": 152,
+      "sha256": "f12030a745b0f31bcaf00e8309c806fb564748828db92aa16c5dcd0e1bf39f02"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Runtime.meta",
+      "size": 169,
+      "sha256": "9d7c812660c54b048bbb63fce8bb7cfe0137caa112f64d80b3dd99ee977454ee"
+    },
+    {
+      "path": "Packages/com.melvad.ads/melvad-binary.json",
+      "size": 196,
+      "sha256": "44d678170a97404f3f9cc1e2711a7736c4e299307f04047670d5909aa3cd29cc"
+    },
+    {
+      "path": "Packages/com.melvad.ads/melvad-binary.json.meta",
+      "size": 152,
+      "sha256": "a511acb30035e83e5d943f1f4ef0c239a18fc2ef53cfd815c161410c2ed62bc6"
+    },
+    {
+      "path": "Packages/com.melvad.ads/package.json",
+      "size": 583,
+      "sha256": "a188e9a52886bd2a983327bba7470b3c849fe82bf6a31418dd23d724a90db664"
+    },
+    {
+      "path": "Packages/com.melvad.ads/package.json.meta",
+      "size": 152,
+      "sha256": "b5359d74776bfac720416ffd570e8d16bd5985f91ab94cb9b65d480701dbc438"
+    },
+    {
+      "path": "LICENSE",
+      "size": 5078,
+      "sha256": "71bc820f26a46fefb18a0eb391671fd23b9a63fe9d3e6c6d22e9e2ff61368536"
+    },
+    {
+      "path": "README.md",
+      "size": 1010,
+      "sha256": "b27caa3999ce9e3e9bc0a04ac6c6a8d84d5fb69f87b0198c5cfd9a3ead2c35ad"
+    },
+    {
+      "path": ".gitattributes",
+      "size": 47,
+      "sha256": "090c9f95db05249b51ac0ea21558896e500a2de816ba8322328c330efaa40b28"
+    }
+  ]
+}

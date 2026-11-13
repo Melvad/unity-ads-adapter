@@ -1,0 +1,106 @@
+MELVAD SDK LICENSE
+License Agreement for the Use of the Melvad SDK
+Version 1.0
+
+1. Licensor and Scope of the Agreement
+
+1.1. Melvad Limited Liability Company (https://melvad.com) grants the user of the SDK
+(the Licensee) a non-exclusive license on the terms of this Agreement.
+
+1.2. The Melvad SDK (the SDK) is a software development kit distributed
+by the Licensor for iOS, Android, and Unity to integrate applications with
+the Melvad advertising platform. This Agreement applies to each version
+of the SDK supplied with this text, including the executable libraries,
+interface files, and other software components of the Licensor included
+in the kit. Section 4 governs third-party components.
+
+1.3. This Agreement is entered into under the simplified procedure set
+out in Article 1286(5) of the Civil Code of the Russian Federation.
+After being given an opportunity to review the terms, the Licensee accepts
+them by first integrating the SDK into an application project or running
+the SDK for testing or operational use. Where integration is carried out
+on behalf of an organization, its authorized representative accepts
+the Agreement.
+
+2. Permitted Uses
+
+2.1. The Licensee may download and reproduce the SDK to the extent
+necessary to store, integrate, build, test, and operate applications
+that the Licensee publishes itself or is authorized by the application
+owner to publish.
+
+2.2. The Licensee may integrate the SDK through the interfaces specified
+in its documentation, configure it, and include its executable components
+in application builds. Standard application build, packaging, and signing
+operations are permitted.
+
+2.3. The Licensee may reproduce, distribute, and make the SDK available
+to the public as part of an application, including a paid application,
+through app stores and other lawful distribution channels. This permission
+includes submitting builds to the operators of those channels for review,
+listing, delivery, and updates. End users may run the SDK as part of
+an application they have obtained in order to use the application's
+features.
+
+2.4. The Licensee may engage employees and contractors to work on
+the application on its behalf and within the scope of the rights granted
+under this Agreement. The Licensee is responsible for ensuring that they
+comply with its terms.
+
+2.5. The license is granted free of charge, worldwide, for the duration
+of the exclusive right in the relevant version of the SDK, unless this
+Agreement is terminated earlier under Section 6. Access to the Melvad
+advertising platform and payments relating to advertising are governed
+by separate agreements.
+
+3. Restrictions
+
+3.1. Without the Licensor's separate written consent, the Licensee may
+not distribute the SDK or its components separately from an application,
+including by publishing them in its own package registry, selling them,
+sublicensing them, or including them in a third-party SDK, an app builder,
+or another product for subsequent integration by third parties. The
+permissions expressly granted in Section 2 continue to apply.
+
+3.2. Without the Licensor's separate written consent, the Licensee may
+not modify the SDK code, create derivative versions of it, decompile
+or disassemble it, or extract its source code. This restriction applies
+to the extent permitted by applicable law and does not apply where
+the law expressly permits the relevant act.
+
+3.3. When distributing an application, the Licensee must retain the
+rights-holder notices and license texts supplied with the SDK. These
+may be included in the application or in a licenses section accessible
+to users. This Agreement grants no right to use Melvad trademarks or
+logos. The Licensee may refer to the SDK by name to accurately describe
+the integration.
+
+4. Third-Party Components
+
+4.1. Third-party components included in the SDK distribution are governed
+by their own licenses. Those licenses take precedence with respect to
+the relevant components. Information about those components and any
+required notices accompany the relevant version of the SDK.
+
+5. Provision of the SDK
+
+5.1. The SDK is provided “as is” to the extent permitted by applicable
+law. Obligations to provide support, ensure compatibility with a
+particular operating system version, or release updates arise where
+provided for in a separate agreement. This Agreement preserves any
+warranties and liability that cannot be excluded or limited by law.
+
+6. Termination
+
+6.1. If the Licensee materially breaches this Agreement, the Licensor
+may terminate it in the manner permitted by applicable law. If the
+breach can be remedied, the Licensor will allow the Licensee 30 calendar
+days from receipt of written notice to remedy it.
+
+6.2. Upon termination, the Licensee must stop producing new builds
+with the SDK and cease further distribution of application versions
+containing it. End users retain permission to run copies of the application
+they lawfully obtained before termination.
+
+6.3. This Agreement is governed by the laws of the Russian Federation,
+subject to any mandatory rules applicable to the parties.

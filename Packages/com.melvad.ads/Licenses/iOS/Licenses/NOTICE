@@ -1,0 +1,13 @@
+Melvad iOS SDK includes third-party components under their respective licenses.
+
+Prebid Mobile is distributed as a compiled framework with Melvad changes for
+supplier auction integration, app identity, privacy handling and bundled runtime
+resources. Its Apache 2.0 license is preserved in Prebid-LICENSE.
+
+Runtime resource bundles also contain third-party notices and licenses for
+SafeFrame, VAST client, XML DOM, Shaka Player and Open Measurement components.
+These notices remain included in the distributed SDK. The corresponding texts
+are provided in this directory and in the framework resource bundles.
+
+The bundled Prebidorg Open Measurement identity does not certify Melvad's app
+measurement integration. No app OM certification is claimed by this release.

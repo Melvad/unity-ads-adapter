@@ -1,0 +1,21 @@
+{
+  "name": "com.melvad.ads",
+  "version": "0.1.0-preview.1",
+  "displayName": "Melvad Ads",
+  "description": "Unity bridge to the native Melvad mobile advertising SDKs.",
+  "unity": "6000.6",
+  "unityRelease": "9f1",
+  "author": {
+    "name": "Melvad"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "com.unity.modules.androidjni": "1.0.0",
+    "com.unity.modules.jsonserialize": "1.0.0"
+  },
+  "homepage": "https://melvad.com/developers?lang=en#unity-sdk",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Melvad/unity-ads-adapter.git"
+  }
+}
