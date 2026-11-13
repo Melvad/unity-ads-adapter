@@ -1,4 +1,0 @@
-framework module MelvadAdsRuntime {
-    header "MelvadAdsRuntime-Swift.h"
-    requires objc
-}

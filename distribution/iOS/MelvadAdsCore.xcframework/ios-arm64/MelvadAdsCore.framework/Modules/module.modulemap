@@ -1,4 +1,0 @@
-framework module MelvadAdsCore {
-    header "MelvadAdsCore-Swift.h"
-    requires objc
-}

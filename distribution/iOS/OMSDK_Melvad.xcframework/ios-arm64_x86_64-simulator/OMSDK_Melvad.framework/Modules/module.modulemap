@@ -1,4 +1,0 @@
-module OMSDK_Melvad {
-    header "Headers/OMIDImports.h"
-    export *
-}

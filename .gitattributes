@@ -2,8 +2,5 @@
 *.dll binary
 *.aar binary
 *.zip binary
-api/Melvad.Ads.api text eol=lf linguist-language=C# linguist-detectable=true -linguist-documentation -linguist-generated -linguist-vendored
-api/Melvad.Android.api text eol=lf linguist-language=Kotlin linguist-detectable=true -linguist-documentation -linguist-generated -linguist-vendored
-api/Melvad.Unity.Android.api text eol=lf linguist-language=Java linguist-detectable=true -linguist-documentation -linguist-generated -linguist-vendored
-distribution/** -text
-distribution/**/*.swiftinterface linguist-language=Swift linguist-detectable=true -linguist-documentation -linguist-generated
+# Binary distribution: shipped interfaces do not measure implementation languages.
+* linguist-detectable=false
