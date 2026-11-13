@@ -13,6 +13,7 @@ Install one package format per project.
 
 - [Integration guide](https://melvad.com/developers?lang=en#unity-sdk)
 - [Package installation and C# usage](Packages/com.melvad.ads/README.md)
+- [Public C# API signatures](api/Melvad.Ads.api)
 
 Tested profile: Unity 6000.6.9f1, IL2CPP ARM64, Android API 29+, iOS 16+.
 Native dependency setup is automatic. Version 1.0.0 supports rewarded video.

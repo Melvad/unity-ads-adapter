@@ -1,0 +1,57 @@
+// Selected public API signatures for Melvad Ads for Unity 1.0.0.
+// Reference metadata only. Implementations are distributed in the binary DLLs.
+
+namespace Melvad.Ads
+{
+    public static class MelvadAds
+    {
+        public static void Initialize(MelvadConfiguration value, PrivacyContext consent);
+        public static RewardedAd CreateRewardedAd(bool keepAcrossScenes = false);
+        public static void UpdatePrivacy(PrivacyContext value);
+    }
+
+    public sealed class PrivacyContext
+    {
+        public bool GdprApplies { get; }
+        public string ConsentString { get; }
+        public bool PersonalizationAllowed { get; }
+        public PrivacyContext(bool gdprApplies, string consentString = "", bool personalizationAllowed = false);
+    }
+
+    public sealed class AdPlacement
+    {
+        public string InventoryId { get; }
+        public string PlacementId { get; }
+        public AdPlacement(string inventoryId, string placementId);
+    }
+
+    public sealed class RewardVerification
+    {
+        public string UserId { get; }
+        public RewardVerification(string userId);
+    }
+
+    public sealed class RewardedAd : System.IDisposable
+    {
+        public AdState State { get; }
+        public bool CanShow { get; }
+        public string AdId { get; }
+        public string RequestId { get; }
+        public event System.Action Loaded;
+        public event System.Action NoFill;
+        public event System.Action Shown;
+        public event System.Action Impression;
+        public event System.Action Clicked;
+        public event System.Action VideoCompleted;
+        public event System.Action VideoSkipped;
+        public event System.Action RewardEarned;
+        public event System.Action Closed;
+        public event System.Action<AdError> LoadFailed;
+        public event System.Action<AdError> ShowFailed;
+        public void Load(AdPlacement placement, RewardVerification verification = null);
+        public void Show();
+        public void Dispose();
+    }
+
+    public enum AdState { Idle, Loading, Ready, Showing, NoFill, Failed, Closed, Disposed }
+}

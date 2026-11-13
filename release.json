@@ -390,13 +390,18 @@
     },
     {
       "path": "README.md",
-      "size": 982,
-      "sha256": "b59c5279ecb07e039aa40a8e8f3f722b6219c058cdc1fb924eebfa264a4b6a5b"
+      "size": 1031,
+      "sha256": "7a1a4fab3a074f67239937e7b90aee3d2505c376abf6a3be980fc9dc59ac7e19"
     },
     {
       "path": ".gitattributes",
-      "size": 47,
-      "sha256": "090c9f95db05249b51ac0ea21558896e500a2de816ba8322328c330efaa40b28"
+      "size": 178,
+      "sha256": "b7aa7a63c59dc2ae4b706e01dea1aa75a60c0d8bea0498b7383ee4699b65aef1"
+    },
+    {
+      "path": "api/Melvad.Ads.api",
+      "size": 2089,
+      "sha256": "138112cff3d5c0321592ce71fa5f71cbad6d9ec9433fa98e4d176ec646062951"
     }
   ]
 }

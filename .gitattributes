@@ -2,3 +2,4 @@
 *.dll binary
 *.aar binary
 *.zip binary
+api/*.api text eol=lf linguist-language=C# linguist-detectable=true -linguist-documentation -linguist-generated -linguist-vendored
