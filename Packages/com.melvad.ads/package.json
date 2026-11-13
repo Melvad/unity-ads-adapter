@@ -1,6 +1,6 @@
 {
   "name": "com.melvad.ads",
-  "version": "0.1.0-preview.1",
+  "version": "1.0.0",
   "displayName": "Melvad Ads",
   "description": "Unity bridge to the native Melvad mobile advertising SDKs.",
   "unity": "6000.6",

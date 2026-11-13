@@ -1,7 +1,7 @@
 {
-  "version": "0.1.0-preview.1",
+  "version": "1.0.0",
   "distribution": "binary",
-  "sourceRevision": "172e0f41577e3875b400d8afc988aef5a7244ab5",
+  "sourceRevision": "6e598e8158adaafa8c5a17b06f90008007fb1b72",
   "nativeVersions": {
     "android": "1.0.3",
     "ios": "1.0.3"

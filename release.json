@@ -1,27 +1,27 @@
 {
-  "version": "0.1.0-preview.1",
+  "version": "1.0.0",
   "distribution": "binary",
-  "sourceRevision": "172e0f41577e3875b400d8afc988aef5a7244ab5",
+  "sourceRevision": "6e598e8158adaafa8c5a17b06f90008007fb1b72",
   "unity": "6000.6.9f1",
   "nativeSDKs": {
     "android": "1.0.3",
     "ios": "1.0.3"
   },
   "assets": {
-    "com.melvad.ads-0.1.0-preview.1.tgz": {
-      "sha256": "3e0472b6be6eac5d1b69e75986e56bf9c0e3308faa692cc5424c67009897c6dc",
-      "size": 7294748
+    "com.melvad.ads-1.0.0.tgz": {
+      "sha256": "87e6b237904ffc3a2a655e1e32a5879da4f1f749e1acde6e633de92ac2b6c4dc",
+      "size": 7293589
     },
-    "MelvadAds-0.1.0-preview.1.unitypackage": {
-      "sha256": "b5c1a5fe94eee1ca86b84f90dd6a408aedd995936188469d20400bdcfb4e97ac",
-      "size": 7314836
+    "MelvadAds-1.0.0.unitypackage": {
+      "sha256": "c1e8170187b981da6d27e8240d9942d8156691b3c3a0e3cb3d413751d67e3a78",
+      "size": 7313846
     }
   },
   "files": [
     {
       "path": "Packages/com.melvad.ads/Editor/Android/Melvad.Ads.Editor.dll",
       "size": 12288,
-      "sha256": "ea8fc398ad410480ac1bfed4181192f81c6dd405a0dbc8294f067f86b1b8863a"
+      "sha256": "205c3b6e6b606f618181db5a8589cc0930a425eda1724837d7f94b793b573c2c"
     },
     {
       "path": "Packages/com.melvad.ads/Editor/Android/Melvad.Ads.Editor.dll.meta",
@@ -36,7 +36,7 @@
     {
       "path": "Packages/com.melvad.ads/Editor/iOS/Melvad.Ads.Editor.dll",
       "size": 11776,
-      "sha256": "8007862525a7391eef3b0c54d75d38f3eed8983c09b5751dae9ff78e22bc1007"
+      "sha256": "2252e2f7afc15af6941c833587692b85bf63d9588f7e47b601f46ec2e97849ef"
     },
     {
       "path": "Packages/com.melvad.ads/Editor/iOS/Melvad.Ads.Editor.dll.meta",
@@ -251,7 +251,7 @@
     {
       "path": "Packages/com.melvad.ads/Native/Android.zip",
       "size": 799856,
-      "sha256": "af91ef3c484f00c6f6b44b0219c1fb9f9328a637dee2fd73aa729a297987a082"
+      "sha256": "4b1c93e4dfdf9ea2b22b5bd4d0794a6c8bd9f5338751904ec9169f4feaad3544"
     },
     {
       "path": "Packages/com.melvad.ads/Native/Android.zip.meta",
@@ -261,7 +261,7 @@
     {
       "path": "Packages/com.melvad.ads/Native/iOS.zip",
       "size": 6539725,
-      "sha256": "5115ed6c7e8712bcec11f6332f4001dbab8bbf23fad1ef6d75bdfc6f3422f078"
+      "sha256": "33c81eec0a2b0d04098e4b49a2ded4f8c221cc3b52e84cd16c51429aea88949e"
     },
     {
       "path": "Packages/com.melvad.ads/Native/iOS.zip.meta",
@@ -276,7 +276,7 @@
     {
       "path": "Packages/com.melvad.ads/Plugins/Android/MelvadUnityBridge.aar",
       "size": 8086,
-      "sha256": "bbcf903072bb41c67a5aa989a432b0a0e1dde4bfb2c7c9df0387101d0edcc43d"
+      "sha256": "a9a21daff5818bf4c6240212893064804db95c20bb8fe7fe2a0cbca32b20c974"
     },
     {
       "path": "Packages/com.melvad.ads/Plugins/Android/MelvadUnityBridge.aar.meta",
@@ -295,8 +295,8 @@
     },
     {
       "path": "Packages/com.melvad.ads/README.md",
-      "size": 2917,
-      "sha256": "7a1686ea3b6f29c6f7087cd64c00e19b999f81302e6f0a655b13f14cd0e4dd05"
+      "size": 2901,
+      "sha256": "d57e7dcd79454dc1a473d4254662f00cad3dc4eb937e117f67e85ed51b67e9f7"
     },
     {
       "path": "Packages/com.melvad.ads/README.md.meta",
@@ -306,7 +306,7 @@
     {
       "path": "Packages/com.melvad.ads/Runtime/Android/Melvad.Ads.dll",
       "size": 23552,
-      "sha256": "52c5e7dd7f89ee26d286e086ebf54e9a28f0839a473c6765e25f773210d61e67"
+      "sha256": "e48198dc0ab21eb4f899c9d1d4291a16d95d7c4dbd6fef6d2b4f60a305b995f2"
     },
     {
       "path": "Packages/com.melvad.ads/Runtime/Android/Melvad.Ads.dll.meta",
@@ -321,7 +321,7 @@
     {
       "path": "Packages/com.melvad.ads/Runtime/Unity/Melvad.Ads.dll",
       "size": 24576,
-      "sha256": "41c6a72710ab887ec113b747afc6c995a0145a89368a9130cd52a3cac1d70559"
+      "sha256": "c58a3ca19f2b70bd09b1148c5d74a9571fa1c2e18662a1d4141723aa2c86d700"
     },
     {
       "path": "Packages/com.melvad.ads/Runtime/Unity/Melvad.Ads.dll.meta",
@@ -336,7 +336,7 @@
     {
       "path": "Packages/com.melvad.ads/Runtime/iOS/Melvad.Ads.dll",
       "size": 23552,
-      "sha256": "48936452445fd2a247b7ccb8459139327c4a6f66bf2e57f3e9aa2e6e69515ba5"
+      "sha256": "5aad5eefdb4eb53bc5568cb1994e5dd56f13cd6f4e41bdf19f51f9c439ef4a7c"
     },
     {
       "path": "Packages/com.melvad.ads/Runtime/iOS/Melvad.Ads.dll.meta",
@@ -365,8 +365,8 @@
     },
     {
       "path": "Packages/com.melvad.ads/melvad-binary.json",
-      "size": 196,
-      "sha256": "44d678170a97404f3f9cc1e2711a7736c4e299307f04047670d5909aa3cd29cc"
+      "size": 186,
+      "sha256": "5c726cdb80898d9f37edffdb0e4d0adf383f85a0eb403d17d2b10af2354ac5db"
     },
     {
       "path": "Packages/com.melvad.ads/melvad-binary.json.meta",
@@ -375,8 +375,8 @@
     },
     {
       "path": "Packages/com.melvad.ads/package.json",
-      "size": 583,
-      "sha256": "a188e9a52886bd2a983327bba7470b3c849fe82bf6a31418dd23d724a90db664"
+      "size": 573,
+      "sha256": "80f5ff1cf49b623ef9b68964ebeef7bbfda9750336d19256e534583f68ce7f08"
     },
     {
       "path": "Packages/com.melvad.ads/package.json.meta",
@@ -390,8 +390,8 @@
     },
     {
       "path": "README.md",
-      "size": 1010,
-      "sha256": "b27caa3999ce9e3e9bc0a04ac6c6a8d84d5fb69f87b0198c5cfd9a3ead2c35ad"
+      "size": 982,
+      "sha256": "b59c5279ecb07e039aa40a8e8f3f722b6219c058cdc1fb924eebfa264a4b6a5b"
     },
     {
       "path": ".gitattributes",

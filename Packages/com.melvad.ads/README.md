@@ -1,7 +1,7 @@
 # Melvad Ads for Unity
 
-Binary Unity adapter for Melvad's Android and iOS advertising SDKs. The current
-preview supports rewarded video through one C# API. Native SDKs 1.0.3 are included.
+Binary Unity adapter for Melvad's Android and iOS advertising SDKs. Version 1.0.0
+supports rewarded video through one C# API. Native SDKs 1.0.3 are included.
 
 ## Install
 
@@ -11,7 +11,7 @@ Download a package from [Releases](https://github.com/Melvad/unity-ads-adapter/r
 - `.unitypackage`: Unity → Assets → Import Package → Custom Package.
 
 Use one installation method per project. The UPM package is also available through
-`https://github.com/Melvad/unity-ads-adapter.git?path=Packages/com.melvad.ads#v0.1.0-preview.1`.
+`https://github.com/Melvad/unity-ads-adapter.git?path=Packages/com.melvad.ads#v1.0.0`.
 
 Tested profile: Unity **6000.6.9f1**, IL2CPP ARM64, Android API 29+ and iOS 16+.
 Install the build support module for your target platform; iOS builds require macOS
