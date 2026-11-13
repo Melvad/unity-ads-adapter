@@ -20,8 +20,18 @@
   "files": [
     {
       "path": ".gitattributes",
-      "size": 158,
-      "sha256": "0fa06a7b97e436e39ab7b3114a1851ebfc083dd17318859635169169d3617d3f"
+      "size": 268,
+      "sha256": "3a8abf538456d2239f524884c343bfe22f082da60e6580232a487ba7c3816855"
+    },
+    {
+      "path": "Examples/README.md",
+      "size": 1250,
+      "sha256": "f39b101dfbb18ff2ecee3f888664c3308e59b66b04fdd8ff98aa9fb6049b0666"
+    },
+    {
+      "path": "Examples/RewardedController.cs",
+      "size": 2066,
+      "sha256": "6da110a38f5623965dd04135a736b3a8f3f3d4fc0136b283b8aed38018215b3c"
     },
     {
       "path": "LICENSE",
@@ -395,8 +405,8 @@
     },
     {
       "path": "README.md",
-      "size": 1513,
-      "sha256": "292090438848fdd801f5b0b73fde6bfd3e925a13dc4edd2d76bb6dad6a5d550d"
+      "size": 1538,
+      "sha256": "d69f1e96677b179b01958c29f506883ef080c8d85139e34cae5fe7213a326705"
     }
   ]
 }

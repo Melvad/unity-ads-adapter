@@ -2,5 +2,6 @@
 *.dll binary
 *.aar binary
 *.zip binary
-# Binary distribution: shipped interfaces do not measure implementation languages.
-* linguist-detectable=false
+# Count integration examples, excluding the compiled package and native interfaces.
+Packages/** linguist-vendored=true
+Examples/*.cs linguist-detectable=true -linguist-documentation -linguist-vendored -linguist-generated

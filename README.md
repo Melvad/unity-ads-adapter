@@ -14,9 +14,10 @@ The current **1.0.0** release supports rewarded video and includes native SDKs 1
 | Native iOS SDK | Swift |
 | Web renderers | TypeScript and JavaScript; shipped as JavaScript |
 
-GitHub language statistics are disabled for this binary repository. Compiled
-assemblies, AARs and XCFrameworks do not expose their implementation source to
-GitHub, so counts of unpacked headers and assets would misrepresent the adapter.
+The GitHub language indicator describes the [C# integration example](Examples/).
+The compiled Unity package and its native interfaces are excluded from that chart.
+Its percentages describe the public example code, not the private adapter or SDK
+implementations.
 
 ## Downloads
 
