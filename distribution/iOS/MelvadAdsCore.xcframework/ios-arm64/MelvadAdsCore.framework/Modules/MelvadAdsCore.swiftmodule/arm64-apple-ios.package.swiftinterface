@@ -1,0 +1,296 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)
+// swift-module-flags: -target arm64-apple-ios16.0 -enable-objc-interop -enable-library-evolution -language-mode 6 -O -enable-experimental-feature DebugDescriptionMacro -module-name MelvadAdsCore -package-name melvadadscore
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.4.2
+import Foundation
+import Foundation/*.Bundle*/
+import Foundation/*.ProcessInfo*/
+import Foundation/*.URL*/
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension MelvadAdsCore::AdError : Foundation::LocalizedError, Foundation::CustomNSError {
+  public static var errorDomain: Swift::String {
+    get
+  }
+  public var errorCode: Swift::Int {
+    get
+  }
+  public var errorDescription: Swift::String? {
+    get
+  }
+  public var errorUserInfo: [Swift::String : Any] {
+    get
+  }
+}
+public struct AdFailure : Swift::Error, Foundation::LocalizedError, Foundation::CustomNSError, @unchecked Swift::Sendable {
+  public let reason: MelvadAdsCore::AdError
+  public let endpoint: Foundation::URL?
+  public let underlyingError: Foundation::NSError?
+  public init(reason: MelvadAdsCore::AdError, url: Foundation::URL? = nil, underlyingError: (any Swift::Error)? = nil)
+  public static var errorDomain: Swift::String {
+    get
+  }
+  public var errorCode: Swift::Int {
+    get
+  }
+  public var errorDescription: Swift::String? {
+    get
+  }
+  public var errorUserInfo: [Swift::String : Any] {
+    get
+  }
+}
+public enum AdLoadState : Swift::Equatable, Swift::Sendable {
+  case idle, loading, ready, noFill, cancelled, consumed, expired, destroyed
+  case failed(MelvadAdsCore::AdError)
+  public static func == (a: MelvadAdsCore::AdLoadState, b: MelvadAdsCore::AdLoadState) -> Swift::Bool
+}
+@_hasMissingDesignatedInitializers @_Concurrency::MainActor final public class AdLoadSession {
+  @_Concurrency::MainActor final public var state: MelvadAdsCore::AdLoadState {
+    get
+  }
+  @_Concurrency::MainActor final public var onStateChange: (@_Concurrency::MainActor @Sendable (MelvadAdsCore::AdLoadState) -> Swift::Void)?
+  @_Concurrency::MainActor final public var failureError: Foundation::NSError? {
+    get
+  }
+  @_Concurrency::MainActor convenience public init(service: any MelvadAdsCore::AdServing, privacy: MelvadAdsCore::PrivacyContext = PrivacyContext())
+  @_Concurrency::MainActor final public var isReady: Swift::Bool {
+    get
+  }
+  @_Concurrency::MainActor final public func load(_ request: MelvadAdsCore::AdRequest) async
+  @_Concurrency::MainActor final public func cancel()
+  @_Concurrency::MainActor final public func updatePrivacy(_ value: MelvadAdsCore::PrivacyContext)
+  @_Concurrency::MainActor final public func takeAd() throws -> MelvadAdsCore::LoadedAd
+  @_Concurrency::MainActor final public func destroy()
+  @objc deinit
+}
+public enum AdError : Swift::Error, Swift::Equatable, Swift::Sendable {
+  case invalidConfiguration(Swift::String)
+  case invalidRequest(Swift::String)
+  case invalidResponse
+  case unsupportedCreative(Swift::String)
+  case responseTooLarge
+  case httpStatus(Swift::Int)
+  case rateLimited(retryAfterSeconds: Swift::Int?)
+  case timeout
+  case network
+  case notReady
+  case expired
+  public static func == (a: MelvadAdsCore::AdError, b: MelvadAdsCore::AdError) -> Swift::Bool
+}
+public struct AdSize : Swift::Equatable, Swift::Sendable {
+  public let width: Swift::Int
+  public let height: Swift::Int
+  public init(width: Swift::Int, height: Swift::Int) throws
+  public static func == (a: MelvadAdsCore::AdSize, b: MelvadAdsCore::AdSize) -> Swift::Bool
+}
+public struct AdRequest : Swift::Equatable, Swift::Sendable {
+  public let requestID: Foundation::UUID
+  public let inventoryID: Swift::String
+  public let placementID: Swift::String
+  public let viewport: MelvadAdsCore::AdSize
+  public let mode: Swift::String?
+  public let rewardUserID: Swift::String?
+  public init(inventoryID: Swift::String, placementID: Swift::String, viewport: MelvadAdsCore::AdSize, mode: Swift::String? = nil) throws
+  public init(inventoryID: Swift::String, placementID: Swift::String, viewport: MelvadAdsCore::AdSize, mode: Swift::String?, rewardUserID: Swift::String?) throws
+  public static func == (a: MelvadAdsCore::AdRequest, b: MelvadAdsCore::AdRequest) -> Swift::Bool
+}
+public enum TrackingAuthorization : Swift::String, Swift::Sendable {
+  case notDetermined, restricted, denied, authorized
+  public init?(rawValue: Swift::String)
+  public typealias RawValue = Swift::String
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public struct PrivacyContext : Swift::Equatable, Swift::Sendable {
+  public var trackingAuthorization: MelvadAdsCore::TrackingAuthorization
+  public var personalizationAllowed: Swift::Bool
+  public var gdprApplies: Swift::Bool?
+  public var consentString: Swift::String?
+  public var globalPrivacyControl: Swift::Bool
+  public var advertisingIdentifier: Foundation::UUID?
+  public var vendorIdentifier: Foundation::UUID?
+  public init(trackingAuthorization: MelvadAdsCore::TrackingAuthorization = .notDetermined, personalizationAllowed: Swift::Bool = false, gdprApplies: Swift::Bool? = nil, consentString: Swift::String? = nil, globalPrivacyControl: Swift::Bool = false, advertisingIdentifier: Foundation::UUID? = nil, vendorIdentifier: Foundation::UUID? = nil)
+  public var allowsAdvertisingIdentifiers: Swift::Bool {
+    get
+  }
+  public var withoutIdentifiers: MelvadAdsCore::PrivacyContext {
+    get
+  }
+  public static func == (a: MelvadAdsCore::PrivacyContext, b: MelvadAdsCore::PrivacyContext) -> Swift::Bool
+}
+public protocol AdvertisingIdentityProvider : Swift::Sendable {
+  @_Concurrency::MainActor func snapshot(for privacy: MelvadAdsCore::PrivacyContext) -> MelvadAdsCore::PrivacyContext
+}
+public enum AdSource : Swift::String, Swift::Sendable {
+  case demand, passback
+  public init?(rawValue: Swift::String)
+  public typealias RawValue = Swift::String
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public struct HTMLCreative : Swift::Equatable, Swift::Sendable {
+  public let html: Swift::String
+  public let size: MelvadAdsCore::AdSize
+  public let api: Swift::Int?
+  public let attributes: [Swift::Int]
+  public static func == (a: MelvadAdsCore::HTMLCreative, b: MelvadAdsCore::HTMLCreative) -> Swift::Bool
+}
+public enum CreativeDescriptor : Swift::Equatable, Swift::Sendable {
+  case html(MelvadAdsCore::HTMLCreative)
+  public static func == (a: MelvadAdsCore::CreativeDescriptor, b: MelvadAdsCore::CreativeDescriptor) -> Swift::Bool
+}
+public struct Advertiser : Swift::Equatable, Swift::Sendable {
+  public let name: Swift::String
+  public let taxIdentifier: Swift::String
+  public let erid: Swift::String?
+  public static func == (a: MelvadAdsCore::Advertiser, b: MelvadAdsCore::Advertiser) -> Swift::Bool
+}
+public struct AdClick : Swift::Equatable, Swift::Sendable {
+  public let destination: Foundation::URL
+  public let trackers: [Foundation::URL]
+  public static func == (a: MelvadAdsCore::AdClick, b: MelvadAdsCore::AdClick) -> Swift::Bool
+}
+public struct LoadedAd : Swift::Equatable, Swift::Sendable {
+  public let requestID: Foundation::UUID
+  public let adID: Swift::String
+  public let templateID: Swift::Int
+  public let source: MelvadAdsCore::AdSource
+  public let isInterstitial: Swift::Bool
+  public let creativeID: Swift::String?
+  public let creative: MelvadAdsCore::CreativeDescriptor
+  public let impressionTrackers: [Foundation::URL]
+  public let complaintURL: Foundation::URL?
+  public let advertiser: MelvadAdsCore::Advertiser?
+  public let click: MelvadAdsCore::AdClick?
+  public static func == (a: MelvadAdsCore::LoadedAd, b: MelvadAdsCore::LoadedAd) -> Swift::Bool
+}
+public enum AdLoadResult : Swift::Equatable, Swift::Sendable {
+  case filled(MelvadAdsCore::LoadedAd)
+  case noFill
+  public static func == (a: MelvadAdsCore::AdLoadResult, b: MelvadAdsCore::AdLoadResult) -> Swift::Bool
+}
+public protocol AdServing : Swift::Sendable {
+  func load(_ request: MelvadAdsCore::AdRequest, privacy: MelvadAdsCore::PrivacyContext) async throws -> MelvadAdsCore::AdLoadResult
+}
+public enum RequestIdentity : Swift::Equatable, Swift::Sendable {
+  case ifa(Foundation::UUID)
+  case ifv(Foundation::UUID)
+  case unavailable
+  public var value: Swift::String? {
+    get
+  }
+  public var isAdvertising: Swift::Bool {
+    get
+  }
+  public static func select(privacy: MelvadAdsCore::PrivacyContext, vendorIdentifier: Foundation::UUID?) -> MelvadAdsCore::RequestIdentity
+  @_Concurrency::MainActor public static func current(privacy: MelvadAdsCore::PrivacyContext) -> MelvadAdsCore::RequestIdentity
+  public static func == (a: MelvadAdsCore::RequestIdentity, b: MelvadAdsCore::RequestIdentity) -> Swift::Bool
+}
+public enum MelvadLogLevel : Swift::Int, Swift::Sendable {
+  case debug, info, warning, error, off
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
+    get
+  }
+}
+public struct MelvadLogEntry : Swift::Sendable {
+  public let date: Foundation::Date
+  public let level: MelvadAdsCore::MelvadLogLevel
+  public let subsystem: Swift::String
+  public let message: Swift::String
+  public let requestID: Foundation::UUID?
+}
+public enum MelvadLogger {
+  public typealias Handler = @Sendable (MelvadAdsCore::MelvadLogEntry) -> Swift::Void
+  public static func configure(minimumLevel: MelvadAdsCore::MelvadLogLevel = .off, handler: MelvadAdsCore::MelvadLogger.MelvadAdsCore::Handler? = nil)
+  public static func record(_ level: MelvadAdsCore::MelvadLogLevel, subsystem: Swift::String, message: Swift::String, requestID: Foundation::UUID? = nil)
+}
+public struct SupplierClient : MelvadAdsCore::AdServing {
+  public init(configuration: MelvadAdsCore::SupplierConfiguration)
+  public func load(_ request: MelvadAdsCore::AdRequest, privacy: MelvadAdsCore::PrivacyContext) async throws -> MelvadAdsCore::AdLoadResult
+  public func resolve(_ request: MelvadAdsCore::AdRequest, privacy: MelvadAdsCore::PrivacyContext) async throws -> MelvadAdsCore::SupplierDecision
+}
+public struct SupplierConfiguration : Swift::Sendable {
+  public enum Route : Swift::String, Swift::Sendable {
+    case display, video
+    public init?(rawValue: Swift::String)
+    public typealias RawValue = Swift::String
+    public var rawValue: Swift::String {
+      get
+    }
+  }
+  public static let productionBaseURL: Foundation::URL
+  public let route: MelvadAdsCore::SupplierConfiguration.MelvadAdsCore::Route
+  public let baseURL: Foundation::URL
+  public let clientID: Swift::Int64
+  public let bundleID: Swift::String
+  public let storeURL: Foundation::URL?
+  public let userAgent: Swift::String
+  public let language: Swift::String?
+  public let timeout: Foundation::TimeInterval
+  public let identityProvider: (any MelvadAdsCore::AdvertisingIdentityProvider)?
+  public init(baseURL: Foundation::URL = SupplierConfiguration.productionBaseURL, clientID: Swift::Int64, bundleID: Swift::String, storeURL: Foundation::URL? = nil, userAgent: Swift::String, language: Swift::String? = nil, timeout: Foundation::TimeInterval = 8, allowLoopbackHTTP: Swift::Bool = false, route: MelvadAdsCore::SupplierConfiguration.MelvadAdsCore::Route = .display, identityProvider: (any MelvadAdsCore::AdvertisingIdentityProvider)? = nil) throws
+  @_Concurrency::MainActor public func requestPrivacy(_ privacy: MelvadAdsCore::PrivacyContext) -> MelvadAdsCore::PrivacyContext
+}
+public enum SupplierDecision : Swift::Sendable {
+  case noFill
+  case filled(MelvadAdsCore::LoadedAd)
+  case prebid(MelvadAdsCore::SupplierPrebidDecision)
+  case vast(Swift::String)
+}
+public struct SupplierPrebidDecision : Swift::Sendable {
+  public let endpoint: Foundation::URL
+  public let placementID: Swift::String
+  public let currency: Swift::String
+  public let sizes: [MelvadAdsCore::AdSize]
+  public var size: MelvadAdsCore::AdSize {
+    get
+  }
+  public let nativeRequest: Foundation::Data?
+  public let nativeTemplateID: Swift::Int?
+  public let cssLink: Foundation::URL?
+  public let elements: [Swift::String]?
+  public let video: MelvadAdsCore::SupplierPrebidDecision.MelvadAdsCore::Video?
+  public let isRewarded: Swift::Bool
+  public let bannerTemplateID: Swift::Int
+  public let allowsFullscreen: Swift::Bool
+  public struct Video : Swift::Codable, Swift::Sendable {
+    public let mimes: [Swift::String]
+    public let protocols: [Swift::Int]
+    public let w: Swift::Int
+    public let h: Swift::Int
+    public let minduration: Swift::Int
+    public let maxduration: Swift::Int
+    public let minbitrate: Swift::Int?
+    public let maxbitrate: Swift::Int?
+    public let placement: Swift::Int?
+    public let plcmt: Swift::Int?
+    public let skip: Swift::Int?
+    public let linearity: Swift::Int
+    public let delivery: [Swift::Int]?
+    public let api: [Swift::Int]
+    public func encode(to encoder: any Swift::Encoder) throws
+    public init(from decoder: any Swift::Decoder) throws
+  }
+  public let auctionTimeout: Swift::Int
+  public let creativeReadyTimeout: Swift::Int
+}
+extension MelvadAdsCore::AdLoadSession : Swift::Sendable {}
+extension MelvadAdsCore::TrackingAuthorization : Swift::Equatable {}
+extension MelvadAdsCore::TrackingAuthorization : Swift::Hashable {}
+extension MelvadAdsCore::TrackingAuthorization : Swift::RawRepresentable {}
+extension MelvadAdsCore::AdSource : Swift::Equatable {}
+extension MelvadAdsCore::AdSource : Swift::Hashable {}
+extension MelvadAdsCore::AdSource : Swift::RawRepresentable {}
+extension MelvadAdsCore::MelvadLogLevel : Swift::Equatable {}
+extension MelvadAdsCore::MelvadLogLevel : Swift::Hashable {}
+extension MelvadAdsCore::MelvadLogLevel : Swift::RawRepresentable {}
+extension MelvadAdsCore::SupplierConfiguration.MelvadAdsCore::Route : Swift::Equatable {}
+extension MelvadAdsCore::SupplierConfiguration.MelvadAdsCore::Route : Swift::Hashable {}
+extension MelvadAdsCore::SupplierConfiguration.MelvadAdsCore::Route : Swift::RawRepresentable {}

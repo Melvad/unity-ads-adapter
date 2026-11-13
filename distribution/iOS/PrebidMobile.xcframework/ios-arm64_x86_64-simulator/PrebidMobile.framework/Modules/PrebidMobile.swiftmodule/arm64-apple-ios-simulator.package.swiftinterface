@@ -1,0 +1,2274 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.4.2 effective-5.10 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -language-mode 5 -O -enable-experimental-feature DebugDescriptionMacro -module-name PrebidMobile -package-name prebidmobile
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.4.2
+import AVFoundation
+import CoreLocation
+import CoreTelephony
+import Foundation
+import Foundation/*.Bundle*/
+import Foundation/*.ProcessInfo*/
+import Foundation/*.URL*/
+import MapKit
+import OMSDK_Prebidorg
+import ObjectiveC
+import QuartzCore
+import SafariServices
+import StoreKit
+import Swift
+import SystemConfiguration
+import UIKit
+import UniformTypeIdentifiers
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import ObjectiveC.runtime
+@objc @objcMembers public class AdUnit : ObjectiveC::NSObject {
+  @objc public var pbAdSlot: Swift::String? {
+    @objc get
+    @objc set
+  }
+  @objc public var adPosition: PrebidMobile::AdPosition {
+    @objc get
+    @objc set
+  }
+  public init(configId: Swift::String, size: CoreFoundation::CGSize?, adFormats: Swift::Set<PrebidMobile::AdFormat>)
+  @objc deinit
+  @objc dynamic public func fetchDemand(completionBidInfo: @escaping (_ bidInfo: PrebidMobile::BidInfo) -> Swift::Void)
+  @objc dynamic public func fetchDemand(adObject: Swift::AnyObject, completion: @escaping (_ result: PrebidMobile::ResultCode) -> Swift::Void)
+  @objc public func fetchDemandBidInfo(adObject: Swift::AnyObject, completion: @escaping (_ bidInfo: PrebidMobile::BidInfo) -> Swift::Void)
+  @objc public func setGPID(_ gpid: Swift::String?)
+  @objc public func getGPID() -> Swift::String?
+  @objc public func setImpORTBConfig(_ ortbConfig: Swift::String?)
+  @objc public func getImpORTBConfig() -> Swift::String?
+  @objc public func setGlobalOrtbConfig(_ ortbConfig: Swift::String?)
+  @objc public func getGlobalOrtbConfig() -> Swift::String?
+  @objc public func setAutoRefreshMillis(time: Swift::Double)
+  @objc public func stopAutoRefresh()
+  @objc public func resumeAutoRefresh()
+}
+@objc public class BannerAdUnit : PrebidMobile::AdUnit {
+  @objc public var bannerParameters: PrebidMobile::BannerParameters {
+    @objc get
+    @objc set
+  }
+  @objc public var videoParameters: PrebidMobile::VideoParameters {
+    @objc get
+    @objc set
+  }
+  @objc public var adFormats: Swift::Set<PrebidMobile::AdFormat> {
+    @objc get
+    @objc set
+  }
+  @objc public init(configId: Swift::String, size: CoreFoundation::CGSize)
+  @objc public func addAdditionalSize(sizes: [CoreFoundation::CGSize])
+  @objc public func activatePrebidImpressionTracker(adView: UIKit::UIView)
+  @objc public func activatePrebidSKAdNetworkStoreKitAdsFlow(adView: UIKit::UIView)
+  @objc deinit
+}
+@objc public class InstreamVideoAdUnit : PrebidMobile::AdUnit {
+  @objc public var videoParameters: PrebidMobile::VideoParameters {
+    @objc get
+    @objc set
+  }
+  @objc public init(configId: Swift::String, size: CoreFoundation::CGSize)
+  @objc deinit
+}
+@objc public class InterstitialAdUnit : PrebidMobile::AdUnit {
+  @objc public var bannerParameters: PrebidMobile::BannerParameters {
+    @objc get
+    @objc set
+  }
+  @objc public var videoParameters: PrebidMobile::VideoParameters {
+    @objc get
+    @objc set
+  }
+  @objc public var adFormats: Swift::Set<PrebidMobile::AdFormat> {
+    @objc get
+    @objc set
+  }
+  @objc public var supportSKOverlay: Swift::Bool {
+    @objc get
+    @objc set
+  }
+  @objc public init(configId: Swift::String)
+  @objc deinit
+  @objc convenience public init(configId: Swift::String, minWidthPerc: Swift::Int, minHeightPerc: Swift::Int)
+  @objc public func activatePrebidImpressionTracker()
+  @objc public func activatePrebidSKAdNetworkStoreKitAdsFlow()
+  @objc public func activateSKOverlayIfAvailable()
+  @objc public func dismissSKOverlayIfAvailable()
+}
+@objcMembers @objc(PBMBidInfo) public class BidInfo : ObjectiveC::NSObject {
+  @objc public var melvadLabWinningBid: PrebidMobile::Bid? {
+    get
+  }
+  @objc public static let EVENT_WIN: Swift::String
+  @objc public static let EVENT_IMP: Swift::String
+  @objc public var resultCode: PrebidMobile::ResultCode {
+    get
+  }
+  @objc public var targetingKeywords: [Swift::String : Swift::String]? {
+    get
+  }
+  public var exp: Swift::Double? {
+    get
+  }
+  @objc public var nativeAdCacheId: Swift::String? {
+    get
+  }
+  @objc public var events: [Swift::String : Swift::String] {
+    get
+  }
+  @objc public var topBidFiltered: Swift::Bool {
+    get
+  }
+  @objc public var price: Foundation::NSNumber? {
+    get
+  }
+  @objc public var currency: Swift::String? {
+    get
+  }
+  @objc public var creativeId: Swift::String? {
+    get
+  }
+  @objc public var requestId: Swift::String? {
+    get
+  }
+  @objc public var adId: Swift::String? {
+    get
+  }
+  public init(resultCode: PrebidMobile::ResultCode, targetingKeywords: [Swift::String : Swift::String]? = nil, exp: Swift::Double? = nil, nativeAdCacheId: Swift::String? = nil, events: [Swift::String : Swift::String] = [:], topBidFiltered: Swift::Bool = false, price: Foundation::NSNumber? = nil, currency: Swift::String? = nil, creativeId: Swift::String? = nil, adId: Swift::String? = nil, requestId: Swift::String? = nil)
+  @objc public func getExp() -> Foundation::NSNumber?
+  @objc deinit
+}
+@objc @objcMembers public class PrebidAdUnit : ObjectiveC::NSObject {
+  @objc public var pbAdSlot: Swift::String? {
+    @objc get
+    @objc set
+  }
+  @objc public init(configId: Swift::String)
+  @objc public func fetchDemand(adObject: Swift::AnyObject, request: PrebidMobile::PrebidRequest, completion: @escaping (PrebidMobile::BidInfo) -> Swift::Void)
+  @objc public func fetchDemand(request: PrebidMobile::PrebidRequest, completion: @escaping (PrebidMobile::BidInfo) -> Swift::Void)
+  @objc public func activatePrebidAdViewImpressionTracker(adView: UIKit::UIView)
+  @objc public func activatePrebidInterstitialImpressionTracker()
+  @objc public func activatePrebidBannerSKAdNetworkStoreKitAdsFlow(adView: UIKit::UIView)
+  @objc public func activatePrebidInterstitialSKAdNetworkStoreKitAdsFlow()
+  @objc public func setAutoRefreshMillis(time: Swift::Double)
+  @objc public func stopAutoRefresh()
+  @objc public func resumeAutoRefresh()
+  @objc public func activateSKOverlayIfAvailable()
+  @objc public func dismissSKOverlayIfAvailable()
+  @objc deinit
+}
+@objc @objcMembers public class PrebidRequest : ObjectiveC::NSObject {
+  @objc public var adPosition: PrebidMobile::AdPosition
+  @objc public var supportSKOverlayForInterstitial: Swift::Bool
+  @objc public init(bannerParameters: PrebidMobile::BannerParameters? = nil, videoParameters: PrebidMobile::VideoParameters? = nil, nativeParameters: PrebidMobile::NativeParameters? = nil, isInterstitial: Swift::Bool = false, isRewarded: Swift::Bool = false)
+  @objc public func setGPID(_ gpid: Swift::String?)
+  @objc public func setImpORTBConfig(_ ortbConfig: Swift::String?)
+  @objc public func getImpORTBConfig() -> Swift::String?
+  @objc public func setGlobalORTBConfig(_ ortbConfig: Swift::String?)
+  @objc public func getGlobalORTBConfig() -> Swift::String?
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class ContextSubType : PrebidMobile::SingleContainerInt {
+  @objc public static let General: PrebidMobile::ContextSubType
+  @objc public static let Article: PrebidMobile::ContextSubType
+  @objc public static let Video: PrebidMobile::ContextSubType
+  @objc public static let Audio: PrebidMobile::ContextSubType
+  @objc public static let Image: PrebidMobile::ContextSubType
+  @objc public static let UserGenerated: PrebidMobile::ContextSubType
+  @objc public static let Social: PrebidMobile::ContextSubType
+  @objc public static let email: PrebidMobile::ContextSubType
+  @objc public static let chatIM: PrebidMobile::ContextSubType
+  @objc public static let SellingProduct: PrebidMobile::ContextSubType
+  @objc public static let AppStore: PrebidMobile::ContextSubType
+  @objc public static let ReviewSite: PrebidMobile::ContextSubType
+  @objc public static let Custom: PrebidMobile::ContextSubType
+  @objc required public init(integerLiteral value: Swift::Int)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class ContextType : PrebidMobile::SingleContainerInt {
+  @objc public static let Content: PrebidMobile::ContextType
+  @objc public static let Social: PrebidMobile::ContextType
+  @objc public static let Product: PrebidMobile::ContextType
+  @objc public static let Custom: PrebidMobile::ContextType
+  @objc required public init(integerLiteral value: Swift::Int)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class NativeAd : ObjectiveC::NSObject {
+  @objc public var nativeAdMarkup: PrebidMobile::NativeAdMarkup?
+  @objc weak public var delegate: (any PrebidMobile::NativeAdEventDelegate)?
+  @objc public var titles: [PrebidMobile::NativeTitle] {
+    @objc get
+  }
+  @objc public var dataObjects: [PrebidMobile::NativeData] {
+    @objc get
+  }
+  @objc public var images: [PrebidMobile::NativeImage] {
+    @objc get
+  }
+  @objc public var eventTrackers: [PrebidMobile::NativeEventTrackerResponse]? {
+    @objc get
+  }
+  @objc public var privacyUrl: Swift::String? {
+    @objc get
+    @objc set
+  }
+  @objc public func dataObjects(of dataType: PrebidMobile::NativeDataAssetType) -> [PrebidMobile::NativeData]
+  @objc public func images(of imageType: PrebidMobile::NativeImageAssetType) -> [PrebidMobile::NativeImage]
+  @objc public var title: Swift::String? {
+    @objc get
+  }
+  @objc public var imageUrl: Swift::String? {
+    @objc get
+  }
+  @objc public var iconUrl: Swift::String? {
+    @objc get
+  }
+  @objc public var sponsoredBy: Swift::String? {
+    @objc get
+  }
+  @objc public var text: Swift::String? {
+    @objc get
+  }
+  @objc public var callToAction: Swift::String? {
+    @objc get
+  }
+  @objc public var clickURL: Swift::String? {
+    @objc get
+  }
+  @objc public static func create(cacheId: Swift::String) -> PrebidMobile::NativeAd?
+  @objc deinit
+  @objc @discardableResult
+  public func registerView(view: UIKit::UIView?, clickableViews: [UIKit::UIView]?) -> Swift::Bool
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(PBMNativeAdConfiguration) @objcMembers public class NativeAdConfiguration : ObjectiveC::NSObject {
+  @objc public var version: Swift::String
+  @objc deinit
+}
+@objc public protocol NativeAdDelegate {
+  @objc func nativeAdLoaded(ad: PrebidMobile::NativeAd)
+  @objc func nativeAdNotFound()
+  @objc func nativeAdNotValid()
+}
+@objc public protocol NativeAdEventDelegate {
+  @objc optional func adDidExpire(ad: PrebidMobile::NativeAd)
+  @objc optional func adWasClicked(ad: PrebidMobile::NativeAd)
+  @objc optional func adDidLogImpression(ad: PrebidMobile::NativeAd)
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class NativeAdMarkup : ObjectiveC::NSObject {
+  @objc public var version: Swift::String?
+  @objc public var assets: [PrebidMobile::NativeAdMarkupAsset]?
+  @objc public var assetsurl: Swift::String?
+  @objc public var dcourl: Swift::String?
+  @objc public var link: PrebidMobile::NativeLink?
+  @objc public var imptrackers: [Swift::String]?
+  @objc public var jstracker: Swift::String?
+  @objc public var eventtrackers: [PrebidMobile::NativeEventTrackerResponse]?
+  @objc public var privacy: Swift::String?
+  @objc public var ext: [Swift::String : Any]?
+  @objc convenience public init?(jsonString: Swift::String?)
+  @objc required public init(jsonDictionary: [Swift::String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class NativeAdMarkupAsset : ObjectiveC::NSObject {
+  public var id: Swift::Int?
+  public var required: Swift::Int?
+  @objc public var title: PrebidMobile::NativeTitle?
+  @objc public var img: PrebidMobile::NativeImage?
+  @objc public var data: PrebidMobile::NativeData?
+  @objc public var link: PrebidMobile::NativeLink?
+  @objc public var ext: [Swift::String : Any]?
+  @objc deinit
+}
+@objc public class NativeAsset : ObjectiveC::NSObject {
+  public var required: Swift::Bool
+  public init(isRequired: Swift::Bool)
+  @objc deinit
+}
+@objc @objcMembers public class NativeAssetTitle : PrebidMobile::NativeAsset {
+  @objc public var ext: Swift::AnyObject?
+  @objc required public init(length: ObjectiveC::NSInteger, required: Swift::Bool)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class NativeAssetImage : PrebidMobile::NativeAsset {
+  @objc public var type: PrebidMobile::ImageAsset?
+  public var width: Swift::Int?
+  public var widthMin: Swift::Int?
+  public var height: Swift::Int?
+  public var heightMin: Swift::Int?
+  @objc public var mimes: Swift::Array<Swift::String>?
+  @objc public var ext: Swift::AnyObject?
+  @objc convenience public init(minimumWidth: Swift::Int, minimumHeight: Swift::Int, required: Swift::Bool)
+  @objc override public init(isRequired: Swift::Bool)
+  @objc deinit
+}
+@objc @objcMembers public class NativeAssetData : PrebidMobile::NativeAsset {
+  public var length: Swift::Int?
+  @objc public var ext: Swift::AnyObject?
+  @objc required public init(type: PrebidMobile::DataAsset, required: Swift::Bool)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class ImageAsset : PrebidMobile::SingleContainerInt {
+  @objc public static let Icon: PrebidMobile::ImageAsset
+  @objc public static let Main: PrebidMobile::ImageAsset
+  @objc public static let Custom: PrebidMobile::ImageAsset
+  @objc required public init(integerLiteral value: Swift::Int)
+  @objc deinit
+}
+@objc public enum DataAsset : Swift::Int {
+  case sponsored = 1
+  case description = 2
+  case rating = 3
+  case likes = 4
+  case downloads = 5
+  case price = 6
+  case saleprice = 7
+  case phone = 8
+  case address = 9
+  case description2 = 10
+  case displayurl = 11
+  case ctatext = 12
+  case Custom
+  public var exchangeID: Swift::Int {
+    get
+    set
+  }
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class NativeData : ObjectiveC::NSObject {
+  public var type: Swift::Int?
+  public var length: Swift::Int?
+  @objc public var value: Swift::String?
+  @objc public var ext: [Swift::String : Any]?
+  @objc deinit
+}
+@objc public enum NativeDataAssetType : Swift::Int {
+  case undefined = 0
+  case sponsored = 1
+  case desc = 2
+  case rating = 3
+  case likes = 4
+  case downloads = 5
+  case price = 6
+  case salePrice = 7
+  case phone = 8
+  case address = 9
+  case desc2 = 10
+  case displayURL = 11
+  case ctaText = 12
+  case custom = 500
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
+    get
+  }
+}
+@objc public class NativeEventTracker : ObjectiveC::NSObject {
+  @objc public init(event: PrebidMobile::EventType, methods: Swift::Array<PrebidMobile::EventTracking>)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class EventType : PrebidMobile::SingleContainerInt {
+  @objc public static let Impression: PrebidMobile::EventType
+  @objc public static let ViewableImpression50: PrebidMobile::EventType
+  @objc public static let ViewableImpression100: PrebidMobile::EventType
+  @objc public static let ViewableVideoImpression50: PrebidMobile::EventType
+  @objc public static let Custom: PrebidMobile::EventType
+  @objc required public init(integerLiteral value: Swift::Int)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class EventTracking : PrebidMobile::SingleContainerInt {
+  @objc public static let Image: PrebidMobile::EventTracking
+  @objc public static let js: PrebidMobile::EventTracking
+  @objc public static let Custom: PrebidMobile::EventTracking
+  @objc required public init(integerLiteral value: Swift::Int)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class NativeEventTrackerResponse : ObjectiveC::NSObject {
+  public var event: Swift::Int?
+  public var method: Swift::Int?
+  @objc public var url: Swift::String?
+  @objc public var customdata: [Swift::String : Any]?
+  @objc public var ext: [Swift::String : Any]?
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class NativeImage : ObjectiveC::NSObject {
+  public var type: Swift::Int?
+  @objc public var url: Swift::String?
+  public var width: Swift::Int?
+  public var height: Swift::Int?
+  @objc public var ext: [Swift::String : Any]?
+  @objc deinit
+}
+@objc public enum NativeImageAssetType : Swift::Int {
+  case icon = 1
+  case main = 3
+  case custom = 500
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class NativeLink : ObjectiveC::NSObject {
+  @objc public var url: Swift::String?
+  @objc public var clicktrackers: [Swift::String]?
+  @objc public var fallback: Swift::String?
+  @objc public var ext: [Swift::String : Any]?
+  @objc required public init(jsonDictionary: [Swift::String : Any])
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(PBMNativeMarkupRequestObject) @objcMembers public class NativeMarkupRequestObject : ObjectiveC::NSObject, Foundation::NSCopying {
+  @objc public var context: PrebidMobile::ContextType?
+  @objc public var assets: [PrebidMobile::NativeAsset]?
+  @objc public var eventtrackers: [PrebidMobile::NativeEventTracker]?
+  @objc public var privacy: Swift::Int
+  @objc public var ext: [Swift::String : Any]?
+  @objc public func copy(with zone: ObjectiveC::NSZone? = nil) -> Any
+  @objc public var jsonDictionary: [Swift::String : Any] {
+    @objc get
+  }
+  @objc deinit
+}
+@objc public class NativeRequest : PrebidMobile::AdUnit {
+  @objc public var version: Swift::String {
+    @objc get
+    @objc set
+  }
+  @objc public var context: PrebidMobile::ContextType? {
+    @objc get
+    @objc set
+  }
+  @objc public var contextSubType: PrebidMobile::ContextSubType? {
+    @objc get
+    @objc set
+  }
+  @objc public var placementType: PrebidMobile::PlacementType? {
+    @objc get
+    @objc set
+  }
+  @objc public var placementCount: Swift::Int {
+    @objc get
+    @objc set
+  }
+  @objc public var sequence: Swift::Int {
+    @objc get
+    @objc set
+  }
+  @objc public var assets: [PrebidMobile::NativeAsset]? {
+    @objc get
+    @objc set
+  }
+  @objc public var asseturlsupport: Swift::Int {
+    @objc get
+    @objc set
+  }
+  @objc public var durlsupport: Swift::Int {
+    @objc get
+    @objc set
+  }
+  @objc public var eventtrackers: [PrebidMobile::NativeEventTracker]? {
+    @objc get
+    @objc set
+  }
+  @objc public var privacy: Swift::Int {
+    @objc get
+    @objc set
+  }
+  @objc public var ext: [Swift::String : Any]? {
+    @objc get
+    @objc set
+  }
+  @objc public var configId: Swift::String {
+    @objc get
+    @objc set
+  }
+  @objc public init(configId: Swift::String)
+  @objc convenience public init(configId: Swift::String, assets: [PrebidMobile::NativeAsset]? = nil, eventTrackers: [PrebidMobile::NativeEventTracker]? = nil)
+  @objc public func addNativeAssets(_ assets: [PrebidMobile::NativeAsset])
+  @objc public func addNativeEventTracker(_ eventTrackers: [PrebidMobile::NativeEventTracker])
+  @objc public func getNativeRequestObject() -> [Swift::AnyHashable : Any]?
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class NativeTitle : ObjectiveC::NSObject {
+  @objc public var text: Swift::String?
+  public var length: Swift::Int?
+  @objc public var ext: [Swift::String : Any]?
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class PlacementType : PrebidMobile::SingleContainerInt {
+  @objc public static let FeedContent: PrebidMobile::PlacementType
+  @objc public static let AtomicContent: PrebidMobile::PlacementType
+  @objc public static let OutsideContent: PrebidMobile::PlacementType
+  @objc public static let RecommendationWidget: PrebidMobile::PlacementType
+  @objc public static let Custom: PrebidMobile::PlacementType
+  @objc required public init(integerLiteral value: Swift::Int)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class BannerParameters : ObjectiveC::NSObject {
+  @objc public var api: [PrebidMobile::Signals.PrebidMobile::Api]?
+  public var interstitialMinWidthPerc: Swift::Int?
+  public var interstitialMinHeightPerc: Swift::Int?
+  @objc public var adSizes: [CoreFoundation::CGSize]?
+  @objc public var rawAPI: [Swift::Int]? {
+    @objc get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class NativeParameters : ObjectiveC::NSObject {
+  @objc public var assets: [PrebidMobile::NativeAsset]?
+  @objc public var eventtrackers: [PrebidMobile::NativeEventTracker]?
+  @objc public var version: Swift::String
+  @objc public var context: PrebidMobile::ContextType?
+  @objc public var contextSubType: PrebidMobile::ContextSubType?
+  @objc public var placementType: PrebidMobile::PlacementType?
+  @objc public var placementCount: Swift::Int
+  @objc public var sequence: Swift::Int
+  @objc public var asseturlsupport: Swift::Int
+  @objc public var durlsupport: Swift::Int
+  @objc public var privacy: Swift::Int
+  @objc public var ext: [Swift::String : Any]?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class Signals : ObjectiveC::NSObject {
+  @_inheritsConvenienceInitializers @objc(PBApi) public class Api : PrebidMobile::SingleContainerInt {
+    @objc public static let VPAID_1: PrebidMobile::Signals.PrebidMobile::Api
+    @objc public static let VPAID_2: PrebidMobile::Signals.PrebidMobile::Api
+    @objc public static let MRAID_1: PrebidMobile::Signals.PrebidMobile::Api
+    @objc public static let ORMMA: PrebidMobile::Signals.PrebidMobile::Api
+    @objc public static let MRAID_2: PrebidMobile::Signals.PrebidMobile::Api
+    @objc public static let MRAID_3: PrebidMobile::Signals.PrebidMobile::Api
+    @objc public static let OMID_1: PrebidMobile::Signals.PrebidMobile::Api
+    @objc required public init(integerLiteral value: Swift::Int)
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers @objc(PBPlaybackMethod) public class PlaybackMethod : PrebidMobile::SingleContainerInt {
+    @objc public static let AutoPlaySoundOn: PrebidMobile::Signals.PrebidMobile::PlaybackMethod
+    @objc public static let AutoPlaySoundOff: PrebidMobile::Signals.PrebidMobile::PlaybackMethod
+    @objc public static let ClickToPlay: PrebidMobile::Signals.PrebidMobile::PlaybackMethod
+    @objc public static let MouseOver: PrebidMobile::Signals.PrebidMobile::PlaybackMethod
+    @objc public static let EnterSoundOn: PrebidMobile::Signals.PrebidMobile::PlaybackMethod
+    @objc public static let EnterSoundOff: PrebidMobile::Signals.PrebidMobile::PlaybackMethod
+    @objc required public init(integerLiteral value: Swift::Int)
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers @objc(PBProtocols) public class Protocols : PrebidMobile::SingleContainerInt {
+    @objc public static let VAST_1_0: PrebidMobile::Signals.PrebidMobile::Protocols
+    @objc public static let VAST_2_0: PrebidMobile::Signals.PrebidMobile::Protocols
+    @objc public static let VAST_3_0: PrebidMobile::Signals.PrebidMobile::Protocols
+    @objc public static let VAST_1_0_Wrapper: PrebidMobile::Signals.PrebidMobile::Protocols
+    @objc public static let VAST_2_0_Wrapper: PrebidMobile::Signals.PrebidMobile::Protocols
+    @objc public static let VAST_3_0_Wrapper: PrebidMobile::Signals.PrebidMobile::Protocols
+    @objc public static let VAST_4_0: PrebidMobile::Signals.PrebidMobile::Protocols
+    @objc public static let VAST_4_0_Wrapper: PrebidMobile::Signals.PrebidMobile::Protocols
+    @objc public static let DAAST_1_0: PrebidMobile::Signals.PrebidMobile::Protocols
+    @objc public static let DAAST_1_0_WRAPPER: PrebidMobile::Signals.PrebidMobile::Protocols
+    @objc required public init(integerLiteral value: Swift::Int)
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers @objc(PBStartDelay) public class StartDelay : PrebidMobile::SingleContainerInt {
+    @objc public static let PreRoll: PrebidMobile::Signals.PrebidMobile::StartDelay
+    @objc public static let GenericMidRoll: PrebidMobile::Signals.PrebidMobile::StartDelay
+    @objc public static let GenericPostRoll: PrebidMobile::Signals.PrebidMobile::StartDelay
+    @objc required public init(integerLiteral value: Swift::Int)
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers @objc(PBPlacement) public class Placement : PrebidMobile::SingleContainerInt {
+    @objc public static let InStream: PrebidMobile::Signals.PrebidMobile::Placement
+    @objc public static let InBanner: PrebidMobile::Signals.PrebidMobile::Placement
+    @objc public static let InArticle: PrebidMobile::Signals.PrebidMobile::Placement
+    @objc public static let InFeed: PrebidMobile::Signals.PrebidMobile::Placement
+    @objc public static let Interstitial: PrebidMobile::Signals.PrebidMobile::Placement
+    @objc public static let Slider: PrebidMobile::Signals.PrebidMobile::Placement
+    @objc public static let Floating: PrebidMobile::Signals.PrebidMobile::Placement
+    @objc public static func getPlacementByRawValue(_ value: Swift::Int) -> PrebidMobile::Signals.PrebidMobile::Placement?
+    @objc required public init(integerLiteral value: Swift::Int)
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers @objc(PBPlcmnt) public class Plcmnt : PrebidMobile::SingleContainerInt {
+    @objc public static let Instream: PrebidMobile::Signals.PrebidMobile::Plcmnt
+    @objc public static let AccompanyingContent: PrebidMobile::Signals.PrebidMobile::Plcmnt
+    @objc public static let Interstitial: PrebidMobile::Signals.PrebidMobile::Plcmnt
+    @objc public static let NoContent: PrebidMobile::Signals.PrebidMobile::Plcmnt
+    @objc public static let Standalone: PrebidMobile::Signals.PrebidMobile::Plcmnt
+    @objc public static func getPlacementByRawValue(_ value: Swift::Int) -> PrebidMobile::Signals.PrebidMobile::Plcmnt?
+    @objc required public init(integerLiteral value: Swift::Int)
+    @objc deinit
+  }
+  @_inheritsConvenienceInitializers @objc(PBCreativeAttribute) public class CreativeAttribute : PrebidMobile::SingleContainerInt {
+    @objc public static let AudioAd_Autoplay: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let AudioAd_UserInitiated: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let Expandable_Automatic: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let Expandable_Click: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let Expandable_Rollover: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let InBanner_Autoplay: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let InBanner_UserInitiated: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let Pop: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let Provocative: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let SuggestiveImagery: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let Shaky: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let Flashing: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let Flickering: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let ExtremeAnimation: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let Smileys: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let Surveys: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let TextOnly: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let UserInteractive: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let WindowsDialog: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let AlertStyle: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let AudioButton: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let SkipButton: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc public static let AdobeFlash: PrebidMobile::Signals.PrebidMobile::CreativeAttribute
+    @objc required public init(integerLiteral value: Swift::Int)
+    @objc deinit
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class SingleContainerInt : ObjectiveC::NSObject, Swift::ExpressibleByIntegerLiteral {
+  public typealias IntegerLiteralType = Swift::Int
+  @objc final public let value: Swift::Int
+  @objc required public init(integerLiteral value: Swift::Int)
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift::Bool
+  @objc override dynamic public var hash: Swift::Int {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @objcMembers public class VideoParameters : ObjectiveC::NSObject {
+  @objc public var api: [PrebidMobile::Signals.PrebidMobile::Api]?
+  @objc public var maxBitrate: PrebidMobile::SingleContainerInt?
+  @objc public var minBitrate: PrebidMobile::SingleContainerInt?
+  @objc public var maxDuration: PrebidMobile::SingleContainerInt?
+  @objc public var minDuration: PrebidMobile::SingleContainerInt?
+  @objc public var mimes: [Swift::String]
+  @objc public var playbackMethod: [PrebidMobile::Signals.PrebidMobile::PlaybackMethod]?
+  @objc public var protocols: [PrebidMobile::Signals.PrebidMobile::Protocols]?
+  @objc public var startDelay: PrebidMobile::Signals.PrebidMobile::StartDelay?
+  @objc public var placement: PrebidMobile::Signals.PrebidMobile::Placement?
+  @objc public var plcmnt: PrebidMobile::Signals.PrebidMobile::Plcmnt?
+  @objc public var linearity: PrebidMobile::SingleContainerInt?
+  public var adSize: CoreFoundation::CGSize?
+  @objc public var battr: [PrebidMobile::Signals.PrebidMobile::CreativeAttribute]?
+  public var isSkippable: Swift::Bool?
+  @objc public var rawAPI: [Swift::Int]? {
+    @objc get
+  }
+  @objc public var rawPlaybackMethod: [Swift::Int]? {
+    @objc get
+  }
+  @objc public var rawProtocols: [Swift::Int]? {
+    @objc get
+  }
+  @objc public var rawBattrs: [Swift::Int]? {
+    @objc get
+  }
+  @objc public var rawSkippable: Foundation::NSNumber? {
+    @objc get
+  }
+  @available(swift, obsoleted: 1.0)
+  @objc(setSkippable:) public func setSkippable(_ isSkippable: Swift::Bool)
+  @objc public init(mimes: [Swift::String])
+  @objc public func setSize(_ size: Foundation::NSValue)
+  @objc deinit
+}
+@objc public class RewardedVideoAdUnit : PrebidMobile::AdUnit {
+  @objc public var videoParameters: PrebidMobile::VideoParameters {
+    @objc get
+    @objc set
+  }
+  @objc public var supportSKOverlay: Swift::Bool {
+    @objc get
+    @objc set
+  }
+  @objc public init(configId: Swift::String)
+  @objc deinit
+  @objc convenience public init(configId: Swift::String, minWidthPerc: Swift::Int, minHeightPerc: Swift::Int)
+  @objc public func activateSKOverlayIfAvailable()
+  @objc public func dismissSKOverlayIfAvailable()
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Utils : ObjectiveC::NSObject {
+  @objc public static let shared: PrebidMobile::Utils
+  @objc weak public var delegate: (any PrebidMobile::NativeAdDelegate)?
+  @objc public func findNative(adObject: Swift::AnyObject)
+  @objc public func round(coordinates: _LocationEssentials::CLLocationCoordinate2D, precision: Foundation::NSNumber?) -> _LocationEssentials::CLLocationCoordinate2D
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers final public class AdViewUtils : ObjectiveC::NSObject {
+  @objc public static func findPrebidCreativeSize(_ adView: UIKit::UIView, success: @escaping (CoreFoundation::CGSize) -> Swift::Void, failure: @escaping (any Swift::Error) -> Swift::Void)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class IMAAdSlotSize : PrebidMobile::SingleContainerInt {
+  @objc public static let Size400x300: PrebidMobile::IMAAdSlotSize
+  @objc public static let Size640x480: PrebidMobile::IMAAdSlotSize
+  @objc public static let Size320x480: PrebidMobile::IMAAdSlotSize
+  @objc required public init(integerLiteral value: Swift::Int)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers final public class IMAUtils : ObjectiveC::NSObject {
+  @objc public static let shared: PrebidMobile::IMAUtils
+  @objc final public func generateInstreamUriForGAM(adUnitID: Swift::String, adSlotSizes: [PrebidMobile::IMAAdSlotSize], customKeywords: [Swift::String : Swift::String]?) throws -> Swift::String
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(PBMCacheManager) @objcMembers public class CacheManager : ObjectiveC::NSObject {
+  @objc public static let cacheManagerExpireInterval: Swift::Double
+  @objc public static let shared: PrebidMobile::CacheManager
+  @objc public func save(content: Swift::String, expireInterval: Foundation::TimeInterval = CacheManager.cacheManagerExpireInterval) -> Swift::String?
+  @objc public func isValid(cacheId: Swift::String) -> Swift::Bool
+  @objc public func get(cacheId: Swift::String) -> Swift::String?
+  @objc deinit
+}
+@objc public enum EidsPlacement : Swift::Int {
+  case openRTB26
+  case openRTB25
+  case compatible
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
+    get
+  }
+}
+public typealias PrebidInitializationCallback = (PrebidMobile::PrebidInitializationStatus, (any Swift::Error)?) -> Swift::Void
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class Prebid : ObjectiveC::NSObject {
+  @objc public var timeoutUpdated: Swift::Bool
+  @objc public var prebidServerAccountId: Swift::String
+  @objc public var auctionSettingsId: Swift::String?
+  @objc public var pbsDebug: Swift::Bool
+  @objc public var customHeaders: [Swift::String : Swift::String] {
+    @objc get
+    @objc set
+  }
+  @objc public var storedBidResponses: [Swift::String : Swift::String]
+  @objc weak public var eventDelegate: (any PrebidMobile::PrebidEventDelegate)?
+  @objc public var shouldAssignNativeAssetID: Swift::Bool
+  @objc public var shareGeoLocation: Swift::Bool
+  @objc public var logLevel: PrebidMobile::LogLevel {
+    @objc get
+    @objc set
+  }
+  @objc public static let shared: PrebidMobile::Prebid
+  @objc public var version: Swift::String {
+    @objc get
+  }
+  @objc public var omsdkVersion: Swift::String {
+    @objc get
+  }
+  @objc public var customStatusEndpoint: Swift::String? {
+    @objc get
+    @objc set
+  }
+  @objc public var timeoutMillis: Swift::Int {
+    @objc get
+    @objc set
+  }
+  @objc public var timeoutMillisDynamic: Foundation::NSNumber?
+  @objc public var storedAuctionResponse: Swift::String?
+  @objc public var useCacheForReportingWithRenderingAPI: Swift::Bool
+  @objc public var filterOutUncachedBids: Swift::Bool
+  @objc public var creativeFactoryTimeout: Swift::Double
+  @objc public var creativeFactoryTimeoutPreRenderContent: Swift::Double
+  @objc public var debugLogFileEnabled: Swift::Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var locationUpdatesEnabled: Swift::Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var includeWinners: Swift::Bool
+  @objc public var includeBidderKeys: Swift::Bool
+  @objc public var eidsPlacement: PrebidMobile::EidsPlacement
+  @objc public var shouldDisableStatusCheck: Swift::Bool
+  @objc public func addStoredBidResponse(bidder: Swift::String, responseId: Swift::String)
+  @objc public func clearStoredBidResponses()
+  @objc public func getStoredBidResponses() -> [[Swift::String : Swift::String]]?
+  @objc public func addCustomHeader(name: Swift::String, value: Swift::String)
+  @objc public func clearCustomHeaders()
+  @objc public static func initializeSDK(serverURL: Swift::String, _ gadMobileAdsObject: Swift::AnyObject? = nil, _ completion: PrebidMobile::PrebidInitializationCallback? = nil) throws
+  @objc public static func initializeSDK(serverURL: Swift::String, nonTrackingURLString: Swift::String, _ gadMobileAdsObject: Swift::AnyObject? = nil, _ completion: PrebidMobile::PrebidInitializationCallback? = nil) throws
+  @objc public static func initializeSDK(serverURL: Swift::String, gadMobileAdsVersion: Swift::String? = nil, _ completion: PrebidMobile::PrebidInitializationCallback? = nil) throws
+  @objc public static func initializeSDK(serverURL: Swift::String, nonTrackingURLString: Swift::String, gadMobileAdsVersion: Swift::String? = nil, _ completion: PrebidMobile::PrebidInitializationCallback? = nil) throws
+  @objc public static func initializeSDK(serverURL: Swift::String, _ completion: PrebidMobile::PrebidInitializationCallback? = nil) throws
+  @objc public static func initializeSDK(serverURL: Swift::String, nonTrackingURLString: Swift::String, _ completion: PrebidMobile::PrebidInitializationCallback? = nil) throws
+  @objc public static func registerPluginRenderer(_ pluginRenderer: any PrebidMobile::PrebidMobilePluginRenderer)
+  @objc public static func unregisterPluginRenderer(_ pluginRenderer: any PrebidMobile::PrebidMobilePluginRenderer)
+  @objc public static func containsPluginRenderer(_ pluginRenderer: any PrebidMobile::PrebidMobilePluginRenderer) -> Swift::Bool
+  @objc deinit
+}
+@objc public protocol PrebidEventDelegate {
+  @objc func prebidBidRequestDidFinish(requestData: Foundation::Data?, responseData: Foundation::Data?)
+}
+@objc public enum PrebidInitializationStatus : Swift::Int {
+  case succeeded
+  case failed
+  case serverStatusWarning
+  case serverStatusSkipped
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class Targeting : ObjectiveC::NSObject {
+  @objc public static var shared: PrebidMobile::Targeting
+  @objc public var omidPartnerName: Swift::String?
+  @objc public var omidPartnerVersion: Swift::String?
+  @objc public var userExt: [Swift::String : Swift::AnyHashable]?
+  @objc public var coppa: Foundation::NSNumber? {
+    @objc get
+    @objc set
+  }
+  public var subjectToCOPPA: Swift::Bool? {
+    get
+    set
+  }
+  public var subjectToGDPR: Swift::Bool? {
+    get
+    set
+  }
+  @objc public func setSubjectToGDPR(_ newValue: Foundation::NSNumber?)
+  @objc public func getSubjectToGDPR() -> Foundation::NSNumber?
+  @objc public var gdprConsentString: Swift::String? {
+    @objc get
+    @objc set
+  }
+  @objc public var purposeConsents: Swift::String? {
+    @objc get
+    @objc set
+  }
+  public func getDeviceAccessConsent() -> Swift::Bool?
+  @objc public func getDeviceAccessConsentObjc() -> Foundation::NSNumber?
+  public func getPurposeConsent(index: Swift::Int) -> Swift::Bool?
+  @objc public func isAllowedAccessDeviceData() -> Swift::Bool
+  @objc public var forceSdkToChooseWinner: Swift::Bool
+  @objc public func setExternalUserIds(_ externalUserIds: [PrebidMobile::ExternalUserId])
+  @objc public func getExternalUserIds() -> [[Swift::String : Any]]?
+  @objc public var sendSharedId: Swift::Bool
+  @objc public var sharedId: PrebidMobile::ExternalUserId {
+    @objc get
+  }
+  @objc public func resetSharedId()
+  @objc @available(*, deprecated, message: "This property is deprecated and will be removed in 4.0. It is not sent in the bid request; use `setGlobalORTBConfig(_:)` to set `app.content.url` instead.")
+  public var contentUrl: Swift::String?
+  @objc public var publisherName: Swift::String?
+  @objc public var sourceapp: Swift::String?
+  @objc public var storeURL: Swift::String? {
+    @objc get
+    @objc set
+  }
+  @objc public var domain: Swift::String?
+  @objc public var itunesID: Swift::String?
+  @objc public var location: _LocationEssentials::CLLocation?
+  @objc public var coordinate: Foundation::NSValue?
+  @objc public var locationPrecision: Foundation::NSNumber?
+  @objc public func setGlobalORTBConfig(_ ortbConfig: Swift::String?)
+  @objc public func getGlobalORTBConfig() -> Swift::String?
+  @objc public func addParam(_ value: Swift::String, withName: Swift::String?)
+  @objc public func setLatitude(_ latitude: Swift::Double, longitude: Swift::Double)
+  @objc public func addBidderToAccessControlList(_ bidderName: Swift::String)
+  @objc public func removeBidderFromAccessControlList(_ bidderName: Swift::String)
+  @objc public func clearAccessControlList()
+  @objc public func getAccessControlList() -> [Swift::String]
+  @objc public var accessControlList: [Swift::String] {
+    @objc get
+  }
+  @objc public func addUserKeyword(_ newElement: Swift::String)
+  @objc public func addUserKeywords(_ newElements: Swift::Set<Swift::String>)
+  @objc public func removeUserKeyword(_ element: Swift::String)
+  @objc public func clearUserKeywords()
+  @objc public func getUserKeywords() -> [Swift::String]
+  @objc public func addAppExtData(key: Swift::String, value: Swift::String)
+  @objc public func updateAppExtData(key: Swift::String, value: Swift::Set<Swift::String>)
+  @objc public func removeAppExtData(for key: Swift::String)
+  @objc public func clearAppExtData()
+  @objc public func getAppExtData() -> [Swift::String : [Swift::String]]
+  @objc public func addAppKeyword(_ newElement: Swift::String)
+  @objc public func addAppKeywords(_ newElements: Swift::Set<Swift::String>)
+  @objc public func removeAppKeyword(_ element: Swift::String)
+  @objc public func clearAppKeywords()
+  @objc public func getAppKeywords() -> [Swift::String]
+  @objc public var parameterDictionary: [Swift::String : Swift::String]
+  @objc override dynamic public init()
+  @objc deinit
+}
+public let PrebidLocalCacheIdKey: Swift::String
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class PrebidConstants : ObjectiveC::NSObject {
+  @objc deinit
+}
+@objc @objcMembers public class ExternalUserId : ObjectiveC::NSObject {
+  @objc public var source: Swift::String
+  @objc public var uids: [PrebidMobile::UserUniqueID]
+  @objc public var ext: [Swift::String : Any]?
+  @objc public var inserter: Swift::String?
+  @objc public var matcher: Swift::String?
+  @objc public var mm: Foundation::NSNumber?
+  @objc public init(source: Swift::String, uids: [PrebidMobile::UserUniqueID], ext: [Swift::String : Any]? = nil)
+  @objc public func toJSONDictionary() -> [Swift::String : Any]
+  @objc deinit
+}
+@objc @objcMembers public class UserUniqueID : ObjectiveC::NSObject {
+  @objc public var uniqueId: Swift::String
+  @objc public var aType: Foundation::NSNumber
+  @objc public var ext: [Swift::String : Any]?
+  @objc public init(uniqueId: Swift::String, aType: Foundation::NSNumber, ext: [Swift::String : Any]? = nil)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class Host : ObjectiveC::NSObject {
+  @objc public static let shared: PrebidMobile::Host
+  @objc public func setHostURL(_ urlString: Swift::String?, nonTrackingURLString: Swift::String?) throws
+  @objc public func getHostURL() throws -> Swift::String
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ImageHelper {
+  public static func downloadImageSync(_ urlString: Swift::String) -> Swift::Result<UIKit::UIImage, any Swift::Error>
+  public static func downloadImageAsync(_ urlString: Swift::String, completion: @escaping (Swift::Result<UIKit::UIImage, any Swift::Error>) -> Swift::Void)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(PBMLog) @objcMembers public class Log : ObjectiveC::NSObject {
+  @objc public static var logLevel: PrebidMobile::LogLevel
+  @objc public static var logToFile: Swift::Bool
+  @objc public static func setCustomLogger(_ logger: any PrebidMobile::PrebidLogger)
+  @objc public static func error(_ object: Any, filename: Swift::String = #file, line: Swift::Int = #line, function: Swift::String = #function)
+  @objc public static func info(_ object: Any, filename: Swift::String = #file, line: Swift::Int = #line, function: Swift::String = #function)
+  @objc public static func debug(_ object: Any, filename: Swift::String = #file, line: Swift::Int = #line, function: Swift::String = #function)
+  @objc public static func verbose(_ object: Any, filename: Swift::String = #file, line: Swift::Int = #line, function: Swift::String = #function)
+  @objc public static func warn(_ object: Any, filename: Swift::String = #file, line: Swift::Int = #line, function: Swift::String = #function)
+  @objc public static func severe(_ object: Any, filename: Swift::String = #file, line: Swift::Int = #line, function: Swift::String = #function)
+  @objc public static func whereAmI(filename: Swift::String = #file, line: Swift::Int = #line, function: Swift::String = #function)
+  @objc public static func serialWriteToLog(_ message: Swift::String)
+  @objc public static func getLogFileAsString() -> Swift::String?
+  @objc public static func clearLogFile()
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc(PBMLogLevel) @objcMembers public class LogLevel : ObjectiveC::NSObject, Swift::RawRepresentable {
+  public typealias RawValue = Swift::Int
+  @objc public var rawValue: Swift::Int
+  @objc public var stringValue: Swift::String
+  @objc convenience public init(stringValue: Swift::String, rawValue: PrebidMobile::LogLevel.PrebidMobile::RawValue)
+  @objc required public init(rawValue: PrebidMobile::LogLevel.PrebidMobile::RawValue)
+  @objc public static let debug: PrebidMobile::LogLevel
+  @objc public static let verbose: PrebidMobile::LogLevel
+  @objc public static let info: PrebidMobile::LogLevel
+  @objc public static let warn: PrebidMobile::LogLevel
+  @objc public static let error: PrebidMobile::LogLevel
+  @objc public static let severe: PrebidMobile::LogLevel
+  @objc deinit
+}
+@objc public protocol PrebidLogger {
+  @objc func error(_ object: Any, filename: Swift::String, line: Swift::Int, function: Swift::String)
+  @objc func info(_ object: Any, filename: Swift::String, line: Swift::Int, function: Swift::String)
+  @objc func debug(_ object: Any, filename: Swift::String, line: Swift::Int, function: Swift::String)
+  @objc func verbose(_ object: Any, filename: Swift::String, line: Swift::Int, function: Swift::String)
+  @objc func warn(_ object: Any, filename: Swift::String, line: Swift::Int, function: Swift::String)
+  @objc func severe(_ object: Any, filename: Swift::String, line: Swift::Int, function: Swift::String)
+  @objc func whereAmI(filename: Swift::String, line: Swift::Int, function: Swift::String)
+}
+@objc(PBMOMSession) public protocol OMSession : ObjectiveC::NSObjectProtocol {
+  @objc var eventTracker: any PrebidMobile::EventTrackerProtocol { get }
+  @objc func start()
+  @objc func addFriendlyObstruction(_ friendlyObstruction: UIKit::UIView, purpose: PrebidMobile::OpenMeasurementFriendlyObstructionPurpose)
+}
+@objc(PBMOMSessionWrapper) public protocol OMSessionWrapper : ObjectiveC::NSObjectProtocol {
+  @objc func injectJSLib(_ html: Swift::String, error: Foundation::NSErrorPointer) -> Swift::String?
+  @objc(initializeWebViewSession:contentUrl:) func initializeWebViewSession(_ webView: WebKit::WKWebView, contentUrl: Swift::String?) -> (any PrebidMobile::OMSession)?
+  @objc func initializeNativeVideoSession(_ videoView: UIKit::UIView, verificationParameters: PrebidMobile::VideoVerificationParameters?) -> (any PrebidMobile::OMSession)?
+  @objc func initializeNativeDisplaySession(_ view: UIKit::UIView, omidJSUrl: Swift::String, vendorKey: Swift::String?, parameters: Swift::String?) -> (any PrebidMobile::OMSession)?
+}
+@objc(PBMOpenMeasurementFriendlyObstructionPurpose) public enum OpenMeasurementFriendlyObstructionPurpose : Swift::UInt {
+  case windowLockerBackground = 0
+  case windowLockerActivityIndicator
+  case modalViewControllerView
+  case modalViewControllerClose
+  case videoViewLearnMoreButton
+  case videoViewProgressBar
+  case purposesCount
+  public init?(rawValue: Swift::UInt)
+  public typealias RawValue = Swift::UInt
+  public var rawValue: Swift::UInt {
+    get
+  }
+}
+@objc @objcMembers public class AdFormat : ObjectiveC::NSObject, Swift::OptionSet {
+  public typealias RawValue = Swift::Int
+  @objc final public let rawValue: Swift::Int
+  @objc public var stringEquivalent: Swift::String? {
+    get
+  }
+  @objc convenience public init(rawValue: PrebidMobile::AdFormat.PrebidMobile::RawValue, stringEquivalent: Swift::String)
+  @objc required public init(rawValue: PrebidMobile::AdFormat.PrebidMobile::RawValue)
+  @objc public static let banner: PrebidMobile::AdFormat
+  @objc public static let video: PrebidMobile::AdFormat
+  @objc public static let native: PrebidMobile::AdFormat
+  @objc public static var allCases: [PrebidMobile::AdFormat] {
+    @objc get
+  }
+  @objc override dynamic public func isEqual(_ object: Any?) -> Swift::Bool
+  @objc override dynamic public var hash: Swift::Int {
+    @objc get
+  }
+  public typealias ArrayLiteralElement = PrebidMobile::AdFormat
+  public typealias Element = PrebidMobile::AdFormat
+  @objc deinit
+}
+@objc(PBMAdPosition) public enum AdPosition : Swift::Int {
+  case undefined = -1
+  case unknown = 0
+  case aboveTheFold = 1
+  @available(*, unavailable, message: "Deprecated in the OpenRTB standard.")
+  case locked = 2
+  case belowTheFold = 3
+  case header = 4
+  case footer = 5
+  case sidebar = 6
+  case fullScreen = 7
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc(PBMAdConfiguration) @objcMembers public class AdConfiguration : PrebidMobile::AutoRefreshCountConfig {
+  @objc public var adFormats: Swift::Set<PrebidMobile::AdFormat>
+  @objc public var bannerParameters: PrebidMobile::BannerParameters {
+    @objc get
+    @objc set
+  }
+  @objc public var videoParameters: PrebidMobile::VideoParameters {
+    @objc get
+    @objc set
+  }
+  @objc public var isInterstitialAd: Swift::Bool
+  @objc public var size: CoreFoundation::CGSize
+  @objc public var isRewarded: Swift::Bool
+  @objc public var supportSKOverlay: Swift::Bool
+  @objc public var videoControlsConfig: PrebidMobile::VideoControlsConfiguration {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc(PBMAdViewManagerDelegate) public protocol AdViewManagerDelegate : ObjectiveC::NSObjectProtocol {
+  @objc func viewControllerForModalPresentation() -> UIKit::UIViewController?
+  @objc func adLoaded(_ adDetails: PrebidMobile::AdDetails)
+  @objc func failedToLoad(_ error: any Swift::Error)
+  @objc func adDidComplete()
+  @objc func adDidDisplay()
+  @objc func adWasClicked()
+  @objc func adViewWasClicked()
+  @objc func adDidExpand()
+  @objc func adDidCollapse()
+  @objc func adDidLeaveApp()
+  @objc func adClickthroughDidClose()
+  @objc func adDidClose()
+  @objc optional var displayView: UIKit::UIView { get }
+  @objc optional var interstitialDisplayProperties: PrebidMobile::InterstitialDisplayProperties { get }
+  @objc optional func videoAdDidStart()
+  @objc optional func videoAdDidFinish()
+  @objc optional func videoAdWasMuted()
+  @objc optional func videoAdWasUnmuted()
+  @objc optional func videoAdDidPause()
+  @objc optional func videoAdDidResume()
+  @objc optional func adDidSendRewardedEvent()
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(PBMInterstitialDisplayProperties) public class InterstitialDisplayProperties : ObjectiveC::NSObject, Swift::Copyable {
+  @objc override dynamic public func copy() -> Any
+  @objc deinit
+}
+@objc(PBMInterstitialLayout) public enum InterstitialLayout : Swift::Int {
+  case undefined
+  case portrait
+  case landscape
+  case aspectRatio
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
+    get
+  }
+}
+@objc(PBMModalManagerDelegate) public protocol ModalManagerDelegate {
+  @objc func modalManagerWillPresentModal()
+  @objc func modalManagerDidDismissModal()
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(PBMModalViewController) @objcMembers @_Concurrency::MainActor @preconcurrency public class ModalViewController : UIKit::UIViewController {
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift::Bool)
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public func viewWillDisappear(_ animated: Swift::Bool)
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public var prefersStatusBarHidden: Swift::Bool {
+    @objc get
+  }
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public var supportedInterfaceOrientations: UIKit::UIInterfaceOrientationMask {
+    @objc get
+  }
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public var shouldAutorotate: Swift::Bool {
+    @objc get
+  }
+  @objc deinit
+}
+@objc(PBMPosition) public enum Position : Swift::Int {
+  case undefined = -1
+  case topLeft
+  case topCenter
+  case topRight
+  case center
+  case bottomLeft
+  case bottomCenter
+  case bottomRight
+  case custom
+  public static func getPositionByStringLiteral(_ stringValue: Swift::String) -> PrebidMobile::Position?
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
+    get
+  }
+}
+@objc(PBMTrackingEvent) public enum TrackingEvent : Swift::Int {
+  case request = 0
+  case impression
+  case click
+  case overlayClick
+  case companionClick
+  case play
+  case pause
+  case resume
+  case rewind
+  case skip
+  case creativeView
+  case start
+  case firstQuartile
+  case midpoint
+  case thirdQuartile
+  case complete
+  case mute
+  case unmute
+  case fullscreen
+  case exitFullscreen
+  case normal
+  case expand
+  case collapse
+  case closeLinear
+  case closeOverlay
+  case acceptInvitation
+  case error
+  case loaded
+  case prebidWin
+  case unknown
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc(PBMVideoControlsConfiguration) @objcMembers public class VideoControlsConfiguration : ObjectiveC::NSObject {
+  @objc public var maxVideoDuration: Foundation::NSNumber? {
+    get
+  }
+  @objc public var isMuted: Swift::Bool
+  @objc public var closeButtonArea: Swift::Double {
+    @objc get
+    @objc set
+  }
+  @objc public var closeButtonPosition: PrebidMobile::Position {
+    @objc get
+    @objc set
+  }
+  @objc public var skipButtonArea: Swift::Double {
+    @objc get
+    @objc set
+  }
+  @objc public var skipButtonPosition: PrebidMobile::Position {
+    @objc get
+    @objc set
+  }
+  @objc public var skipDelay: Swift::Double
+  @objc public var isSoundButtonVisible: Swift::Bool
+  @objc public var isAutoCloseOnCompletionEnabled: Swift::Bool
+  @objc public func initialize(with ortbAdConfiguration: PrebidMobile::ORTBAdConfiguration?)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(PBMVastTrackingEvents) public class VastTrackingEvents : ObjectiveC::NSObject {
+  public var trackingEvents: [Swift::String : [Swift::String]] {
+    get
+  }
+  public var progressOffsets: [Foundation::NSNumber] {
+    get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(PBMAutoRefreshCountConfig) @objcMembers public class AutoRefreshCountConfig : ObjectiveC::NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc(PBMTimerInterface) public protocol TimerInterface : ObjectiveC::NSObjectProtocol {
+  @objc func invalidate()
+}
+extension Foundation::Timer : PrebidMobile::TimerInterface {
+}
+extension UIKit::UIView {
+  @objc(PBMAddCropAndCenterConstraintsWithInitialWidth:initialHeight:) @_Concurrency::MainActor @preconcurrency dynamic public func PBMAddCropAndCenterConstraints(initialWidth: CoreFoundation::CGFloat, initialHeight: CoreFoundation::CGFloat)
+}
+extension UIKit::UIWindow {
+  @objc @_Concurrency::MainActor @preconcurrency dynamic public func visibleViewController() -> UIKit::UIViewController?
+}
+@_hasMissingDesignatedInitializers @objc(PBMAdDetails) public class AdDetails : ObjectiveC::NSObject {
+  @objc deinit
+}
+public enum MelvadRequestIdentity {
+  public static func set(advertisingIdentifier: Swift::String?, vendorIdentifier: Swift::String?, attStatus: Swift::UInt = 0)
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class PrebidServerConnection : ObjectiveC::NSObject, PrebidMobile::PrebidServerConnectionProtocol, Foundation::URLSessionDelegate {
+  @objc public var userAgentService: PrebidMobile::UserAgentService {
+    get
+  }
+  @objc public static let shared: PrebidMobile::PrebidServerConnection
+  @objc public static var internalIDKey: Swift::String {
+    @objc get
+  }
+  @objc public static var isPBMRequestKey: Swift::String {
+    @objc get
+  }
+  @objc public func fireAndForget(_ resourceURL: Swift::String?)
+  @objc public func head(_ resourceURL: Swift::String?, timeout: Foundation::TimeInterval, callback: @escaping (PrebidMobile::PrebidServerResponse) -> Swift::Void)
+  @objc public func get(_ resourceURL: Swift::String?, timeout: Foundation::TimeInterval = 0, callback: @escaping (PrebidMobile::PrebidServerResponse) -> Swift::Void)
+  @objc public func post(_ resourceURL: Swift::String?, data: Foundation::Data?, timeout: Foundation::TimeInterval, callback: @escaping (PrebidMobile::PrebidServerResponse) -> Swift::Void)
+  @objc public func post(_ resourceURL: Swift::String?, contentType: Swift::String?, data: Foundation::Data?, timeout: Foundation::TimeInterval, callback: @escaping (PrebidMobile::PrebidServerResponse) -> Swift::Void)
+  @objc public func download(_ resourceURL: Swift::String?, callback: @escaping (PrebidMobile::PrebidServerResponse) -> Swift::Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public typealias PrebidServerResponseCallback = (PrebidMobile::PrebidServerResponse) -> Swift::Void
+@objc public protocol PrebidServerConnectionProtocol {
+  @objc var userAgentService: PrebidMobile::UserAgentService { get }
+  @objc func fireAndForget(_ resourceURL: Swift::String?)
+  @objc func head(_ resourceURL: Swift::String?, timeout: Foundation::TimeInterval, callback: @escaping PrebidMobile::PrebidServerResponseCallback)
+  @objc func get(_ resourceURL: Swift::String?, timeout: Foundation::TimeInterval, callback: @escaping PrebidMobile::PrebidServerResponseCallback)
+  @objc func post(_ resourceURL: Swift::String?, data: Foundation::Data?, timeout: Foundation::TimeInterval, callback: @escaping PrebidMobile::PrebidServerResponseCallback)
+  @objc func post(_ resourceURL: Swift::String?, contentType: Swift::String?, data: Foundation::Data?, timeout: Foundation::TimeInterval, callback: @escaping PrebidMobile::PrebidServerResponseCallback)
+  @objc func download(_ resourceURL: Swift::String?, callback: @escaping PrebidMobile::PrebidServerResponseCallback)
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class PrebidServerResponse : ObjectiveC::NSObject {
+  @objc public var error: (any Swift::Error)?
+  @objc public var statusCode: Swift::Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol PluginEventDelegate : ObjectiveC::NSObjectProtocol {
+  @objc func getPluginName() -> Swift::String
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class PluginRendererFactory : ObjectiveC::NSObject {
+  @objc public static func createBannerView(with frame: CoreFoundation::CGRect, bid: PrebidMobile::Bid, adConfiguration: PrebidMobile::AdUnitConfig, loadingDelegate: any PrebidMobile::DisplayViewLoadingDelegate, interactionDelegate: any PrebidMobile::DisplayViewInteractionDelegate) -> (any UIKit::UIView & PrebidMobile::PrebidMobileDisplayViewProtocol)?
+  @objc public static func createInterstitialController(bid: PrebidMobile::Bid, adConfiguration: PrebidMobile::AdUnitConfig, loadingDelegate: any PrebidMobile::InterstitialControllerLoadingDelegate, interactionDelegate: any PrebidMobile::InterstitialControllerInteractionDelegate) -> (any PrebidMobile::PrebidMobileInterstitialControllerProtocol)?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension PrebidMobile::PrebidMobilePluginRenderer {
+  public func jsonDictionary() -> [Swift::String : Any]
+}
+@objc public protocol PrebidMobilePluginRenderer {
+  @objc var name: Swift::String { get }
+  @objc var version: Swift::String { get }
+  @objc var data: [Swift::String : Any]? { get }
+  @objc optional var sendsWinNotice: Swift::Bool { get }
+  @objc optional func registerEventDelegate(pluginEventDelegate: any PrebidMobile::PluginEventDelegate, adUnitConfigFingerprint: Swift::String)
+  @objc optional func unregisterEventDelegate(pluginEventDelegate: any PrebidMobile::PluginEventDelegate, adUnitConfigFingerprint: Swift::String)
+  @objc func createBannerView(with frame: CoreFoundation::CGRect, bid: PrebidMobile::Bid, adConfiguration: PrebidMobile::AdUnitConfig, loadingDelegate: any PrebidMobile::DisplayViewLoadingDelegate, interactionDelegate: any PrebidMobile::DisplayViewInteractionDelegate) -> (any UIKit::UIView & PrebidMobile::PrebidMobileDisplayViewProtocol)?
+  @objc func createInterstitialController(bid: PrebidMobile::Bid, adConfiguration: PrebidMobile::AdUnitConfig, loadingDelegate: any PrebidMobile::InterstitialControllerLoadingDelegate, interactionDelegate: any PrebidMobile::InterstitialControllerInteractionDelegate) -> (any PrebidMobile::PrebidMobileInterstitialControllerProtocol)?
+  @objc optional func didInjectView(_ view: UIKit::UIView, into bannerView: UIKit::UIView)
+}
+@objc public protocol BannerEventHandler : PrebidMobile::PrimaryAdRequesterProtocol {
+  @objc weak var loadingDelegate: (any PrebidMobile::BannerEventLoadingDelegate)? { get set }
+  @objc weak var interactionDelegate: (any PrebidMobile::BannerEventInteractionDelegate)? { get set }
+  @objc var adSizes: [CoreFoundation::CGSize] { get }
+  @objc func trackImpression()
+}
+@objc public protocol BannerEventInteractionDelegate : ObjectiveC::NSObjectProtocol {
+  @objc func willPresentModal()
+  @objc func didDismissModal()
+  @objc func willLeaveApp()
+  @objc func didDisplayAd()
+  @objc var viewControllerForPresentingModal: UIKit::UIViewController? { get }
+}
+@objc public protocol BannerEventLoadingDelegate : ObjectiveC::NSObjectProtocol {
+  @objc func prebidDidWin()
+  @objc func adServerDidWin(_ view: UIKit::UIView, adSize: CoreFoundation::CGSize)
+  @objc func failedWithError(_ error: (any Swift::Error)?)
+}
+@objc(PBMBannerViewVideoPlaybackDelegate) public protocol BannerViewVideoPlaybackDelegate : ObjectiveC::NSObjectProtocol {
+  @objc func videoPlaybackDidPause(_ banner: PrebidMobile::BannerView)
+  @objc func videoPlaybackDidResume(_ banner: PrebidMobile::BannerView)
+  @objc func videoPlaybackWasMuted(_ banner: PrebidMobile::BannerView)
+  @objc func videoPlaybackWasUnmuted(_ banner: PrebidMobile::BannerView)
+  @objc func videoPlaybackDidComplete(_ banner: PrebidMobile::BannerView)
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers @_Concurrency::MainActor @preconcurrency public class BannerView : UIKit::UIView, PrebidMobile::BannerEventInteractionDelegate, PrebidMobile::DisplayViewInteractionDelegate {
+  @objc @_Concurrency::MainActor @preconcurrency final public let adUnitConfig: PrebidMobile::AdUnitConfig
+  @_Concurrency::MainActor @preconcurrency @objc final public let eventHandler: (any PrebidMobile::BannerEventHandler)?
+  @objc @_Concurrency::MainActor @preconcurrency public var bannerParameters: PrebidMobile::BannerParameters {
+    @objc get
+  }
+  @objc @_Concurrency::MainActor @preconcurrency public var videoParameters: PrebidMobile::VideoParameters {
+    @objc get
+  }
+  @objc @_Concurrency::MainActor @preconcurrency public var lastBidResponse: PrebidMobile::BidResponse? {
+    @objc get
+  }
+  @objc @_Concurrency::MainActor @preconcurrency public var configID: Swift::String {
+    @objc get
+  }
+  @objc @_Concurrency::MainActor @preconcurrency public var refreshInterval: Foundation::TimeInterval {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency::MainActor @preconcurrency public var additionalSizes: [CoreFoundation::CGSize]? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency::MainActor @preconcurrency public var adFormats: Swift::Set<PrebidMobile::AdFormat> {
+    @objc get
+    @objc set
+  }
+  @objc @available(*, deprecated, message: "Use `adFormats` instead.")
+  @_Concurrency::MainActor @preconcurrency public var adFormat: PrebidMobile::AdFormat {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency::MainActor @preconcurrency public var adPosition: PrebidMobile::AdPosition {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency::MainActor @preconcurrency weak public var delegate: (any PrebidMobile::BannerViewDelegate)?
+  @objc @_Concurrency::MainActor @preconcurrency weak public var videoPlaybackDelegate: (any PrebidMobile::BannerViewVideoPlaybackDelegate)?
+  @objc @_Concurrency::MainActor @preconcurrency public init(frame: CoreFoundation::CGRect, configID: Swift::String, adSize: CoreFoundation::CGSize, eventHandler: any PrebidMobile::BannerEventHandler)
+  @objc @_Concurrency::MainActor @preconcurrency convenience public init(configID: Swift::String, eventHandler: any PrebidMobile::BannerEventHandler)
+  @objc @_Concurrency::MainActor @preconcurrency convenience public init(frame: CoreFoundation::CGRect, configID: Swift::String, adSize: CoreFoundation::CGSize)
+  @objc deinit
+  @objc @_Concurrency::MainActor @preconcurrency public func loadAd()
+  @objc @_Concurrency::MainActor @preconcurrency public func setStoredAuctionResponse(storedAuction: Swift::String)
+  @objc @_Concurrency::MainActor @preconcurrency public func setImpORTBConfig(_ ortbConfig: Swift::String?)
+  @objc @_Concurrency::MainActor @preconcurrency public func getImpORTBConfig() -> Swift::String?
+  @objc @_Concurrency::MainActor @preconcurrency public func setGlobalORTBConfig(_ ortbConfig: Swift::String?)
+  @objc @_Concurrency::MainActor @preconcurrency public func getGlobalORTBConfig() -> Swift::String?
+  @objc @_Concurrency::MainActor @preconcurrency public func stopRefresh()
+  @objc @_Concurrency::MainActor @preconcurrency public func setPluginEventDelegate(_ pluginEventDelegate: any PrebidMobile::PluginEventDelegate)
+  @_Concurrency::MainActor @preconcurrency @objc public func trackImpression(forDisplayView: UIKit::UIView)
+  @_Concurrency::MainActor @preconcurrency @objc public func viewControllerForModalPresentation(fromDisplayView: UIKit::UIView) -> UIKit::UIViewController?
+  @_Concurrency::MainActor @preconcurrency @objc public func didLeaveApp(from displayView: UIKit::UIView)
+  @_Concurrency::MainActor @preconcurrency @objc public func willPresentModal(from displayView: UIKit::UIView)
+  @_Concurrency::MainActor @preconcurrency @objc public func didDismissModal(from displayView: UIKit::UIView)
+  @_Concurrency::MainActor @preconcurrency @objc public func willPresentModal()
+  @_Concurrency::MainActor @preconcurrency @objc public func didDismissModal()
+  @_Concurrency::MainActor @preconcurrency @objc public func willLeaveApp()
+  @_Concurrency::MainActor @preconcurrency @objc public func didDisplayAd()
+  @_Concurrency::MainActor @preconcurrency @objc public var viewControllerForPresentingModal: UIKit::UIViewController? {
+    @objc get
+  }
+}
+@objc public protocol BannerViewDelegate : ObjectiveC::NSObjectProtocol {
+  @objc func bannerViewPresentationController() -> UIKit::UIViewController?
+  @objc optional func bannerView(_ bannerView: PrebidMobile::BannerView, didReceiveAdWithAdSize adSize: CoreFoundation::CGSize)
+  @objc optional func bannerView(_ bannerView: PrebidMobile::BannerView, didFailToReceiveAdWith error: any Swift::Error)
+  @objc optional func bannerViewWillLeaveApplication(_ bannerView: PrebidMobile::BannerView)
+  @objc optional func bannerViewWillPresentModal(_ bannerView: PrebidMobile::BannerView)
+  @objc optional func bannerViewDidDismissModal(_ bannerView: PrebidMobile::BannerView)
+  @objc optional func bannerViewDidDisplay(_ bannerView: PrebidMobile::BannerView)
+  @objc optional func bannerViewDidExpire(_ bannerView: PrebidMobile::BannerView)
+}
+@objc(PBMInterstitialAd) public protocol InterstitialAd : PrebidMobile::PrimaryAdRequesterProtocol {
+  @objc var isReady: Swift::Bool { get }
+  @objc(showFromViewController:) func show(from viewController: UIKit::UIViewController?)
+  @objc optional func trackImpression()
+}
+@objc public protocol InterstitialAdUnitDelegate : ObjectiveC::NSObjectProtocol {
+  @objc optional func interstitialDidReceiveAd(_ interstitial: PrebidMobile::InterstitialRenderingAdUnit)
+  @objc optional func interstitial(_ interstitial: PrebidMobile::InterstitialRenderingAdUnit, didFailToReceiveAdWithError error: (any Swift::Error)?)
+  @objc optional func interstitialWillPresentAd(_ interstitial: PrebidMobile::InterstitialRenderingAdUnit)
+  @objc optional func interstitialDidDismissAd(_ interstitial: PrebidMobile::InterstitialRenderingAdUnit)
+  @objc optional func interstitialWillLeaveApplication(_ interstitial: PrebidMobile::InterstitialRenderingAdUnit)
+  @objc optional func interstitialDidClickAd(_ interstitial: PrebidMobile::InterstitialRenderingAdUnit)
+  @objc optional func interstitialDidExpireAd(_ interstitial: PrebidMobile::InterstitialRenderingAdUnit)
+}
+@objc(PBMInterstitialEventHandlerProtocol) public protocol InterstitialEventHandlerProtocol : PrebidMobile::InterstitialAd {
+  @objc weak var loadingDelegate: (any PrebidMobile::InterstitialEventLoadingDelegate)? { get set }
+  @objc weak var interactionDelegate: (any PrebidMobile::InterstitialEventInteractionDelegate)? { get set }
+}
+@objc public protocol InterstitialEventInteractionDelegate : ObjectiveC::NSObjectProtocol {
+  @objc func willPresentAd()
+  @objc func didDismissAd()
+  @objc func willLeaveApp()
+  @objc func didClickAd()
+}
+@objc public protocol InterstitialEventLoadingDelegate : ObjectiveC::NSObjectProtocol {
+  @objc func prebidDidWin()
+  @objc func adServerDidWin()
+  @objc(failedWithError:) func failed(with error: (any Swift::Error)?)
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class InterstitialRenderingAdUnit : ObjectiveC::NSObject {
+  @objc weak public var delegate: (any PrebidMobile::InterstitialAdUnitDelegate)?
+  @objc public var isReady: Swift::Bool {
+    @objc get
+  }
+  @objc public var adFormats: Swift::Set<PrebidMobile::AdFormat> {
+    @objc get
+    @objc set
+  }
+  @objc public var adPosition: PrebidMobile::AdPosition {
+    @objc get
+    @objc set
+  }
+  @objc public var bannerParameters: PrebidMobile::BannerParameters {
+    @objc get
+  }
+  @objc public var videoParameters: PrebidMobile::VideoParameters {
+    @objc get
+  }
+  @objc public var supportSKOverlay: Swift::Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var closeButtonArea: Swift::Double {
+    @objc get
+    @objc set
+  }
+  @objc public var closeButtonPosition: PrebidMobile::Position {
+    @objc get
+    @objc set
+  }
+  @objc public var skipButtonArea: Swift::Double {
+    @objc get
+    @objc set
+  }
+  @objc public var skipButtonPosition: PrebidMobile::Position {
+    @objc get
+    @objc set
+  }
+  @objc public var skipDelay: Swift::Double {
+    @objc get
+    @objc set
+  }
+  @objc public var isMuted: Swift::Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var isSoundButtonVisible: Swift::Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var isAutoCloseOnCompletionEnabled: Swift::Bool {
+    @objc get
+    @objc set
+  }
+  @objc convenience public init(configID: Swift::String)
+  @objc convenience public init(configID: Swift::String, minSizePercentage: CoreFoundation::CGSize)
+  @objc convenience public init(configID: Swift::String, eventHandler: Swift::AnyObject?)
+  @objc convenience public init(configID: Swift::String, minSizePercentage: CoreFoundation::CGSize, eventHandler: Swift::AnyObject)
+  @objc public func loadAd()
+  @objc public func show(from controller: UIKit::UIViewController)
+  @objc public func setImpORTBConfig(_ ortbConfig: Swift::String?)
+  @objc public func getImpORTBConfig() -> Swift::String?
+  @objc public func setGlobalORTBConfig(_ ortbConfig: Swift::String?)
+  @objc public func getGlobalORTBConfig() -> Swift::String?
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class PrebidReward : ObjectiveC::NSObject {
+  @objc public var type: Swift::String?
+  @objc public var count: Foundation::NSNumber?
+  @objc public var ext: [Swift::String : Any]?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc(PBMPrimaryAdRequesterProtocol) public protocol PrimaryAdRequesterProtocol : ObjectiveC::NSObjectProtocol {
+  @objc(requestAdWithBidResponse:) func requestAd(with bidResponse: PrebidMobile::BidResponse?)
+}
+@_hasMissingDesignatedInitializers @objc @objcMembers public class RewardedAdUnit : ObjectiveC::NSObject {
+  @objc weak public var delegate: (any PrebidMobile::RewardedAdUnitDelegate)?
+  @objc public var isReady: Swift::Bool {
+    @objc get
+  }
+  @objc public var adFormats: Swift::Set<PrebidMobile::AdFormat> {
+    @objc get
+    @objc set
+  }
+  @objc public var adPosition: PrebidMobile::AdPosition {
+    @objc get
+    @objc set
+  }
+  @objc public var bannerParameters: PrebidMobile::BannerParameters {
+    @objc get
+  }
+  @objc public var videoParameters: PrebidMobile::VideoParameters {
+    @objc get
+  }
+  @objc public var supportSKOverlay: Swift::Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var closeButtonArea: Swift::Double {
+    @objc get
+    @objc set
+  }
+  @objc public var closeButtonPosition: PrebidMobile::Position {
+    @objc get
+    @objc set
+  }
+  @objc public var isMuted: Swift::Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var isSoundButtonVisible: Swift::Bool {
+    @objc get
+    @objc set
+  }
+  @objc convenience public init(configID: Swift::String)
+  @objc convenience public init(configID: Swift::String, minSizePercentage: CoreFoundation::CGSize)
+  @objc convenience public init(configID: Swift::String, eventHandler: Swift::AnyObject?)
+  @objc convenience public init(configID: Swift::String, minSizePercentage: CoreFoundation::CGSize, eventHandler: Swift::AnyObject)
+  @objc public func loadAd()
+  @objc public func show(from controller: UIKit::UIViewController)
+  @objc public func setImpORTBConfig(_ ortbConfig: Swift::String?)
+  @objc public func getImpORTBConfig() -> Swift::String?
+  @objc public func setGlobalORTBConfig(_ ortbConfig: Swift::String?)
+  @objc public func getGlobalORTBConfig() -> Swift::String?
+  @objc deinit
+}
+@objc public protocol RewardedAdUnitDelegate : ObjectiveC::NSObjectProtocol {
+  @objc optional func rewardedAdDidReceiveAd(_ rewardedAd: PrebidMobile::RewardedAdUnit)
+  @objc optional func rewardedAdUserDidEarnReward(_ rewardedAd: PrebidMobile::RewardedAdUnit, reward: PrebidMobile::PrebidReward)
+  @objc optional func rewardedAd(_ rewardedAd: PrebidMobile::RewardedAdUnit, didFailToReceiveAdWithError error: (any Swift::Error)?)
+  @objc optional func rewardedAdWillPresentAd(_ rewardedAd: PrebidMobile::RewardedAdUnit)
+  @objc optional func rewardedAdDidDismissAd(_ rewardedAd: PrebidMobile::RewardedAdUnit)
+  @objc optional func rewardedAdWillLeaveApplication(_ rewardedAd: PrebidMobile::RewardedAdUnit)
+  @objc optional func rewardedAdDidClickAd(_ rewardedAd: PrebidMobile::RewardedAdUnit)
+  @objc optional func rewardedAdDidExpire(_ rewardedAd: PrebidMobile::RewardedAdUnit)
+}
+@_hasMissingDesignatedInitializers @objc(PBMRewardedConfig) @objcMembers public class RewardedConfig : ObjectiveC::NSObject {
+  @objc public var reward: PrebidMobile::PrebidReward? {
+    @objc get
+  }
+  @objc deinit
+}
+@objc public protocol RewardedEventHandlerProtocol : PrebidMobile::InterstitialAd {
+  @objc weak var loadingDelegate: (any PrebidMobile::InterstitialEventLoadingDelegate)? { get set }
+  @objc weak var interactionDelegate: (any PrebidMobile::RewardedEventInteractionDelegate)? { get set }
+}
+@objc public protocol RewardedEventInteractionDelegate : PrebidMobile::InterstitialEventInteractionDelegate {
+  @objc func userDidEarnReward(_ reward: PrebidMobile::PrebidReward?)
+}
+@objc @objcMembers public class MediationBannerAdUnit : ObjectiveC::NSObject {
+  @objc final public let mediationDelegate: any PrebidMobile::PrebidMediationDelegate
+  @objc public var configID: Swift::String {
+    @objc get
+  }
+  @objc public var adFormats: Swift::Set<PrebidMobile::AdFormat> {
+    @objc get
+    @objc set
+  }
+  @objc @available(*, deprecated, message: "Use `adFormats` instead.")
+  public var adFormat: PrebidMobile::AdFormat {
+    @objc get
+    @objc set
+  }
+  @objc public var adPosition: PrebidMobile::AdPosition {
+    @objc get
+    @objc set
+  }
+  @objc public var bannerParameters: PrebidMobile::BannerParameters {
+    @objc get
+  }
+  @objc public var videoParameters: PrebidMobile::VideoParameters {
+    @objc get
+  }
+  @objc public var refreshInterval: Foundation::TimeInterval {
+    @objc get
+    @objc set
+  }
+  @objc public var additionalSizes: [CoreFoundation::CGSize]? {
+    @objc get
+    @objc set
+  }
+  @objc public func setImpORTBConfig(_ ortbConfig: Swift::String?)
+  @objc public func getImpORTBConfig() -> Swift::String?
+  @objc public func setGlobalORTBConfig(_ ortbConfig: Swift::String?)
+  @objc public func getGlobalORTBConfig() -> Swift::String?
+  @objc public init(configID: Swift::String, size: CoreFoundation::CGSize, mediationDelegate: any PrebidMobile::PrebidMediationDelegate)
+  @objc public func fetchDemand(completion: ((PrebidMobile::ResultCode) -> Swift::Void)?)
+  @objc public func stopRefresh()
+  @objc public func adObjectDidFailToLoadAd(adObject: UIKit::UIView, with error: any Swift::Error)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class MediationBaseInterstitialAdUnit : ObjectiveC::NSObject {
+  @objc public var bannerParameters: PrebidMobile::BannerParameters {
+    @objc get
+  }
+  @objc public var videoParameters: PrebidMobile::VideoParameters {
+    @objc get
+  }
+  @objc public var adPosition: PrebidMobile::AdPosition {
+    @objc get
+    @objc set
+  }
+  @objc public var isMuted: Swift::Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var isSoundButtonVisible: Swift::Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var closeButtonArea: Swift::Double {
+    @objc get
+    @objc set
+  }
+  @objc public var closeButtonPosition: PrebidMobile::Position {
+    @objc get
+    @objc set
+  }
+  @objc public var configId: Swift::String {
+    @objc get
+  }
+  @objc public func fetchDemand(completion: ((PrebidMobile::ResultCode) -> Swift::Void)?)
+  @objc public func setImpORTBConfig(_ ortbConfig: Swift::String?)
+  @objc public func getImpORTBConfig() -> Swift::String?
+  @objc public func setGlobalORTBConfig(_ ortbConfig: Swift::String?)
+  @objc public func getGlobalORTBConfig() -> Swift::String?
+  @objc deinit
+}
+public let PBMMediationAdUnitBidKey: Swift::String
+public let PBMMediationConfigIdKey: Swift::String
+public let PBMMediationTargetingInfoKey: Swift::String
+public let PBMMediationAdNativeResponseKey: Swift::String
+public let PBMMediationVideoAdConfiguration: Swift::String
+public let PBMMediationVideoParameters: Swift::String
+@objc @_inheritsConvenienceInitializers @objcMembers public class MediationInterstitialAdUnit : PrebidMobile::MediationBaseInterstitialAdUnit {
+  @objc public var adFormats: Swift::Set<PrebidMobile::AdFormat> {
+    @objc get
+    @objc set
+  }
+  @objc public var additionalSizes: [CoreFoundation::CGSize]? {
+    @objc get
+    @objc set
+  }
+  @objc public var skipButtonArea: Swift::Double {
+    @objc get
+    @objc set
+  }
+  @objc public var skipButtonPosition: PrebidMobile::Position {
+    @objc get
+    @objc set
+  }
+  @objc public var skipDelay: Swift::Double {
+    @objc get
+    @objc set
+  }
+  @objc public var isAutoCloseOnCompletionEnabled: Swift::Bool {
+    @objc get
+    @objc set
+  }
+  @objc convenience public init(configId: Swift::String, mediationDelegate: any PrebidMobile::PrebidMediationDelegate)
+  public init(configId: Swift::String, minSizePercentage: CoreFoundation::CGSize?, mediationDelegate: any PrebidMobile::PrebidMediationDelegate)
+  @objc override public var configId: Swift::String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @objcMembers public class MediationNativeAdUnit : ObjectiveC::NSObject {
+  @objc public var nativeAdUnit: PrebidMobile::NativeRequest
+  @objc public init(configId: Swift::String, mediationDelegate: any PrebidMobile::PrebidMediationDelegate)
+  @objc public func addEventTracker(_ eventTrackers: [PrebidMobile::NativeEventTracker])
+  @objc public func addNativeAssets(_ assets: [PrebidMobile::NativeAsset])
+  @objc public func setContextType(_ contextType: PrebidMobile::ContextType)
+  @objc public func setPlacementType(_ placementType: PrebidMobile::PlacementType)
+  @objc public func setPlacementCount(_ placementCount: Swift::Int)
+  @objc public func setContextSubType(_ contextSubType: PrebidMobile::ContextSubType)
+  @objc public func setSequence(_ sequence: Swift::Int)
+  @objc public func setAssetURLSupport(_ assetURLSupport: Swift::Int)
+  @objc public func setDURLSupport(_ dURLSupport: Swift::Int)
+  @objc public func setPrivacy(_ privacy: Swift::Int)
+  @objc public func setExt(_ ext: [Swift::String : Any])
+  @objc public func setImpORTBConfig(_ ortbConfig: Swift::String?)
+  @objc public func getImpORTBConfig() -> Swift::String?
+  @objc public func setGlobalORTBConfig(_ ortbConfig: Swift::String?)
+  @objc public func getGlobalORTBConfig() -> Swift::String?
+  @objc public func fetchDemand(completion: ((PrebidMobile::ResultCode) -> Swift::Void)?)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(PBMMediationNativeUtils) @objcMembers public class MediationNativeUtils : ObjectiveC::NSObject {
+  public static func findNative(in extras: [Swift::AnyHashable : Any]) -> Swift::Result<PrebidMobile::NativeAd, any Swift::Error>
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class MediationRewardedAdUnit : PrebidMobile::MediationBaseInterstitialAdUnit {
+  @objc public init(configId: Swift::String, mediationDelegate: any PrebidMobile::PrebidMediationDelegate)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(PBMMediationUtils) @objcMembers public class MediationUtils : ObjectiveC::NSObject {
+  @objc public static func isServerParameterInTargetingInfo(_ serverParameter: Swift::String, _ targetingInfo: [Swift::String]) -> Swift::Bool
+  @objc public static func isServerParameterInTargetingInfoDict(_ serverParameter: Swift::String, _ targetingInfoDictionary: [Swift::String : Swift::String]) -> Swift::Bool
+  @objc public static func isServerParameterDictInTargetingInfoDict(_ serverParametersDictionary: [Swift::String : Swift::String], _ targetingInfoDictionary: [Swift::String : Swift::String]) -> Swift::Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol PrebidMediationDelegate {
+  @objc func setUpAdObject(with values: [Swift::String : Any]) -> Swift::Bool
+  @objc func cleanUpAdObject()
+  @objc func getAdView() -> UIKit::UIView?
+}
+@objc(PBMDisplayView) @objcMembers @_Concurrency::MainActor @preconcurrency public class DisplayView : UIKit::UIView, PrebidMobile::PrebidMobileDisplayViewProtocol, PrebidMobile::AdViewManagerDelegate, PrebidMobile::ModalManagerDelegate {
+  @objc @_Concurrency::MainActor @preconcurrency weak public var loadingDelegate: (any PrebidMobile::DisplayViewLoadingDelegate)?
+  @objc @_Concurrency::MainActor @preconcurrency weak public var interactionDelegate: (any PrebidMobile::DisplayViewInteractionDelegate)?
+  @objc @_Concurrency::MainActor @preconcurrency public var isCreativeOpened: Swift::Bool {
+    @objc get
+  }
+  @objc @_Concurrency::MainActor @preconcurrency public var isVideoPlaying: Swift::Bool {
+    get
+  }
+  @_Concurrency::MainActor @preconcurrency @objc public var interstitialDisplayProperties: PrebidMobile::InterstitialDisplayProperties
+  @objc @_Concurrency::MainActor @preconcurrency convenience public init(frame: CoreFoundation::CGRect, bid: PrebidMobile::Bid, configId: Swift::String)
+  @objc @_Concurrency::MainActor @preconcurrency public init(frame: CoreFoundation::CGRect, bid: PrebidMobile::Bid, adConfiguration: PrebidMobile::AdUnitConfig)
+  @_Concurrency::MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation::NSCoder)
+  @objc deinit
+  @_Concurrency::MainActor @preconcurrency @objc public func loadAd()
+  @_Concurrency::MainActor @preconcurrency @objc public func viewControllerForModalPresentation() -> UIKit::UIViewController?
+  @_Concurrency::MainActor @preconcurrency @objc public func adLoaded(_ adDetails: PrebidMobile::AdDetails)
+  @_Concurrency::MainActor @preconcurrency @objc public func failedToLoad(_ error: any Swift::Error)
+  @_Concurrency::MainActor @preconcurrency @objc public func adDidComplete()
+  @_Concurrency::MainActor @preconcurrency @objc public func adDidDisplay()
+  @_Concurrency::MainActor @preconcurrency @objc public func adWasClicked()
+  @_Concurrency::MainActor @preconcurrency @objc public func adViewWasClicked()
+  @_Concurrency::MainActor @preconcurrency @objc public func adDidExpand()
+  @_Concurrency::MainActor @preconcurrency @objc public func adDidCollapse()
+  @_Concurrency::MainActor @preconcurrency @objc public func adDidLeaveApp()
+  @_Concurrency::MainActor @preconcurrency @objc public func adClickthroughDidClose()
+  @_Concurrency::MainActor @preconcurrency @objc public func adDidClose()
+  @_Concurrency::MainActor @preconcurrency @objc public var displayView: UIKit::UIView {
+    @objc get
+  }
+  @_Concurrency::MainActor @preconcurrency @objc public func modalManagerWillPresentModal()
+  @_Concurrency::MainActor @preconcurrency @objc public func modalManagerDidDismissModal()
+  @_Concurrency::MainActor @preconcurrency @objc public func videoAdWasMuted()
+  @_Concurrency::MainActor @preconcurrency @objc public func videoAdWasUnmuted()
+  @_Concurrency::MainActor @preconcurrency @objc public func videoAdDidStart()
+  @_Concurrency::MainActor @preconcurrency @objc public func videoAdDidFinish()
+  @_Concurrency::MainActor @preconcurrency @objc public func videoAdDidPause()
+  @_Concurrency::MainActor @preconcurrency @objc public func videoAdDidResume()
+}
+extension PrebidMobile::DisplayView {
+  @objc @_Concurrency::MainActor @preconcurrency public static func melvadLabView(size: CoreFoundation::CGSize, video: Swift::Bool = false) throws -> PrebidMobile::DisplayView
+  @objc @_Concurrency::MainActor @preconcurrency dynamic public func melvadLabLoad(markup: Swift::String) throws
+  @objc @_Concurrency::MainActor @preconcurrency dynamic public func melvadLabPause()
+  @objc @_Concurrency::MainActor @preconcurrency dynamic public func melvadLabResume()
+  @objc @_Concurrency::MainActor @preconcurrency dynamic public func melvadLabDestroy()
+}
+@objc public protocol DisplayViewInteractionDelegate : ObjectiveC::NSObjectProtocol {
+  @objc func trackImpression(forDisplayView: UIKit::UIView)
+  @objc func didLeaveApp(from displayView: UIKit::UIView)
+  @objc func willPresentModal(from displayView: UIKit::UIView)
+  @objc func didDismissModal(from displayView: UIKit::UIView)
+  @objc func viewControllerForModalPresentation(fromDisplayView: UIKit::UIView) -> UIKit::UIViewController?
+}
+@objc public protocol DisplayViewLoadingDelegate : ObjectiveC::NSObjectProtocol {
+  @objc func displayViewDidLoadAd(_ displayView: UIKit::UIView)
+  @objc func displayView(_ displayView: UIKit::UIView, didFailWithError error: any Swift::Error)
+  @objc optional func displayViewDidExpire(_ displayView: UIKit::UIView)
+}
+@objc public protocol InterstitialControllerInteractionDelegate : ObjectiveC::NSObjectProtocol {
+  @objc func trackImpression(forInterstitialController: any PrebidMobile::PrebidMobileInterstitialControllerProtocol)
+  @objc func interstitialControllerDidClickAd(_ interstitialController: any PrebidMobile::PrebidMobileInterstitialControllerProtocol)
+  @objc func interstitialControllerDidCloseAd(_ interstitialController: any PrebidMobile::PrebidMobileInterstitialControllerProtocol)
+  @objc func interstitialControllerDidLeaveApp(_ interstitialController: any PrebidMobile::PrebidMobileInterstitialControllerProtocol)
+  @objc func interstitialControllerDidDisplay(_ interstitialController: any PrebidMobile::PrebidMobileInterstitialControllerProtocol)
+  @objc func interstitialControllerDidComplete(_ interstitialController: any PrebidMobile::PrebidMobileInterstitialControllerProtocol)
+  @objc func viewControllerForModalPresentation(fromInterstitialController: any PrebidMobile::PrebidMobileInterstitialControllerProtocol) -> UIKit::UIViewController?
+  @objc optional func trackUserReward(_ interstitialController: any PrebidMobile::PrebidMobileInterstitialControllerProtocol, _ reward: PrebidMobile::PrebidReward)
+}
+@objc public protocol InterstitialControllerLoadingDelegate : ObjectiveC::NSObjectProtocol {
+  @objc func interstitialControllerDidLoadAd(_ interstitialController: any PrebidMobile::PrebidMobileInterstitialControllerProtocol)
+  @objc func interstitialController(_ interstitialController: any PrebidMobile::PrebidMobileInterstitialControllerProtocol, didFailWithError error: any Swift::Error)
+  @objc optional func interstitialControllerDidExpire(_ interstitialController: any PrebidMobile::PrebidMobileInterstitialControllerProtocol)
+}
+@objc public protocol PrebidMobileDisplayViewProtocol {
+  @objc func loadAd()
+}
+@objc public protocol PrebidMobileInterstitialControllerProtocol : ObjectiveC::NSObjectProtocol {
+  @objc func loadAd()
+  @objc func show()
+}
+@objc @objcMembers public class AdUnitConfig : ObjectiveC::NSObject, Foundation::NSCopying {
+  @objc public var configId: Swift::String
+  @objc final public let adConfiguration: PrebidMobile::AdConfiguration
+  @objc public var adFormats: Swift::Set<PrebidMobile::AdFormat> {
+    @objc get
+    @objc set
+  }
+  @objc public var adSize: CoreFoundation::CGSize
+  @objc public var minSizePerc: Foundation::NSValue?
+  @objc public var adPosition: PrebidMobile::AdPosition
+  @objc public var nativeAdConfiguration: PrebidMobile::NativeAdConfiguration?
+  @objc public var additionalSizes: [CoreFoundation::CGSize]? {
+    @objc get
+    @objc set
+  }
+  @objc public var refreshInterval: Foundation::TimeInterval {
+    @objc get
+    @objc set
+  }
+  @objc public var gpid: Swift::String?
+  @objc public var impORTBConfig: Swift::String? {
+    @objc get
+    @objc set
+  }
+  @objc public var globalORTBConfig: Swift::String? {
+    @objc get
+    @objc set
+  }
+  @objc convenience public init(configId: Swift::String)
+  @objc public init(configId: Swift::String, size: CoreFoundation::CGSize)
+  @objc public func setPbAdSlot(_ newElement: Swift::String?)
+  @objc public func getPbAdSlot() -> Swift::String?
+  @objc public func copy(with zone: ObjectiveC::NSZone? = nil) -> Any
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class Bid : ObjectiveC::NSObject {
+  @objc public static let KEY_RENDERER_NAME: Swift::String
+  @objc public static let KEY_RENDERER_VERSION: Swift::String
+  @objc public var price: Swift::Float {
+    @objc get
+  }
+  @objc public var burl: Swift::String?
+  @objc public var nurl: Swift::String? {
+    get
+  }
+  @objc public var adm: Swift::String? {
+    get
+  }
+  @objc public var size: CoreFoundation::CGSize {
+    @objc get
+  }
+  @objc public var exp: Foundation::NSNumber? {
+    @objc get
+  }
+  @objc public var targetingInfo: [Swift::String : Swift::String]? {
+    @objc get
+  }
+  @objc public var meta: [Swift::String : Any]? {
+    @objc get
+  }
+  @objc public var skadn: PrebidMobile::ORTBBidExtSkadn? {
+    @objc get
+  }
+  @objc public var adFormat: PrebidMobile::AdFormat? {
+    @objc get
+  }
+  @objc public var videoAdConfiguration: PrebidMobile::ORTBAdConfiguration? {
+    @objc get
+  }
+  @objc public var pluginRendererName: Swift::String? {
+    @objc get
+  }
+  @objc public var pluginRendererVersion: Swift::String? {
+    @objc get
+  }
+  @objc public var rewardedConfig: PrebidMobile::ORTBRewardedConfiguration? {
+    @objc get
+  }
+  @objc public var isWinning: Swift::Bool {
+    @objc get
+  }
+  @objc public var hasSuccessfulServerCache: Swift::Bool {
+    @objc get
+  }
+  @objc public var events: PrebidMobile::ORTBExtPrebidEvents? {
+    @objc get
+  }
+  @objc deinit
+}
+@objc extension PrebidMobile::Bid {
+  @objc dynamic public var impressionTrackingURLs: [Swift::String] {
+    @objc get
+  }
+}
+extension PrebidMobile::Bid {
+  public var melvadLabAPI: Swift::Int? {
+    get
+  }
+  @objc dynamic public var melvadLabAttributes: [Swift::Int] {
+    @objc get
+  }
+  @objc dynamic public var melvadSkAdImpression: StoreKit::SKAdImpression? {
+    @objc get
+  }
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class BidResponse : ObjectiveC::NSObject {
+  @objc public var adUnitId: Swift::String?
+  @objc public var allBids: [PrebidMobile::Bid]? {
+    get
+  }
+  @objc public var winningBid: PrebidMobile::Bid? {
+    get
+  }
+  @objc public var targetingInfo: [Swift::String : Swift::String]? {
+    get
+  }
+  @objc public var topBidWasFiltered: Swift::Bool {
+    get
+  }
+  @objc public var tmaxrequest: Foundation::NSNumber? {
+    get
+  }
+  @objc public var ext: PrebidMobile::ORTBBidResponseExt? {
+    get
+  }
+  @objc convenience public init(adUnitId: Swift::String?, targetingInfo: [Swift::String : Swift::String]?)
+  @objc convenience public init(jsonDictionary: [Swift::String : Any])
+  @objc public func setTargetingInfo(with newValue: [Swift::String : Swift::String])
+  @objc public func addTargetingInfoValue(key: Swift::String, value: Swift::String)
+  @objc @discardableResult
+  public func removeBidsWithoutSuccessfulCache() -> Swift::Int
+  @objc deinit
+}
+public enum MelvadBidResponse {
+  public static func normalize(_ input: [Swift::String : Any]) throws -> [Swift::String : Any]
+}
+@_inheritsConvenienceInitializers @objc open class ORTBAdConfiguration : ObjectiveC::NSObject {
+  @objc public var maxVideoDuration: Foundation::NSNumber?
+  @objc public var isMuted: Foundation::NSNumber?
+  @objc public var closeButtonArea: Foundation::NSNumber?
+  @objc public var closeButtonPosition: Swift::String?
+  @objc public var skipButtonArea: Foundation::NSNumber?
+  @objc public var skipButtonPosition: Swift::String?
+  @objc public var skipDelay: Foundation::NSNumber?
+  @objc public var isAutoCloseOnCompletionEnabled: Foundation::NSNumber?
+  @objc override dynamic public init()
+  @objc required public init(jsonDictionary: [Swift::String : Any])
+  @objc public var jsonDictionary: [Swift::String : Any] {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(PBMORTBBidExtSkadn) open class ORTBBidExtSkadn : ObjectiveC::NSObject {
+  @objc public var version: Swift::String?
+  @objc public var network: Swift::String?
+  @objc public var campaign: Swift::String?
+  @objc public var sourceidentifier: Swift::String?
+  @objc public var itunesitem: Swift::String?
+  @objc public var sourceapp: Swift::String?
+  @objc public var fidelities: [PrebidMobile::ORTBSkadnFidelity]?
+  @objc public var skoverlay: PrebidMobile::ORTBBidExtSkadnSKOverlay?
+  @objc override dynamic public init()
+  @objc required public init(jsonDictionary: [Swift::String : Any])
+  @objc public var jsonDictionary: [Swift::String : Any] {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc open class ORTBBidExtSkadnSKOverlay : ObjectiveC::NSObject {
+  @objc public var delay: Foundation::NSNumber?
+  @objc public var endcarddelay: Foundation::NSNumber?
+  @objc public var dismissible: Foundation::NSNumber?
+  @objc public var pos: Foundation::NSNumber?
+  @objc override dynamic public init()
+  @objc required public init(jsonDictionary: [Swift::String : Any])
+  @objc public var jsonDictionary: [Swift::String : Any] {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class ORTBBidResponseExt : ObjectiveC::NSObject {
+  @objc public var responsetimemillis: [Swift::String : Foundation::NSNumber]?
+  @objc public var tmaxrequest: Foundation::NSNumber?
+  @objc public var extPrebid: PrebidMobile::ORTBBidResponseExtPrebid?
+  @objc required public init(jsonDictionary: [Swift::String : Any])
+  @objc public var jsonDictionary: [Swift::String : Any] {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc open class ORTBBidResponseExtPrebid : ObjectiveC::NSObject {
+  @objc public var passthrough: [PrebidMobile::ORTBExtPrebidPassthrough]?
+  @objc override dynamic public init()
+  @objc required public init(jsonDictionary: [Swift::String : Any])
+  @objc public var jsonDictionary: [Swift::String : Any] {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc open class ORTBExtPrebidEvents : ObjectiveC::NSObject {
+  @objc public var win: Swift::String?
+  @objc public var imp: Swift::String?
+  @objc override dynamic public init()
+  @objc required public init(jsonDictionary: [Swift::String : Any])
+  @objc public var jsonDictionary: [Swift::String : Any] {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc open class ORTBExtPrebidPassthrough : ObjectiveC::NSObject {
+  @objc public var type: Swift::String?
+  @objc public var adConfiguration: PrebidMobile::ORTBAdConfiguration?
+  @objc public var sdkConfiguration: PrebidMobile::ORTBSDKConfiguration?
+  @objc public var rewardedConfiguration: PrebidMobile::ORTBRewardedConfiguration?
+  @objc override dynamic public init()
+  @objc required public init(jsonDictionary: [Swift::String : Any])
+  @objc public var jsonDictionary: [Swift::String : Any] {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc open class ORTBRewardedClose : ObjectiveC::NSObject {
+  @objc public var postrewardtime: Foundation::NSNumber?
+  @objc public var action: Swift::String?
+  @objc override dynamic public init()
+  @objc required public init(jsonDictionary: [Swift::String : Any])
+  @objc public var jsonDictionary: [Swift::String : Any] {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc open class ORTBRewardedCompletion : ObjectiveC::NSObject {
+  @objc public var banner: PrebidMobile::ORTBRewardedCompletionBanner?
+  @objc public var video: PrebidMobile::ORTBRewardedCompletionVideo?
+  @objc override dynamic public init()
+  @objc required public init(jsonDictionary: [Swift::String : Any])
+  @objc public var jsonDictionary: [Swift::String : Any] {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc open class ORTBRewardedCompletionBanner : ObjectiveC::NSObject {
+  @objc public var time: Foundation::NSNumber?
+  @objc public var event: Swift::String?
+  @objc override dynamic public init()
+  @objc required public init(jsonDictionary: [Swift::String : Any])
+  @objc public var jsonDictionary: [Swift::String : Any] {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc open class ORTBRewardedCompletionVideo : ObjectiveC::NSObject {
+  @objc public var time: Foundation::NSNumber?
+  @objc public var playbackevent: Swift::String?
+  @objc public var endcard: PrebidMobile::ORTBRewardedCompletionVideoEndcard?
+  @objc override dynamic public init()
+  @objc required public init(jsonDictionary: [Swift::String : Any])
+  @objc public var jsonDictionary: [Swift::String : Any] {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc open class ORTBRewardedCompletionVideoEndcard : ObjectiveC::NSObject {
+  @objc public var time: Foundation::NSNumber?
+  @objc public var event: Swift::String?
+  @objc override dynamic public init()
+  @objc required public init(jsonDictionary: [Swift::String : Any])
+  @objc public var jsonDictionary: [Swift::String : Any] {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc open class ORTBRewardedConfiguration : ObjectiveC::NSObject {
+  @objc public var reward: PrebidMobile::ORTBRewardedReward?
+  @objc public var completion: PrebidMobile::ORTBRewardedCompletion?
+  @objc public var close: PrebidMobile::ORTBRewardedClose?
+  @objc override dynamic public init()
+  @objc required public init(jsonDictionary: [Swift::String : Any])
+  @objc public var jsonDictionary: [Swift::String : Any] {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc open class ORTBRewardedReward : ObjectiveC::NSObject {
+  @objc public var type: Swift::String?
+  @objc public var count: Foundation::NSNumber?
+  @objc public var ext: [Swift::String : Any]?
+  @objc override dynamic public init()
+  @objc required public init(jsonDictionary: [Swift::String : Any])
+  @objc public var jsonDictionary: [Swift::String : Any] {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(PBMORTBSDKConfiguration) open class ORTBSDKConfiguration : ObjectiveC::NSObject {
+  @objc public var cftBanner: Foundation::NSNumber?
+  @objc public var cftPreRender: Foundation::NSNumber?
+  @objc override dynamic public init()
+  @objc required public init(jsonDictionary: [Swift::String : Any])
+  @objc public var jsonDictionary: [Swift::String : Any] {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc open class ORTBSkadnFidelity : ObjectiveC::NSObject {
+  @objc public var fidelity: Foundation::NSNumber?
+  @objc public var signature: Swift::String?
+  @objc public var nonce: Swift::String?
+  @objc public var timestamp: Swift::String?
+  @objc override dynamic public init()
+  @objc required public init(jsonDictionary: [Swift::String : Any])
+  @objc public var jsonDictionary: [Swift::String : Any] {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class CustomModelObjects : ObjectiveC::NSObject {
+  public static func unregisterCustomType(_ type: any PrebidMobile::PBMJsonDecodable.Type)
+  public static func registerCustomType(_ type: PrebidMobile::ORTBAdConfiguration.Type)
+  public static func registerCustomType(_ type: PrebidMobile::ORTBBidExtSkadn.Type)
+  public static func registerCustomType(_ type: PrebidMobile::ORTBBidExtSkadnSKOverlay.Type)
+  public static func registerCustomType(_ type: PrebidMobile::ORTBBidResponseExt.Type)
+  public static func registerCustomType(_ type: PrebidMobile::ORTBBidResponseExtPrebid.Type)
+  public static func registerCustomType(_ type: PrebidMobile::ORTBExtPrebidEvents.Type)
+  public static func registerCustomType(_ type: PrebidMobile::ORTBExtPrebidPassthrough.Type)
+  public static func registerCustomType(_ type: PrebidMobile::ORTBRewardedClose.Type)
+  public static func registerCustomType(_ type: PrebidMobile::ORTBRewardedCompletion.Type)
+  public static func registerCustomType(_ type: PrebidMobile::ORTBRewardedCompletionBanner.Type)
+  public static func registerCustomType(_ type: PrebidMobile::ORTBRewardedCompletionVideo.Type)
+  public static func registerCustomType(_ type: PrebidMobile::ORTBRewardedCompletionVideoEndcard.Type)
+  public static func registerCustomType(_ type: PrebidMobile::ORTBRewardedConfiguration.Type)
+  public static func registerCustomType(_ type: PrebidMobile::ORTBRewardedReward.Type)
+  public static func registerCustomType(_ type: PrebidMobile::ORTBSDKConfiguration.Type)
+  public static func registerCustomType(_ type: PrebidMobile::ORTBSkadnFidelity.Type)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc extension PrebidMobile::Prebid {
+  @objc dynamic public func callEventDelegateAsync_prebidBidRequestDidFinishWith(requestData: Foundation::Data?, responseData: Foundation::Data?)
+}
+public protocol PBMJsonDecodable {
+  init?(jsonDictionary: [Swift::String : Any])
+}
+extension Swift::Dictionary where Key == Swift::String, Value == Any {
+  public init(jsonDictionary: [Swift::String : Any])
+  public var jsonDictionary: [Swift::String : Any] {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @available(iOS 14.5, *)
+@objc(PBMSkadnEventTracker) @objcMembers public class SkadnEventTracker : ObjectiveC::NSObject, PrebidMobile::EventTrackerProtocol {
+  @objc public func trackEvent(_ event: PrebidMobile::TrackingEvent)
+  @objc public func trackVideoAdLoaded(_ parameters: PrebidMobile::VideoVerificationParameters)
+  @objc public func trackStartVideo(duration: Foundation::TimeInterval, volume: Swift::Double)
+  @objc public func trackVolumeChanged(playerVolume: Swift::Double, deviceVolume: Swift::Double)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(PBMEventManager) @objcMembers public class EventManager : ObjectiveC::NSObject, PrebidMobile::EventTrackerProtocol {
+  @objc public func trackEvent(_ event: PrebidMobile::TrackingEvent)
+  @objc public func trackVideoAdLoaded(_ parameters: PrebidMobile::VideoVerificationParameters)
+  @objc public func trackStartVideo(duration: Foundation::TimeInterval, volume: Swift::Double)
+  @objc public func trackVolumeChanged(playerVolume: Swift::Double, deviceVolume: Swift::Double)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc(PBMEventTrackerProtocol) public protocol EventTrackerProtocol {
+  @objc func trackEvent(_ event: PrebidMobile::TrackingEvent)
+  @objc func trackVideoAdLoaded(_ parameters: PrebidMobile::VideoVerificationParameters)
+  @objc func trackStartVideo(duration: Foundation::TimeInterval, volume: Swift::Double)
+  @objc(trackVolumeChanged:deviceVolume:) func trackVolumeChanged(playerVolume: Swift::Double, deviceVolume: Swift::Double)
+}
+@_inheritsConvenienceInitializers @objc(PBMVideoVerificationResource) public class VideoVerificationResource : ObjectiveC::NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(PBMVideoVerificationParameters) public class VideoVerificationParameters : ObjectiveC::NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(PBMUserAgentService) @objcMembers public class UserAgentService : ObjectiveC::NSObject {
+  @objc public static let shared: PrebidMobile::UserAgentService
+  @objc public var userAgent: Swift::String {
+    @objc get
+  }
+  @objc deinit
+}
+public typealias VoidBlock = () -> Swift::Void
+@objc public enum ResultCode : Swift::Int {
+  case prebidDemandFetchSuccess = 0
+  case prebidServerNotSpecified
+  case prebidInvalidAccountId
+  case prebidInvalidConfigId
+  case prebidInvalidSize
+  case prebidNetworkError
+  case prebidServerError
+  case prebidDemandNoBids
+  case prebidDemandTimedOut
+  case prebidServerURLInvalid
+  case prebidUnknownError
+  case prebidDemandNoCachedBids = 11
+  case prebidInvalidResponseStructure = 1000
+  case prebidInternalSDKError = 7000
+  case prebidWrongArguments
+  case prebidNoVastTagInMediaData
+  case prebidSDKMisuse = 8000
+  case prebidSDKMisusePreviousFetchNotCompletedYet
+  case prebidInvalidRequest
+  public func name() -> Swift::String
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
+    get
+  }
+}
+extension UIKit::UIView {
+  @_Concurrency::MainActor @preconcurrency public func allSubViewsOf<T>(type: T.Type) -> [T] where T : UIKit::UIView
+}
+extension PrebidMobile::DataAsset : Swift::Equatable {}
+extension PrebidMobile::DataAsset : Swift::Hashable {}
+extension PrebidMobile::DataAsset : Swift::RawRepresentable {}
+extension PrebidMobile::NativeDataAssetType : Swift::Equatable {}
+extension PrebidMobile::NativeDataAssetType : Swift::Hashable {}
+extension PrebidMobile::NativeDataAssetType : Swift::RawRepresentable {}
+extension PrebidMobile::NativeImageAssetType : Swift::Equatable {}
+extension PrebidMobile::NativeImageAssetType : Swift::Hashable {}
+extension PrebidMobile::NativeImageAssetType : Swift::RawRepresentable {}
+extension PrebidMobile::EidsPlacement : Swift::Equatable {}
+extension PrebidMobile::EidsPlacement : Swift::Hashable {}
+extension PrebidMobile::EidsPlacement : Swift::RawRepresentable {}
+extension PrebidMobile::PrebidInitializationStatus : Swift::Equatable {}
+extension PrebidMobile::PrebidInitializationStatus : Swift::Hashable {}
+extension PrebidMobile::PrebidInitializationStatus : Swift::RawRepresentable {}
+extension PrebidMobile::OpenMeasurementFriendlyObstructionPurpose : Swift::Equatable {}
+extension PrebidMobile::OpenMeasurementFriendlyObstructionPurpose : Swift::Hashable {}
+extension PrebidMobile::OpenMeasurementFriendlyObstructionPurpose : Swift::RawRepresentable {}
+extension PrebidMobile::AdPosition : Swift::Equatable {}
+extension PrebidMobile::AdPosition : Swift::Hashable {}
+extension PrebidMobile::AdPosition : Swift::RawRepresentable {}
+extension PrebidMobile::InterstitialLayout : Swift::Equatable {}
+extension PrebidMobile::InterstitialLayout : Swift::Hashable {}
+extension PrebidMobile::InterstitialLayout : Swift::RawRepresentable {}
+extension PrebidMobile::Position : Swift::Equatable {}
+extension PrebidMobile::Position : Swift::Hashable {}
+extension PrebidMobile::Position : Swift::RawRepresentable {}
+extension PrebidMobile::TrackingEvent : Swift::Equatable {}
+extension PrebidMobile::TrackingEvent : Swift::Hashable {}
+extension PrebidMobile::TrackingEvent : Swift::RawRepresentable {}
+extension PrebidMobile::ORTBAdConfiguration : PrebidMobile::PBMJsonDecodable {}
+extension PrebidMobile::ORTBBidExtSkadn : PrebidMobile::PBMJsonDecodable {}
+extension PrebidMobile::ORTBBidExtSkadnSKOverlay : PrebidMobile::PBMJsonDecodable {}
+extension PrebidMobile::ORTBBidResponseExt : PrebidMobile::PBMJsonDecodable {}
+extension PrebidMobile::ORTBBidResponseExtPrebid : PrebidMobile::PBMJsonDecodable {}
+extension PrebidMobile::ORTBExtPrebidEvents : PrebidMobile::PBMJsonDecodable {}
+extension PrebidMobile::ORTBExtPrebidPassthrough : PrebidMobile::PBMJsonDecodable {}
+extension PrebidMobile::ORTBRewardedClose : PrebidMobile::PBMJsonDecodable {}
+extension PrebidMobile::ORTBRewardedCompletion : PrebidMobile::PBMJsonDecodable {}
+extension PrebidMobile::ORTBRewardedCompletionBanner : PrebidMobile::PBMJsonDecodable {}
+extension PrebidMobile::ORTBRewardedCompletionVideo : PrebidMobile::PBMJsonDecodable {}
+extension PrebidMobile::ORTBRewardedCompletionVideoEndcard : PrebidMobile::PBMJsonDecodable {}
+extension PrebidMobile::ORTBRewardedConfiguration : PrebidMobile::PBMJsonDecodable {}
+extension PrebidMobile::ORTBRewardedReward : PrebidMobile::PBMJsonDecodable {}
+extension PrebidMobile::ORTBSDKConfiguration : PrebidMobile::PBMJsonDecodable {}
+extension PrebidMobile::ORTBSkadnFidelity : PrebidMobile::PBMJsonDecodable {}
+extension PrebidMobile::ResultCode : Swift::Equatable {}
+extension PrebidMobile::ResultCode : Swift::Hashable {}
+extension PrebidMobile::ResultCode : Swift::RawRepresentable {}

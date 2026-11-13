@@ -1,0 +1,278 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.4.2 effective-5.10 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)
+// swift-module-flags: -target arm64-apple-ios16.0 -enable-objc-interop -enable-library-evolution -language-mode 5 -O -enable-experimental-feature DebugDescriptionMacro -module-name MelvadAdsRuntime -package-name source
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.4.2
+import CryptoKit
+import Foundation
+import Foundation/*.Bundle*/
+import Foundation/*.ProcessInfo*/
+import Foundation/*.URL*/
+import MelvadAdsCore
+import OMSDK_Melvad
+import PrebidMobile
+import StoreKit
+import Swift
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum JSRendererEvent : Swift::String {
+  case ready, started, impression
+  case videoStart, firstQuartile
+  case midpoint, thirdQuartile, complete
+  case paused, playing, stopped, skipped
+  case failed, click, destroyed
+  public init?(rawValue: Swift::String)
+  public typealias RawValue = Swift::String
+  public var rawValue: Swift::String {
+    get
+  }
+}
+public enum JSRendererError : Swift::Error {
+  case invalidState, invalidMarkup, hostUnavailable, preparationFailed, timeout
+  case fullscreenUnavailable
+  public static func == (a: MelvadAdsRuntime::JSRendererError, b: MelvadAdsRuntime::JSRendererError) -> Swift::Bool
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+}
+@objc @_Concurrency::MainActor final public class JSPreparedRenderer : ObjectiveC::NSObject, WebKit::WKNavigationDelegate {
+  @_Concurrency::MainActor final public let view: WebKit::WKWebView
+  @_Concurrency::MainActor final public var isReady: Swift::Bool {
+    get
+  }
+  @_Concurrency::MainActor final public var isDestroyed: Swift::Bool {
+    get
+  }
+  @_Concurrency::MainActor final public var onEvent: ((MelvadAdsRuntime::JSRendererEvent) -> Swift::Void)?
+  @_Concurrency::MainActor final public var onClick: ((Foundation::URL) -> Swift::Void)?
+  @_Concurrency::MainActor final public var lastError: Swift::String? {
+    get
+  }
+  public enum Resources {
+    case bundled, loopbackFixture
+    public static func == (a: MelvadAdsRuntime::JSPreparedRenderer.MelvadAdsRuntime::Resources, b: MelvadAdsRuntime::JSPreparedRenderer.MelvadAdsRuntime::Resources) -> Swift::Bool
+    public func hash(into hasher: inout Swift::Hasher)
+    public var hashValue: Swift::Int {
+      get
+    }
+  }
+  @_Concurrency::MainActor final public var bundledResourceRequests: [Swift::String] {
+    get
+  }
+  @_Concurrency::MainActor final public var isAdhesion: Swift::Bool {
+    get
+  }
+  @_Concurrency::MainActor final public var isFullscreenBanner: Swift::Bool {
+    get
+  }
+  @_Concurrency::MainActor final public var visibleFraction: Swift::Double {
+    get
+  }
+  @_Concurrency::MainActor final public var videoMode: MelvadAdsRuntime::MelvadVideoMode?
+  @_Concurrency::MainActor final public var continuousVisibleDuration: Swift::Duration {
+    get
+  }
+  public enum CreativeKind {
+    case video, banner
+    public static func == (a: MelvadAdsRuntime::JSPreparedRenderer.MelvadAdsRuntime::CreativeKind, b: MelvadAdsRuntime::JSPreparedRenderer.MelvadAdsRuntime::CreativeKind) -> Swift::Bool
+    public func hash(into hasher: inout Swift::Hasher)
+    public var hashValue: Swift::Int {
+      get
+    }
+  }
+  @_Concurrency::MainActor public init(kind: MelvadAdsRuntime::JSPreparedRenderer.MelvadAdsRuntime::CreativeKind = .video, privacy: MelvadAdsCore::PrivacyContext = PrivacyContext(), resources: MelvadAdsRuntime::JSPreparedRenderer.MelvadAdsRuntime::Resources = .bundled)
+  @_Concurrency::MainActor final public func prepare(vast: Swift::String, timeout: Swift::Duration = .seconds(20)) async throws
+  @_Concurrency::MainActor final public func prepare(ad: MelvadAdsCore::LoadedAd) async throws
+  @_Concurrency::MainActor public static func bannerPayload(for ad: MelvadAdsCore::LoadedAd) throws -> Foundation::Data
+  @_Concurrency::MainActor final public func prepare(response data: Foundation::Data, timeout: Swift::Duration = .seconds(20)) async throws
+  @_Concurrency::MainActor final public func setActive(_ active: Swift::Bool) async throws
+  @_Concurrency::MainActor final public func resize(to size: CoreFoundation::CGSize) async throws
+  @_Concurrency::MainActor final public func closeByUser() async
+  @_Concurrency::MainActor final public func destroy() async
+  @_Concurrency::MainActor final public func updatePrivacy(_ value: MelvadAdsCore::PrivacyContext) async
+  @_Concurrency::MainActor final public func refreshVisibility() async throws
+  @objc deinit
+  @_Concurrency::MainActor @preconcurrency @objc final public func webView(_ webView: WebKit::WKWebView, didFinish navigation: WebKit::WKNavigation!)
+  @_Concurrency::MainActor @preconcurrency @objc final public func webView(_ webView: WebKit::WKWebView, decidePolicyFor action: WebKit::WKNavigationAction, decisionHandler: @escaping (WebKit::WKNavigationActionPolicy) -> Swift::Void)
+  @_Concurrency::MainActor @preconcurrency @objc final public func webView(_ webView: WebKit::WKWebView, didFailProvisionalNavigation navigation: WebKit::WKNavigation!, withError error: any Swift::Error)
+  @_Concurrency::MainActor @preconcurrency @objc final public func webView(_ webView: WebKit::WKWebView, didFail navigation: WebKit::WKNavigation!, withError error: any Swift::Error)
+  @_Concurrency::MainActor @preconcurrency @objc final public func webViewWebContentProcessDidTerminate(_ webView: WebKit::WKWebView)
+}
+extension MelvadAdsRuntime::JSRendererError : Foundation::LocalizedError, Foundation::CustomNSError {
+  public static var errorDomain: Swift::String {
+    get
+  }
+  public var errorCode: Swift::Int {
+    get
+  }
+  public var errorDescription: Swift::String? {
+    get
+  }
+  public var errorUserInfo: [Swift::String : Any] {
+    get
+  }
+}
+@objc public enum MelvadAdSessionState : Swift::Int {
+  case idle, loading, ready, showing, noFill, failed, destroyed
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
+    get
+  }
+}
+@_Concurrency::MainActor @objc public protocol MelvadAdSessionDelegate {
+  @objc @_Concurrency::MainActor func adSession(_ session: MelvadAdsRuntime::MelvadAdSession, didChange state: MelvadAdsRuntime::MelvadAdSessionState)
+  @objc @_Concurrency::MainActor func adSession(_ session: MelvadAdsRuntime::MelvadAdSession, didFail error: Foundation::NSError)
+  @objc @_Concurrency::MainActor func adSession(_ session: MelvadAdsRuntime::MelvadAdSession, didReceiveEvent event: Swift::String)
+  @objc @_Concurrency::MainActor func adSession(_ session: MelvadAdsRuntime::MelvadAdSession, didClick url: Foundation::URL)
+  @objc @_Concurrency::MainActor optional func adSessionDidEarnReward(_ session: MelvadAdsRuntime::MelvadAdSession)
+  @objc @_Concurrency::MainActor optional func adSessionDidClose(_ session: MelvadAdsRuntime::MelvadAdSession)
+}
+@objc @_Concurrency::MainActor final public class MelvadAdSession : ObjectiveC::NSObject {
+  @objc @_Concurrency::MainActor weak final public var delegate: (any MelvadAdsRuntime::MelvadAdSessionDelegate)?
+  @objc @_Concurrency::MainActor final public var state: MelvadAdsRuntime::MelvadAdSessionState {
+    get
+  }
+  @_Concurrency::MainActor final public var videoMode: MelvadAdsRuntime::MelvadVideoMode? {
+    get
+  }
+  @_Concurrency::MainActor public init(configuration: MelvadAdsCore::SupplierConfiguration)
+  @objc @_Concurrency::MainActor convenience public init(supplierURL: Foundation::URL, clientID: Swift::Int64, bundleIdentifier: Swift::String, storeURL: Foundation::URL?, userAgent: Swift::String, video: Swift::Bool) throws
+  @objc @_Concurrency::MainActor final public func load(in container: UIKit::UIView, inventoryID: Swift::String, placementID: Swift::String, mode: Swift::String?, width: Swift::Int, height: Swift::Int)
+  @objc @_Concurrency::MainActor final public func load(in container: UIKit::UIView, inventoryID: Swift::String, placementID: Swift::String, mode: Swift::String?, width: Swift::Int, height: Swift::Int, rewardUserID: Swift::String)
+  @objc @_Concurrency::MainActor final public func show()
+  @objc @_Concurrency::MainActor final public func hide()
+  @objc @_Concurrency::MainActor final public func present(from controller: UIKit::UIViewController) throws
+  @objc @_Concurrency::MainActor final public func updatePrivacy(personalizationAllowed: Swift::Bool, gdprApplies: Foundation::NSNumber?, consent: Swift::String?, globalPrivacyControl: Swift::Bool)
+  @_Concurrency::MainActor final public func updatePrivacy(_ value: MelvadAdsCore::PrivacyContext)
+  @objc @_Concurrency::MainActor final public func destroy()
+  @objc deinit
+}
+@objc public enum MelvadVideoMode : Swift::Int, Swift::CaseIterable {
+  case inslide, inread, infeed, fullscreen
+  public var supplierValue: Swift::String {
+    get
+  }
+  public init?(rawValue: Swift::Int)
+  public typealias AllCases = [MelvadAdsRuntime::MelvadVideoMode]
+  public typealias RawValue = Swift::Int
+  nonisolated public static var allCases: [MelvadAdsRuntime::MelvadVideoMode] {
+    get
+  }
+  public var rawValue: Swift::Int {
+    get
+  }
+}
+@_Concurrency::MainActor public protocol MelvadContentPlayback : AnyObject {
+  @_Concurrency::MainActor func playContent()
+  @_Concurrency::MainActor func pauseContent()
+}
+@objc @_Concurrency::MainActor final public class MelvadAdBreakController : ObjectiveC::NSObject, MelvadAdsRuntime::MelvadAdSessionDelegate {
+  public enum Position : Swift::String {
+    case preroll, midroll, postroll
+    public init?(rawValue: Swift::String)
+    public typealias RawValue = Swift::String
+    public var rawValue: Swift::String {
+      get
+    }
+  }
+  @_Concurrency::MainActor final public var onEvent: ((Swift::String) -> Swift::Void)?
+  @_Concurrency::MainActor public init(content: any MelvadAdsRuntime::MelvadContentPlayback, container: UIKit::UIView, configuration: MelvadAdsCore::SupplierConfiguration, inventoryID: Swift::String, placementID: Swift::String, midrollTime: Foundation::TimeInterval, privacy: MelvadAdsCore::PrivacyContext = PrivacyContext())
+  @_Concurrency::MainActor final public func updatePrivacy(_ value: MelvadAdsCore::PrivacyContext)
+  @_Concurrency::MainActor final public func start()
+  @_Concurrency::MainActor final public func contentTimeDidChange(_ seconds: Foundation::TimeInterval)
+  @_Concurrency::MainActor final public func contentDidFinish()
+  @_Concurrency::MainActor @objc final public func adSession(_ session: MelvadAdsRuntime::MelvadAdSession, didChange state: MelvadAdsRuntime::MelvadAdSessionState)
+  @_Concurrency::MainActor @objc final public func adSession(_ session: MelvadAdsRuntime::MelvadAdSession, didFail error: Foundation::NSError)
+  @_Concurrency::MainActor @objc final public func adSession(_ session: MelvadAdsRuntime::MelvadAdSession, didReceiveEvent event: Swift::String)
+  @_Concurrency::MainActor @objc final public func adSession(_ session: MelvadAdsRuntime::MelvadAdSession, didClick url: Foundation::URL)
+  @_Concurrency::MainActor final public func destroy()
+  @objc deinit
+}
+@objc public enum MelvadSDKLogLevel : Swift::Int {
+  case debug, info, warning, error, off
+  public init?(rawValue: Swift::Int)
+  public typealias RawValue = Swift::Int
+  public var rawValue: Swift::Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency::MainActor @objcMembers final public class MelvadDiagnostics : ObjectiveC::NSObject {
+  @objc @_Concurrency::MainActor public static func configure(minimumLevel: MelvadAdsRuntime::MelvadSDKLogLevel, handler: ((Foundation::NSDictionary) -> Swift::Void)?)
+  @_Concurrency::MainActor @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency::MainActor final public class MelvadFullscreenViewController : UIKit::UIViewController {
+  @_Concurrency::MainActor final public var onVideoCompleted: (() -> Swift::Void)?
+  @_Concurrency::MainActor final public var onClose: (() -> Swift::Void)?
+  @_Concurrency::MainActor public init(renderer: MelvadAdsRuntime::JSPreparedRenderer) throws
+  @_Concurrency::MainActor @objc override final public func viewDidLoad()
+  @_Concurrency::MainActor @objc override final public func viewWillAppear(_ animated: Swift::Bool)
+  @_Concurrency::MainActor @objc override final public func viewDidAppear(_ animated: Swift::Bool)
+  @_Concurrency::MainActor @objc override final public func viewDidLayoutSubviews()
+  @_Concurrency::MainActor @objc override final public func viewWillDisappear(_ animated: Swift::Bool)
+  @_Concurrency::MainActor @objc override final public func viewDidDisappear(_ animated: Swift::Bool)
+  @objc @_Concurrency::MainActor final public func close()
+  @objc deinit
+}
+public struct NativePrebidConfiguration {
+  public let endpoint: Foundation::URL
+  public let accountID: Swift::String
+  public let configID: Swift::String
+  public let size: MelvadAdsCore::AdSize
+  public let storeURL: Foundation::URL?
+  public init(endpoint: Foundation::URL, accountID: Swift::String, configID: Swift::String, size: MelvadAdsCore::AdSize, allowLoopbackHTTP: Swift::Bool = false, supplierDecision: MelvadAdsCore::SupplierPrebidDecision? = nil, storeURL: Foundation::URL? = nil, identityProvider: (any MelvadAdsCore::AdvertisingIdentityProvider)? = nil) throws
+}
+@_hasMissingDesignatedInitializers @_Concurrency::MainActor final public class NativePrebidDemand {
+  @_Concurrency::MainActor public static func load(configuration: MelvadAdsRuntime::NativePrebidConfiguration, video: Swift::Bool = false, privacy: MelvadAdsCore::PrivacyContext = PrivacyContext()) async throws -> MelvadAdsRuntime::NativePrebidCreative?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @_Concurrency::MainActor final public class NativePrebidCreative {
+  @_Concurrency::MainActor final public let markup: Swift::String
+  @_Concurrency::MainActor final public let size: MelvadAdsCore::AdSize
+  @_Concurrency::MainActor final public let isVideo: Swift::Bool
+  @_Concurrency::MainActor final public var isNative: Swift::Bool {
+    get
+  }
+  @_Concurrency::MainActor final public var billingRequestCount: Swift::Int {
+    get
+  }
+  @_Concurrency::MainActor final public var isExpired: Swift::Bool {
+    get
+  }
+  @_Concurrency::MainActor final public func prepare(renderer: MelvadAdsRuntime::JSPreparedRenderer) async throws
+  @_Concurrency::MainActor final public func recordImpression()
+  @_Concurrency::MainActor final public func endAttribution()
+  @_Concurrency::MainActor final public func destroy()
+  @objc deinit
+}
+extension MelvadAdsRuntime::JSRendererEvent : Swift::Equatable {}
+extension MelvadAdsRuntime::JSRendererEvent : Swift::Hashable {}
+extension MelvadAdsRuntime::JSRendererEvent : Swift::RawRepresentable {}
+extension MelvadAdsRuntime::JSRendererError : Swift::Equatable {}
+extension MelvadAdsRuntime::JSRendererError : Swift::Hashable {}
+extension MelvadAdsRuntime::JSPreparedRenderer : Swift::Sendable {}
+extension MelvadAdsRuntime::JSPreparedRenderer.MelvadAdsRuntime::Resources : Swift::Equatable {}
+extension MelvadAdsRuntime::JSPreparedRenderer.MelvadAdsRuntime::Resources : Swift::Hashable {}
+extension MelvadAdsRuntime::JSPreparedRenderer.MelvadAdsRuntime::CreativeKind : Swift::Equatable {}
+extension MelvadAdsRuntime::JSPreparedRenderer.MelvadAdsRuntime::CreativeKind : Swift::Hashable {}
+extension MelvadAdsRuntime::MelvadAdSessionState : Swift::Equatable {}
+extension MelvadAdsRuntime::MelvadAdSessionState : Swift::Hashable {}
+extension MelvadAdsRuntime::MelvadAdSessionState : Swift::RawRepresentable {}
+extension MelvadAdsRuntime::MelvadAdSession : Swift::Sendable {}
+extension MelvadAdsRuntime::MelvadVideoMode : Swift::Equatable {}
+extension MelvadAdsRuntime::MelvadVideoMode : Swift::Hashable {}
+extension MelvadAdsRuntime::MelvadVideoMode : Swift::RawRepresentable {}
+extension MelvadAdsRuntime::MelvadAdBreakController : Swift::Sendable {}
+extension MelvadAdsRuntime::MelvadAdBreakController.MelvadAdsRuntime::Position : Swift::Equatable {}
+extension MelvadAdsRuntime::MelvadAdBreakController.MelvadAdsRuntime::Position : Swift::Hashable {}
+extension MelvadAdsRuntime::MelvadAdBreakController.MelvadAdsRuntime::Position : Swift::RawRepresentable {}
+extension MelvadAdsRuntime::MelvadSDKLogLevel : Swift::Equatable {}
+extension MelvadAdsRuntime::MelvadSDKLogLevel : Swift::Hashable {}
+extension MelvadAdsRuntime::MelvadSDKLogLevel : Swift::RawRepresentable {}
+extension MelvadAdsRuntime::MelvadDiagnostics : Swift::Sendable {}
+extension MelvadAdsRuntime::NativePrebidDemand : Swift::Sendable {}
+extension MelvadAdsRuntime::NativePrebidCreative : Swift::Sendable {}

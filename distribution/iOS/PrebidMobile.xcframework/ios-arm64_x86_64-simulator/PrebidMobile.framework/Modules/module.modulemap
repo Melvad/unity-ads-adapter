@@ -1,0 +1,4 @@
+framework module PrebidMobile {
+    header "PrebidMobile-Swift.h"
+    requires objc
+}

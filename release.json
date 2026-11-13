@@ -19,6 +19,1066 @@
   },
   "files": [
     {
+      "path": ".gitattributes",
+      "size": 635,
+      "sha256": "9e0309f6ee6b72a2f05a6b092286e9e2e642a6fee0ccc37ac1065822f6709127"
+    },
+    {
+      "path": "api/Melvad.Ads.api",
+      "size": 2089,
+      "sha256": "138112cff3d5c0321592ce71fa5f71cbad6d9ec9433fa98e4d176ec646062951"
+    },
+    {
+      "path": "api/Melvad.Android.api",
+      "size": 2296,
+      "sha256": "3f5b1ad6e3ff416c4e59a1f7256aec9cfff8a4116248061110e760b52359a448"
+    },
+    {
+      "path": "api/Melvad.Unity.Android.api",
+      "size": 498,
+      "sha256": "7fb15a6c92370d91712946614794245c54e6af73528933b8cb27f22caea786ee"
+    },
+    {
+      "path": "distribution/Android/assets/melvad/omid/omsdk-v1.js",
+      "size": 51255,
+      "sha256": "1e6be2bbf9a7eecb7653b608241796c47a560ac3d081a15aff74c4a52c8f8cb0"
+    },
+    {
+      "path": "distribution/Android/assets/melvad/renderer/safeframe/html/r.html",
+      "size": 1425,
+      "sha256": "8a918d2aaace91ca315c29c8eb773c3ab18c69c3aca9900ae6df1191fbedf204"
+    },
+    {
+      "path": "distribution/Android/assets/melvad/renderer/safeframe/js/ext/ext.js",
+      "size": 43002,
+      "sha256": "f5e4fde8e31f1d1f59fe8b2f546ced34fda82c92c69063b83b9614a7aba657fd"
+    },
+    {
+      "path": "distribution/Android/assets/melvad/renderer/safeframe/js/lib/base.js",
+      "size": 74402,
+      "sha256": "114e2b4c0f808f02b73f8c68440f44669081a6e3f3f9b36d89cc55456f3481e4"
+    },
+    {
+      "path": "distribution/Android/assets/melvad/renderer/safeframe/mraid.js",
+      "size": 8917,
+      "sha256": "37d25592e5b798ddf7bb49ead04b3f63cb0dbd1f2da781febc7bf7e36491f8ba"
+    },
+    {
+      "path": "distribution/Android/assets/melvad/renderer/safeframe/native-runtime.js",
+      "size": 11677,
+      "sha256": "039e6191545153ae773633013624e6883f82fe4d8b0d4c3c5385a28ebabde945"
+    },
+    {
+      "path": "distribution/Android/assets/melvad/renderer/show.min.js",
+      "size": 93348,
+      "sha256": "a885db2706e15a2fbc4ccbfeaf81201383a3ba00608934187832f1c24ec2196c"
+    },
+    {
+      "path": "distribution/Android/assets/melvad/renderer/video/main.js",
+      "size": 204637,
+      "sha256": "8d49852a4df2849b68df92613f35e6362ff1e0e282dab54806e8c19741e04512"
+    },
+    {
+      "path": "distribution/Android/assets/melvad/renderer/video/optional.js",
+      "size": 40907,
+      "sha256": "bbf78d4b6142900dafee6404e2d2dd9c3fff1af97e73934af007bf1d742ab2d4"
+    },
+    {
+      "path": "distribution/Android/assets/melvad/renderer/video/vendor/shaka-player.compiled.js",
+      "size": 831369,
+      "sha256": "b22dfdba631104c48a654cb623b08b0f79e2d52c83c0e9b4b7cff54730b55894"
+    },
+    {
+      "path": "distribution/Android/assets/melvad/renderer/video/vendor/shaka-player.transmuxer-worker.js",
+      "size": 98070,
+      "sha256": "d57b08bbd94ca97a20c343967f3e331f60862ad263879e701bdf8d621f8897bf"
+    },
+    {
+      "path": "distribution/Android/assets/melvad/runtime.js",
+      "size": 14522,
+      "sha256": "22f7bf9e498dbe2dca5d1f216a9de18615e7d3f1d0d3541a5be5c68daa7e95df"
+    },
+    {
+      "path": "distribution/Android/assets/melvad/shell.html",
+      "size": 674,
+      "sha256": "7bba4231bebf7bdcda8b316c7569b788854e2eadbb68c2655ec13900f4292319"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsCore.xcframework/ios-arm64/MelvadAdsCore.framework/Headers/MelvadAdsCore-Swift.h",
+      "size": 13001,
+      "sha256": "6e5637a1433f9e67c307c33e1f20328537eac33993b6eaaa073a23ef409441a6"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsCore.xcframework/ios-arm64/MelvadAdsCore.framework/Modules/MelvadAdsCore.swiftmodule/arm64-apple-ios.package.swiftinterface",
+      "size": 13988,
+      "sha256": "6e8f4440ffbe6401d195512743b7bf7f87ba2857ea653cf3d6f6e5d6b709f0a1"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsCore.xcframework/ios-arm64/MelvadAdsCore.framework/Modules/MelvadAdsCore.swiftmodule/arm64-apple-ios.swiftinterface",
+      "size": 13988,
+      "sha256": "6e8f4440ffbe6401d195512743b7bf7f87ba2857ea653cf3d6f6e5d6b709f0a1"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsCore.xcframework/ios-arm64/MelvadAdsCore.framework/Modules/module.modulemap",
+      "size": 88,
+      "sha256": "ab2157f95b2ba6a196879a7c415fb892f7278e09505db82e31616b490daa1388"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsCore.xcframework/ios-arm64_x86_64-simulator/MelvadAdsCore.framework/Headers/MelvadAdsCore-Swift.h",
+      "size": 25947,
+      "sha256": "c29fbb11d0e355e85ddad2d05e46822571a19227ab2cca0f5b8081c962264ab5"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsCore.xcframework/ios-arm64_x86_64-simulator/MelvadAdsCore.framework/Modules/MelvadAdsCore.swiftmodule/arm64-apple-ios-simulator.package.swiftinterface",
+      "size": 13998,
+      "sha256": "dcc9049a7b921d2bd1f118a769d9615ad26b6bbf9df60601850601f54dac3582"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsCore.xcframework/ios-arm64_x86_64-simulator/MelvadAdsCore.framework/Modules/MelvadAdsCore.swiftmodule/arm64-apple-ios-simulator.swiftinterface",
+      "size": 13998,
+      "sha256": "dcc9049a7b921d2bd1f118a769d9615ad26b6bbf9df60601850601f54dac3582"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsCore.xcframework/ios-arm64_x86_64-simulator/MelvadAdsCore.framework/Modules/MelvadAdsCore.swiftmodule/x86_64-apple-ios-simulator.package.swiftinterface",
+      "size": 13999,
+      "sha256": "58b13e9b70a8c9ef0c9d88b273249368b264f4643135a592f82d34975a5cc1fc"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsCore.xcframework/ios-arm64_x86_64-simulator/MelvadAdsCore.framework/Modules/MelvadAdsCore.swiftmodule/x86_64-apple-ios-simulator.swiftinterface",
+      "size": 13999,
+      "sha256": "58b13e9b70a8c9ef0c9d88b273249368b264f4643135a592f82d34975a5cc1fc"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsCore.xcframework/ios-arm64_x86_64-simulator/MelvadAdsCore.framework/Modules/module.modulemap",
+      "size": 88,
+      "sha256": "ab2157f95b2ba6a196879a7c415fb892f7278e09505db82e31616b490daa1388"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64/MelvadAdsRuntime.framework/Headers/MelvadAdsRuntime-Swift.h",
+      "size": 19574,
+      "sha256": "7609f7e8820fad1d2593328aefce230837fd7fa21ae2c94d052f38ad18849246"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Measurement/omsdk-v1.js",
+      "size": 51255,
+      "sha256": "1e6be2bbf9a7eecb7653b608241796c47a560ac3d081a15aff74c4a52c8f8cb0"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/bridge.js",
+      "size": 1854,
+      "sha256": "c62aabea9e075c160cdf6d67ff6144ecd2a8ea1529be7d3536da7aaf3a13f723"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/host.html",
+      "size": 450,
+      "sha256": "3a1938a853b70df90f0deaf72dd61aed28e7b91b23e5c1e64b2f4094c428e64a"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/player.js",
+      "size": 195426,
+      "sha256": "ea1f1300b894464f26407addc7207bffcd325284e4d56be0d7ce8afb12504bdc"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/safeframe/html/r.html",
+      "size": 907,
+      "sha256": "2514abbb6fce7388fc814db27e4439f8cefbd49a40a35b370d340eb04b244767"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/safeframe/js/ext/ext.js",
+      "size": 43002,
+      "sha256": "f5e4fde8e31f1d1f59fe8b2f546ced34fda82c92c69063b83b9614a7aba657fd"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/safeframe/js/lib/base.js",
+      "size": 74443,
+      "sha256": "5f0a65aed592dc9e9561daabc84ac840f98be58f4d0e23c9eaa3f6ade395f1a7"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/safeframe/mraid.js",
+      "size": 5237,
+      "sha256": "aef9e6611eca46df9874ebab34e8a52a2e4d2d42ea294d0b12e8770d680dcb11"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/safeframe/native-runtime.js",
+      "size": 5133,
+      "sha256": "94235489b094fd17693ce6c2e481ca69809a438380d62a33886a091d5c563401"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/show-bridge.js",
+      "size": 871,
+      "sha256": "cb2f0071f2c94bb42da31c9238bdafb790b6c7b53afb3902e032984f52b32d2b"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/show-host.html",
+      "size": 327,
+      "sha256": "ce0ffcedb69a030e0d3e08edab18463a58b02964875b4ea3e3483600cd37ad24"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/show-sdk.js",
+      "size": 95348,
+      "sha256": "45caf2a04d50b1bd3f1537981b159fe2a7b9ec958e9b7ff2522162c69fbc3089"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/vendor/shaka-player.compiled.js",
+      "size": 831369,
+      "sha256": "b22dfdba631104c48a654cb623b08b0f79e2d52c83c0e9b4b7cff54730b55894"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/vendor/shaka-player.transmuxer-worker.js",
+      "size": 98070,
+      "sha256": "d57b08bbd94ca97a20c343967f3e331f60862ad263879e701bdf8d621f8897bf"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/vendor/vpaid-optional.bbf78d4b6142900d.min.js",
+      "size": 40907,
+      "sha256": "bbf78d4b6142900dafee6404e2d2dd9c3fff1af97e73934af007bf1d742ab2d4"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64/MelvadAdsRuntime.framework/Modules/MelvadAdsRuntime.swiftmodule/arm64-apple-ios.package.swiftinterface",
+      "size": 16712,
+      "sha256": "7b201d2caa358df3b39d53195bc7ee7c45be5e8cda4da16a643151ceb9d07f68"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64/MelvadAdsRuntime.framework/Modules/MelvadAdsRuntime.swiftmodule/arm64-apple-ios.swiftinterface",
+      "size": 16712,
+      "sha256": "7b201d2caa358df3b39d53195bc7ee7c45be5e8cda4da16a643151ceb9d07f68"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64/MelvadAdsRuntime.framework/Modules/module.modulemap",
+      "size": 94,
+      "sha256": "3f7088def12f50aec6d511883790c579587db5e2f8429f469d7b7227bf5ebf36"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/Headers/MelvadAdsRuntime-Swift.h",
+      "size": 39093,
+      "sha256": "a0ce50196eafd6b25f44a7c5f8ececcac406eb3f8aefe31920c57e2007125561"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Measurement/omsdk-v1.js",
+      "size": 51255,
+      "sha256": "1e6be2bbf9a7eecb7653b608241796c47a560ac3d081a15aff74c4a52c8f8cb0"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/bridge.js",
+      "size": 1854,
+      "sha256": "c62aabea9e075c160cdf6d67ff6144ecd2a8ea1529be7d3536da7aaf3a13f723"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/host.html",
+      "size": 450,
+      "sha256": "3a1938a853b70df90f0deaf72dd61aed28e7b91b23e5c1e64b2f4094c428e64a"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/player.js",
+      "size": 195426,
+      "sha256": "ea1f1300b894464f26407addc7207bffcd325284e4d56be0d7ce8afb12504bdc"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/safeframe/html/r.html",
+      "size": 907,
+      "sha256": "2514abbb6fce7388fc814db27e4439f8cefbd49a40a35b370d340eb04b244767"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/safeframe/js/ext/ext.js",
+      "size": 43002,
+      "sha256": "f5e4fde8e31f1d1f59fe8b2f546ced34fda82c92c69063b83b9614a7aba657fd"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/safeframe/js/lib/base.js",
+      "size": 74443,
+      "sha256": "5f0a65aed592dc9e9561daabc84ac840f98be58f4d0e23c9eaa3f6ade395f1a7"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/safeframe/mraid.js",
+      "size": 5237,
+      "sha256": "aef9e6611eca46df9874ebab34e8a52a2e4d2d42ea294d0b12e8770d680dcb11"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/safeframe/native-runtime.js",
+      "size": 5133,
+      "sha256": "94235489b094fd17693ce6c2e481ca69809a438380d62a33886a091d5c563401"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/show-bridge.js",
+      "size": 871,
+      "sha256": "cb2f0071f2c94bb42da31c9238bdafb790b6c7b53afb3902e032984f52b32d2b"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/show-host.html",
+      "size": 327,
+      "sha256": "ce0ffcedb69a030e0d3e08edab18463a58b02964875b4ea3e3483600cd37ad24"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/show-sdk.js",
+      "size": 95348,
+      "sha256": "45caf2a04d50b1bd3f1537981b159fe2a7b9ec958e9b7ff2522162c69fbc3089"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/vendor/shaka-player.compiled.js",
+      "size": 831369,
+      "sha256": "b22dfdba631104c48a654cb623b08b0f79e2d52c83c0e9b4b7cff54730b55894"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/vendor/shaka-player.transmuxer-worker.js",
+      "size": 98070,
+      "sha256": "d57b08bbd94ca97a20c343967f3e331f60862ad263879e701bdf8d621f8897bf"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/MelvadAdsSDK_MelvadAdsRuntime.bundle/Runtime/vendor/vpaid-optional.bbf78d4b6142900d.min.js",
+      "size": 40907,
+      "sha256": "bbf78d4b6142900dafee6404e2d2dd9c3fff1af97e73934af007bf1d742ab2d4"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/Modules/MelvadAdsRuntime.swiftmodule/arm64-apple-ios-simulator.package.swiftinterface",
+      "size": 16722,
+      "sha256": "e2aa33bd2a33a66b7239bd1196d1b2ab6cf65a7e6bb6deb91ef65399a9de094d"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/Modules/MelvadAdsRuntime.swiftmodule/arm64-apple-ios-simulator.swiftinterface",
+      "size": 16722,
+      "sha256": "e2aa33bd2a33a66b7239bd1196d1b2ab6cf65a7e6bb6deb91ef65399a9de094d"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/Modules/MelvadAdsRuntime.swiftmodule/x86_64-apple-ios-simulator.package.swiftinterface",
+      "size": 16723,
+      "sha256": "38bfd87ff75fda70a7eca31ee0395df2a10fb39a521c0334c82cba91b7a83367"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/Modules/MelvadAdsRuntime.swiftmodule/x86_64-apple-ios-simulator.swiftinterface",
+      "size": 16723,
+      "sha256": "38bfd87ff75fda70a7eca31ee0395df2a10fb39a521c0334c82cba91b7a83367"
+    },
+    {
+      "path": "distribution/iOS/MelvadAdsRuntime.xcframework/ios-arm64_x86_64-simulator/MelvadAdsRuntime.framework/Modules/module.modulemap",
+      "size": 94,
+      "sha256": "3f7088def12f50aec6d511883790c579587db5e2f8429f469d7b7227bf5ebf36"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64/OMSDK_Melvad.framework/Headers/OMIDAdEvents.h",
+      "size": 1978,
+      "sha256": "e9614cb5805b9a628e648abaa25e8aaf30033b8324dc13313b48f83e1a051861"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64/OMSDK_Melvad.framework/Headers/OMIDAdSession.h",
+      "size": 5416,
+      "sha256": "95a199097d8fde69fff12580f31eeb5e6e9a5e695d588b8abc60e7ec1f9c18c6"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64/OMSDK_Melvad.framework/Headers/OMIDAdSessionConfiguration.h",
+      "size": 5254,
+      "sha256": "cbc49c035603c880bef7c034103779be059b22f9240d86ae692e0700fcc792c1"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64/OMSDK_Melvad.framework/Headers/OMIDAdSessionContext.h",
+      "size": 5808,
+      "sha256": "c16506ed76142d1ff4dd135e7c73e5d0af292dd0f310ee40d334d8131fd797b6"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64/OMSDK_Melvad.framework/Headers/OMIDFriendlyObstructionType.h",
+      "size": 902,
+      "sha256": "fd99811654caee64b47d9cb85aac424e97e1c03004038aa50c7a1e77815ac018"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64/OMSDK_Melvad.framework/Headers/OMIDImports.h",
+      "size": 302,
+      "sha256": "5d00606fada6dc310dd9706d9e54be86a71ae0c108b81263abaa68f5f21b65ca"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64/OMSDK_Melvad.framework/Headers/OMIDJavaScriptSessionService.h",
+      "size": 5073,
+      "sha256": "517251b1a6b6ada2a84c23fc28984c4e348c9cb1c847b171264313d74ae7c9c9"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64/OMSDK_Melvad.framework/Headers/OMIDMediaEvents.h",
+      "size": 4770,
+      "sha256": "e56a48ce4d5d59e4acd954c0288c3f35c7ef8c51ed79bc9023c6a997df4e8834"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64/OMSDK_Melvad.framework/Headers/OMIDPartner.h",
+      "size": 954,
+      "sha256": "5b8ef908f9f44a71d3b651a978e57c39f04b17c9216e57c9c67c55c13c190699"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64/OMSDK_Melvad.framework/Headers/OMIDScriptInjector.h",
+      "size": 969,
+      "sha256": "88d0162297e91415257c0226c574327cb1dac13e0e16244af30f031386f4fc5f"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64/OMSDK_Melvad.framework/Headers/OMIDSDK.h",
+      "size": 1638,
+      "sha256": "c1640a6c97ba40bc8cf044c9a2234bc4cf9ad069d513b550a38349b59d261673"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64/OMSDK_Melvad.framework/Headers/OMIDUniversalAdID.h",
+      "size": 1418,
+      "sha256": "a994e933741b412edef2fb213c89374299c4f1a18d50317c722897e88507126f"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64/OMSDK_Melvad.framework/Headers/OMIDVASTProperties.h",
+      "size": 2231,
+      "sha256": "711d569f01c589b505b21c1f1c4d82ffbbfcde8cd0fe0f5208eaaa97b28a8ae5"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64/OMSDK_Melvad.framework/Headers/OMIDVerificationScriptResource.h",
+      "size": 1750,
+      "sha256": "6dd2b5dad7971321c74d1b815f612f5b221b7b20ec1a580e4ab582c473cd3287"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64/OMSDK_Melvad.framework/Headers/OMSDK.h",
+      "size": 456,
+      "sha256": "44cbd034424b38898b7a6e9af03b475acd3cb4532771db165ed17f41f61422f4"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64/OMSDK_Melvad.framework/Modules/module.modulemap",
+      "size": 72,
+      "sha256": "54b01cd0a8f5ce77ad3c479c582d8134a1d1d6f9e8773a325692347cd5d8040a"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDAdEvents.h",
+      "size": 1978,
+      "sha256": "e9614cb5805b9a628e648abaa25e8aaf30033b8324dc13313b48f83e1a051861"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDAdSession.h",
+      "size": 5416,
+      "sha256": "95a199097d8fde69fff12580f31eeb5e6e9a5e695d588b8abc60e7ec1f9c18c6"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDAdSessionConfiguration.h",
+      "size": 5254,
+      "sha256": "cbc49c035603c880bef7c034103779be059b22f9240d86ae692e0700fcc792c1"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDAdSessionContext.h",
+      "size": 5808,
+      "sha256": "c16506ed76142d1ff4dd135e7c73e5d0af292dd0f310ee40d334d8131fd797b6"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDFriendlyObstructionType.h",
+      "size": 902,
+      "sha256": "fd99811654caee64b47d9cb85aac424e97e1c03004038aa50c7a1e77815ac018"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDImports.h",
+      "size": 302,
+      "sha256": "5d00606fada6dc310dd9706d9e54be86a71ae0c108b81263abaa68f5f21b65ca"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDJavaScriptSessionService.h",
+      "size": 5073,
+      "sha256": "517251b1a6b6ada2a84c23fc28984c4e348c9cb1c847b171264313d74ae7c9c9"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDMediaEvents.h",
+      "size": 4770,
+      "sha256": "e56a48ce4d5d59e4acd954c0288c3f35c7ef8c51ed79bc9023c6a997df4e8834"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDPartner.h",
+      "size": 954,
+      "sha256": "5b8ef908f9f44a71d3b651a978e57c39f04b17c9216e57c9c67c55c13c190699"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDScriptInjector.h",
+      "size": 969,
+      "sha256": "88d0162297e91415257c0226c574327cb1dac13e0e16244af30f031386f4fc5f"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDSDK.h",
+      "size": 1638,
+      "sha256": "c1640a6c97ba40bc8cf044c9a2234bc4cf9ad069d513b550a38349b59d261673"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDUniversalAdID.h",
+      "size": 1418,
+      "sha256": "a994e933741b412edef2fb213c89374299c4f1a18d50317c722897e88507126f"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDVASTProperties.h",
+      "size": 2231,
+      "sha256": "711d569f01c589b505b21c1f1c4d82ffbbfcde8cd0fe0f5208eaaa97b28a8ae5"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDVerificationScriptResource.h",
+      "size": 1750,
+      "sha256": "6dd2b5dad7971321c74d1b815f612f5b221b7b20ec1a580e4ab582c473cd3287"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMSDK.h",
+      "size": 456,
+      "sha256": "44cbd034424b38898b7a6e9af03b475acd3cb4532771db165ed17f41f61422f4"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/ios-arm64_x86_64-simulator/OMSDK_Melvad.framework/Modules/module.modulemap",
+      "size": 72,
+      "sha256": "54b01cd0a8f5ce77ad3c479c582d8134a1d1d6f9e8773a325692347cd5d8040a"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64/OMSDK_Melvad.framework/Headers/OMIDAdEvents.h",
+      "size": 1978,
+      "sha256": "e9614cb5805b9a628e648abaa25e8aaf30033b8324dc13313b48f83e1a051861"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64/OMSDK_Melvad.framework/Headers/OMIDAdSession.h",
+      "size": 5416,
+      "sha256": "95a199097d8fde69fff12580f31eeb5e6e9a5e695d588b8abc60e7ec1f9c18c6"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64/OMSDK_Melvad.framework/Headers/OMIDAdSessionConfiguration.h",
+      "size": 5254,
+      "sha256": "cbc49c035603c880bef7c034103779be059b22f9240d86ae692e0700fcc792c1"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64/OMSDK_Melvad.framework/Headers/OMIDAdSessionContext.h",
+      "size": 5808,
+      "sha256": "c16506ed76142d1ff4dd135e7c73e5d0af292dd0f310ee40d334d8131fd797b6"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64/OMSDK_Melvad.framework/Headers/OMIDFriendlyObstructionType.h",
+      "size": 902,
+      "sha256": "fd99811654caee64b47d9cb85aac424e97e1c03004038aa50c7a1e77815ac018"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64/OMSDK_Melvad.framework/Headers/OMIDImports.h",
+      "size": 302,
+      "sha256": "5d00606fada6dc310dd9706d9e54be86a71ae0c108b81263abaa68f5f21b65ca"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64/OMSDK_Melvad.framework/Headers/OMIDJavaScriptSessionService.h",
+      "size": 5073,
+      "sha256": "517251b1a6b6ada2a84c23fc28984c4e348c9cb1c847b171264313d74ae7c9c9"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64/OMSDK_Melvad.framework/Headers/OMIDMediaEvents.h",
+      "size": 4770,
+      "sha256": "e56a48ce4d5d59e4acd954c0288c3f35c7ef8c51ed79bc9023c6a997df4e8834"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64/OMSDK_Melvad.framework/Headers/OMIDPartner.h",
+      "size": 954,
+      "sha256": "5b8ef908f9f44a71d3b651a978e57c39f04b17c9216e57c9c67c55c13c190699"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64/OMSDK_Melvad.framework/Headers/OMIDScriptInjector.h",
+      "size": 969,
+      "sha256": "88d0162297e91415257c0226c574327cb1dac13e0e16244af30f031386f4fc5f"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64/OMSDK_Melvad.framework/Headers/OMIDSDK.h",
+      "size": 1638,
+      "sha256": "c1640a6c97ba40bc8cf044c9a2234bc4cf9ad069d513b550a38349b59d261673"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64/OMSDK_Melvad.framework/Headers/OMIDUniversalAdID.h",
+      "size": 1418,
+      "sha256": "a994e933741b412edef2fb213c89374299c4f1a18d50317c722897e88507126f"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64/OMSDK_Melvad.framework/Headers/OMIDVASTProperties.h",
+      "size": 2231,
+      "sha256": "711d569f01c589b505b21c1f1c4d82ffbbfcde8cd0fe0f5208eaaa97b28a8ae5"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64/OMSDK_Melvad.framework/Headers/OMIDVerificationScriptResource.h",
+      "size": 1750,
+      "sha256": "6dd2b5dad7971321c74d1b815f612f5b221b7b20ec1a580e4ab582c473cd3287"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64/OMSDK_Melvad.framework/Headers/OMSDK.h",
+      "size": 456,
+      "sha256": "44cbd034424b38898b7a6e9af03b475acd3cb4532771db165ed17f41f61422f4"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64/OMSDK_Melvad.framework/Modules/module.modulemap",
+      "size": 72,
+      "sha256": "54b01cd0a8f5ce77ad3c479c582d8134a1d1d6f9e8773a325692347cd5d8040a"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDAdEvents.h",
+      "size": 1978,
+      "sha256": "e9614cb5805b9a628e648abaa25e8aaf30033b8324dc13313b48f83e1a051861"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDAdSession.h",
+      "size": 5416,
+      "sha256": "95a199097d8fde69fff12580f31eeb5e6e9a5e695d588b8abc60e7ec1f9c18c6"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDAdSessionConfiguration.h",
+      "size": 5254,
+      "sha256": "cbc49c035603c880bef7c034103779be059b22f9240d86ae692e0700fcc792c1"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDAdSessionContext.h",
+      "size": 5808,
+      "sha256": "c16506ed76142d1ff4dd135e7c73e5d0af292dd0f310ee40d334d8131fd797b6"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDFriendlyObstructionType.h",
+      "size": 902,
+      "sha256": "fd99811654caee64b47d9cb85aac424e97e1c03004038aa50c7a1e77815ac018"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDImports.h",
+      "size": 302,
+      "sha256": "5d00606fada6dc310dd9706d9e54be86a71ae0c108b81263abaa68f5f21b65ca"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDJavaScriptSessionService.h",
+      "size": 5073,
+      "sha256": "517251b1a6b6ada2a84c23fc28984c4e348c9cb1c847b171264313d74ae7c9c9"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDMediaEvents.h",
+      "size": 4770,
+      "sha256": "e56a48ce4d5d59e4acd954c0288c3f35c7ef8c51ed79bc9023c6a997df4e8834"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDPartner.h",
+      "size": 954,
+      "sha256": "5b8ef908f9f44a71d3b651a978e57c39f04b17c9216e57c9c67c55c13c190699"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDScriptInjector.h",
+      "size": 969,
+      "sha256": "88d0162297e91415257c0226c574327cb1dac13e0e16244af30f031386f4fc5f"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDSDK.h",
+      "size": 1638,
+      "sha256": "c1640a6c97ba40bc8cf044c9a2234bc4cf9ad069d513b550a38349b59d261673"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDUniversalAdID.h",
+      "size": 1418,
+      "sha256": "a994e933741b412edef2fb213c89374299c4f1a18d50317c722897e88507126f"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDVASTProperties.h",
+      "size": 2231,
+      "sha256": "711d569f01c589b505b21c1f1c4d82ffbbfcde8cd0fe0f5208eaaa97b28a8ae5"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMIDVerificationScriptResource.h",
+      "size": 1750,
+      "sha256": "6dd2b5dad7971321c74d1b815f612f5b221b7b20ec1a580e4ab582c473cd3287"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Melvad.framework/Headers/OMSDK.h",
+      "size": 456,
+      "sha256": "44cbd034424b38898b7a6e9af03b475acd3cb4532771db165ed17f41f61422f4"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Melvad.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Melvad.framework/Modules/module.modulemap",
+      "size": 72,
+      "sha256": "54b01cd0a8f5ce77ad3c479c582d8134a1d1d6f9e8773a325692347cd5d8040a"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64/OMSDK_Prebidorg.framework/Headers/OMIDAdEvents.h",
+      "size": 1987,
+      "sha256": "be41c5a940fc692373400bfca48d032a0f99e7206682045a0e825ea56dcfcb90"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64/OMSDK_Prebidorg.framework/Headers/OMIDAdSession.h",
+      "size": 5428,
+      "sha256": "fc143c5e275a97986de376a7f1b1c73b78dec64445e4538f2f07e7a38dfd6fb2"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64/OMSDK_Prebidorg.framework/Headers/OMIDAdSessionConfiguration.h",
+      "size": 5257,
+      "sha256": "c54fb821481fc999c82775023f9766599f8cfb0fd9721cebfde5af55313721e9"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64/OMSDK_Prebidorg.framework/Headers/OMIDAdSessionContext.h",
+      "size": 5832,
+      "sha256": "58033b1eeaae04a073737717ae13f6dc9279fc6fa8c7214ba193359e133f80fc"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64/OMSDK_Prebidorg.framework/Headers/OMIDFriendlyObstructionType.h",
+      "size": 902,
+      "sha256": "fd99811654caee64b47d9cb85aac424e97e1c03004038aa50c7a1e77815ac018"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64/OMSDK_Prebidorg.framework/Headers/OMIDImports.h",
+      "size": 302,
+      "sha256": "5d00606fada6dc310dd9706d9e54be86a71ae0c108b81263abaa68f5f21b65ca"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64/OMSDK_Prebidorg.framework/Headers/OMIDJavaScriptSessionService.h",
+      "size": 5079,
+      "sha256": "cb7a468a36e3b8077ada89496d7e19dfa81937abfdf532affd3b40b1f48a92bd"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64/OMSDK_Prebidorg.framework/Headers/OMIDMediaEvents.h",
+      "size": 4776,
+      "sha256": "4b6e4ac9ab12e0c772b4bbe815f74b1b7bcb4ff09c198c464b9c579e781cc7ed"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64/OMSDK_Prebidorg.framework/Headers/OMIDPartner.h",
+      "size": 957,
+      "sha256": "bb6bbbee1bac209be6b90586d25c03a642c574dde368feaa3383b937c98ca3f4"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64/OMSDK_Prebidorg.framework/Headers/OMIDScriptInjector.h",
+      "size": 972,
+      "sha256": "7dc82eba3ced7a3bfba545a6b4f1f5241b0c2ab081c59a1e756e5db3bc456ae3"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64/OMSDK_Prebidorg.framework/Headers/OMIDSDK.h",
+      "size": 1644,
+      "sha256": "1f48f50c3f59fc0da5a95697a89e01faabda61227e77643a8405e30573258175"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64/OMSDK_Prebidorg.framework/Headers/OMIDUniversalAdID.h",
+      "size": 1421,
+      "sha256": "374c9a4b259b2604ca8e1feb49a76fb4a0e2f385ec986d7511608f00742e26ef"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64/OMSDK_Prebidorg.framework/Headers/OMIDVASTProperties.h",
+      "size": 2234,
+      "sha256": "bdb37d602beb29cad2a3b87f9cef88a8cfdb6440b180b77bcdfc7266f1d26612"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64/OMSDK_Prebidorg.framework/Headers/OMIDVerificationScriptResource.h",
+      "size": 1753,
+      "sha256": "5d064292aef35a7dad2a1c420089ed128d99435efc4ef45d6cee667080e9110d"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64/OMSDK_Prebidorg.framework/Headers/OMSDK.h",
+      "size": 456,
+      "sha256": "44cbd034424b38898b7a6e9af03b475acd3cb4532771db165ed17f41f61422f4"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64/OMSDK_Prebidorg.framework/Modules/module.modulemap",
+      "size": 75,
+      "sha256": "d843b69aa9223ffd718c8db2fbe89b30721b7363ea12981c255bec3d22e37674"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDAdEvents.h",
+      "size": 1987,
+      "sha256": "be41c5a940fc692373400bfca48d032a0f99e7206682045a0e825ea56dcfcb90"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDAdSession.h",
+      "size": 5428,
+      "sha256": "fc143c5e275a97986de376a7f1b1c73b78dec64445e4538f2f07e7a38dfd6fb2"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDAdSessionConfiguration.h",
+      "size": 5257,
+      "sha256": "c54fb821481fc999c82775023f9766599f8cfb0fd9721cebfde5af55313721e9"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDAdSessionContext.h",
+      "size": 5832,
+      "sha256": "58033b1eeaae04a073737717ae13f6dc9279fc6fa8c7214ba193359e133f80fc"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDFriendlyObstructionType.h",
+      "size": 902,
+      "sha256": "fd99811654caee64b47d9cb85aac424e97e1c03004038aa50c7a1e77815ac018"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDImports.h",
+      "size": 302,
+      "sha256": "5d00606fada6dc310dd9706d9e54be86a71ae0c108b81263abaa68f5f21b65ca"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDJavaScriptSessionService.h",
+      "size": 5079,
+      "sha256": "cb7a468a36e3b8077ada89496d7e19dfa81937abfdf532affd3b40b1f48a92bd"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDMediaEvents.h",
+      "size": 4776,
+      "sha256": "4b6e4ac9ab12e0c772b4bbe815f74b1b7bcb4ff09c198c464b9c579e781cc7ed"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDPartner.h",
+      "size": 957,
+      "sha256": "bb6bbbee1bac209be6b90586d25c03a642c574dde368feaa3383b937c98ca3f4"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDScriptInjector.h",
+      "size": 972,
+      "sha256": "7dc82eba3ced7a3bfba545a6b4f1f5241b0c2ab081c59a1e756e5db3bc456ae3"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDSDK.h",
+      "size": 1644,
+      "sha256": "1f48f50c3f59fc0da5a95697a89e01faabda61227e77643a8405e30573258175"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDUniversalAdID.h",
+      "size": 1421,
+      "sha256": "374c9a4b259b2604ca8e1feb49a76fb4a0e2f385ec986d7511608f00742e26ef"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDVASTProperties.h",
+      "size": 2234,
+      "sha256": "bdb37d602beb29cad2a3b87f9cef88a8cfdb6440b180b77bcdfc7266f1d26612"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDVerificationScriptResource.h",
+      "size": 1753,
+      "sha256": "5d064292aef35a7dad2a1c420089ed128d99435efc4ef45d6cee667080e9110d"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMSDK.h",
+      "size": 456,
+      "sha256": "44cbd034424b38898b7a6e9af03b475acd3cb4532771db165ed17f41f61422f4"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/ios-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Modules/module.modulemap",
+      "size": 75,
+      "sha256": "d843b69aa9223ffd718c8db2fbe89b30721b7363ea12981c255bec3d22e37674"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64/OMSDK_Prebidorg.framework/Headers/OMIDAdEvents.h",
+      "size": 1987,
+      "sha256": "be41c5a940fc692373400bfca48d032a0f99e7206682045a0e825ea56dcfcb90"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64/OMSDK_Prebidorg.framework/Headers/OMIDAdSession.h",
+      "size": 5428,
+      "sha256": "fc143c5e275a97986de376a7f1b1c73b78dec64445e4538f2f07e7a38dfd6fb2"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64/OMSDK_Prebidorg.framework/Headers/OMIDAdSessionConfiguration.h",
+      "size": 5257,
+      "sha256": "c54fb821481fc999c82775023f9766599f8cfb0fd9721cebfde5af55313721e9"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64/OMSDK_Prebidorg.framework/Headers/OMIDAdSessionContext.h",
+      "size": 5832,
+      "sha256": "58033b1eeaae04a073737717ae13f6dc9279fc6fa8c7214ba193359e133f80fc"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64/OMSDK_Prebidorg.framework/Headers/OMIDFriendlyObstructionType.h",
+      "size": 902,
+      "sha256": "fd99811654caee64b47d9cb85aac424e97e1c03004038aa50c7a1e77815ac018"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64/OMSDK_Prebidorg.framework/Headers/OMIDImports.h",
+      "size": 302,
+      "sha256": "5d00606fada6dc310dd9706d9e54be86a71ae0c108b81263abaa68f5f21b65ca"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64/OMSDK_Prebidorg.framework/Headers/OMIDJavaScriptSessionService.h",
+      "size": 5079,
+      "sha256": "cb7a468a36e3b8077ada89496d7e19dfa81937abfdf532affd3b40b1f48a92bd"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64/OMSDK_Prebidorg.framework/Headers/OMIDMediaEvents.h",
+      "size": 4776,
+      "sha256": "4b6e4ac9ab12e0c772b4bbe815f74b1b7bcb4ff09c198c464b9c579e781cc7ed"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64/OMSDK_Prebidorg.framework/Headers/OMIDPartner.h",
+      "size": 957,
+      "sha256": "bb6bbbee1bac209be6b90586d25c03a642c574dde368feaa3383b937c98ca3f4"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64/OMSDK_Prebidorg.framework/Headers/OMIDScriptInjector.h",
+      "size": 972,
+      "sha256": "7dc82eba3ced7a3bfba545a6b4f1f5241b0c2ab081c59a1e756e5db3bc456ae3"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64/OMSDK_Prebidorg.framework/Headers/OMIDSDK.h",
+      "size": 1644,
+      "sha256": "1f48f50c3f59fc0da5a95697a89e01faabda61227e77643a8405e30573258175"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64/OMSDK_Prebidorg.framework/Headers/OMIDUniversalAdID.h",
+      "size": 1421,
+      "sha256": "374c9a4b259b2604ca8e1feb49a76fb4a0e2f385ec986d7511608f00742e26ef"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64/OMSDK_Prebidorg.framework/Headers/OMIDVASTProperties.h",
+      "size": 2234,
+      "sha256": "bdb37d602beb29cad2a3b87f9cef88a8cfdb6440b180b77bcdfc7266f1d26612"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64/OMSDK_Prebidorg.framework/Headers/OMIDVerificationScriptResource.h",
+      "size": 1753,
+      "sha256": "5d064292aef35a7dad2a1c420089ed128d99435efc4ef45d6cee667080e9110d"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64/OMSDK_Prebidorg.framework/Headers/OMSDK.h",
+      "size": 456,
+      "sha256": "44cbd034424b38898b7a6e9af03b475acd3cb4532771db165ed17f41f61422f4"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64/OMSDK_Prebidorg.framework/Modules/module.modulemap",
+      "size": 75,
+      "sha256": "d843b69aa9223ffd718c8db2fbe89b30721b7363ea12981c255bec3d22e37674"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDAdEvents.h",
+      "size": 1987,
+      "sha256": "be41c5a940fc692373400bfca48d032a0f99e7206682045a0e825ea56dcfcb90"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDAdSession.h",
+      "size": 5428,
+      "sha256": "fc143c5e275a97986de376a7f1b1c73b78dec64445e4538f2f07e7a38dfd6fb2"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDAdSessionConfiguration.h",
+      "size": 5257,
+      "sha256": "c54fb821481fc999c82775023f9766599f8cfb0fd9721cebfde5af55313721e9"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDAdSessionContext.h",
+      "size": 5832,
+      "sha256": "58033b1eeaae04a073737717ae13f6dc9279fc6fa8c7214ba193359e133f80fc"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDFriendlyObstructionType.h",
+      "size": 902,
+      "sha256": "fd99811654caee64b47d9cb85aac424e97e1c03004038aa50c7a1e77815ac018"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDImports.h",
+      "size": 302,
+      "sha256": "5d00606fada6dc310dd9706d9e54be86a71ae0c108b81263abaa68f5f21b65ca"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDJavaScriptSessionService.h",
+      "size": 5079,
+      "sha256": "cb7a468a36e3b8077ada89496d7e19dfa81937abfdf532affd3b40b1f48a92bd"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDMediaEvents.h",
+      "size": 4776,
+      "sha256": "4b6e4ac9ab12e0c772b4bbe815f74b1b7bcb4ff09c198c464b9c579e781cc7ed"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDPartner.h",
+      "size": 957,
+      "sha256": "bb6bbbee1bac209be6b90586d25c03a642c574dde368feaa3383b937c98ca3f4"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDScriptInjector.h",
+      "size": 972,
+      "sha256": "7dc82eba3ced7a3bfba545a6b4f1f5241b0c2ab081c59a1e756e5db3bc456ae3"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDSDK.h",
+      "size": 1644,
+      "sha256": "1f48f50c3f59fc0da5a95697a89e01faabda61227e77643a8405e30573258175"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDUniversalAdID.h",
+      "size": 1421,
+      "sha256": "374c9a4b259b2604ca8e1feb49a76fb4a0e2f385ec986d7511608f00742e26ef"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDVASTProperties.h",
+      "size": 2234,
+      "sha256": "bdb37d602beb29cad2a3b87f9cef88a8cfdb6440b180b77bcdfc7266f1d26612"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMIDVerificationScriptResource.h",
+      "size": 1753,
+      "sha256": "5d064292aef35a7dad2a1c420089ed128d99435efc4ef45d6cee667080e9110d"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Headers/OMSDK.h",
+      "size": 456,
+      "sha256": "44cbd034424b38898b7a6e9af03b475acd3cb4532771db165ed17f41f61422f4"
+    },
+    {
+      "path": "distribution/iOS/OMSDK_Prebidorg.xcframework/tvos-arm64_x86_64-simulator/OMSDK_Prebidorg.framework/Modules/module.modulemap",
+      "size": 75,
+      "sha256": "d843b69aa9223ffd718c8db2fbe89b30721b7363ea12981c255bec3d22e37674"
+    },
+    {
+      "path": "distribution/iOS/PrebidMobile.xcframework/ios-arm64/PrebidMobile.framework/Headers/PrebidMobile-Swift.h",
+      "size": 233991,
+      "sha256": "a0aa3c96b0bcfbd85d4141b31e30f970227d61c7347268d97516bb61ab4a18bc"
+    },
+    {
+      "path": "distribution/iOS/PrebidMobile.xcframework/ios-arm64/PrebidMobile.framework/Modules/module.modulemap",
+      "size": 86,
+      "sha256": "c6795621372827b6564e0bd6bb27493b8fc4d01ecf3f8857cc6a450af163a880"
+    },
+    {
+      "path": "distribution/iOS/PrebidMobile.xcframework/ios-arm64/PrebidMobile.framework/Modules/PrebidMobile.swiftmodule/arm64-apple-ios.package.swiftinterface",
+      "size": 110926,
+      "sha256": "4f7afe4bbc257d8f9eb8af2b478c2dc0aa040dde85852ced0ba4954ec3a4829e"
+    },
+    {
+      "path": "distribution/iOS/PrebidMobile.xcframework/ios-arm64/PrebidMobile.framework/Modules/PrebidMobile.swiftmodule/arm64-apple-ios.swiftinterface",
+      "size": 110926,
+      "sha256": "4f7afe4bbc257d8f9eb8af2b478c2dc0aa040dde85852ced0ba4954ec3a4829e"
+    },
+    {
+      "path": "distribution/iOS/PrebidMobile.xcframework/ios-arm64/PrebidMobile.framework/PrebidMobile_PrebidMobile.bundle/mraid.js",
+      "size": 31514,
+      "sha256": "7e689062a3b31158d30f026bdd8c9fcd83d3557bb50360e04dc6cae9d19e8893"
+    },
+    {
+      "path": "distribution/iOS/PrebidMobile.xcframework/ios-arm64/PrebidMobile.framework/PrebidMobile_PrebidMobile.bundle/omsdk.js",
+      "size": 40695,
+      "sha256": "ef14add5fe4b6e3e3ae4ede2045aa0a242da6b9f1f44509bb4d05ffa9d840b22"
+    },
+    {
+      "path": "distribution/iOS/PrebidMobile.xcframework/ios-arm64_x86_64-simulator/PrebidMobile.framework/Headers/PrebidMobile-Swift.h",
+      "size": 467927,
+      "sha256": "9378c52ed3cf17fd691598098c0122bff847709effd78f5069b81933651a2512"
+    },
+    {
+      "path": "distribution/iOS/PrebidMobile.xcframework/ios-arm64_x86_64-simulator/PrebidMobile.framework/Modules/module.modulemap",
+      "size": 86,
+      "sha256": "c6795621372827b6564e0bd6bb27493b8fc4d01ecf3f8857cc6a450af163a880"
+    },
+    {
+      "path": "distribution/iOS/PrebidMobile.xcframework/ios-arm64_x86_64-simulator/PrebidMobile.framework/Modules/PrebidMobile.swiftmodule/arm64-apple-ios-simulator.package.swiftinterface",
+      "size": 110936,
+      "sha256": "41f306d76528d4073e4561e29879bfb582f6fb7c64ce2471cb84b1a8c333680b"
+    },
+    {
+      "path": "distribution/iOS/PrebidMobile.xcframework/ios-arm64_x86_64-simulator/PrebidMobile.framework/Modules/PrebidMobile.swiftmodule/arm64-apple-ios-simulator.swiftinterface",
+      "size": 110936,
+      "sha256": "41f306d76528d4073e4561e29879bfb582f6fb7c64ce2471cb84b1a8c333680b"
+    },
+    {
+      "path": "distribution/iOS/PrebidMobile.xcframework/ios-arm64_x86_64-simulator/PrebidMobile.framework/Modules/PrebidMobile.swiftmodule/x86_64-apple-ios-simulator.package.swiftinterface",
+      "size": 110937,
+      "sha256": "c22542aa9e8dc68cbab3062f11cb3a88b96c7ea942b6673fed61fd2b2b12fafe"
+    },
+    {
+      "path": "distribution/iOS/PrebidMobile.xcframework/ios-arm64_x86_64-simulator/PrebidMobile.framework/Modules/PrebidMobile.swiftmodule/x86_64-apple-ios-simulator.swiftinterface",
+      "size": 110937,
+      "sha256": "c22542aa9e8dc68cbab3062f11cb3a88b96c7ea942b6673fed61fd2b2b12fafe"
+    },
+    {
+      "path": "distribution/iOS/PrebidMobile.xcframework/ios-arm64_x86_64-simulator/PrebidMobile.framework/PrebidMobile_PrebidMobile.bundle/mraid.js",
+      "size": 31514,
+      "sha256": "7e689062a3b31158d30f026bdd8c9fcd83d3557bb50360e04dc6cae9d19e8893"
+    },
+    {
+      "path": "distribution/iOS/PrebidMobile.xcframework/ios-arm64_x86_64-simulator/PrebidMobile.framework/PrebidMobile_PrebidMobile.bundle/omsdk.js",
+      "size": 40695,
+      "sha256": "ef14add5fe4b6e3e3ae4ede2045aa0a242da6b9f1f44509bb4d05ffa9d840b22"
+    },
+    {
+      "path": "distribution/manifest.json",
+      "size": 87646,
+      "sha256": "c666142315009dc1e2e94946277a410a35e26bc59e29887184a49e640baa9417"
+    },
+    {
+      "path": "distribution/README.md",
+      "size": 1060,
+      "sha256": "ce11e55bf7c9a7fe47db7404be374d5caafa9d1cce3e9973d717e2a852a22e95"
+    },
+    {
+      "path": "LICENSE",
+      "size": 5078,
+      "sha256": "71bc820f26a46fefb18a0eb391671fd23b9a63fe9d3e6c6d22e9e2ff61368536"
+    },
+    {
       "path": "Packages/com.melvad.ads/Editor/Android/Melvad.Ads.Editor.dll",
       "size": 12288,
       "sha256": "205c3b6e6b606f618181db5a8589cc0930a425eda1724837d7f94b793b573c2c"
@@ -74,16 +1134,6 @@
       "sha256": "e4dcd0cb1f52cc59e8c84b50cc230a901acec7999cb96109c6bf848bf651d699"
     },
     {
-      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/NOTICE",
-      "size": 907,
-      "sha256": "fb376aa0088b612531c26f4cdeeaecee42c8a4e8f0ea7575807351bec53ac8e8"
-    },
-    {
-      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/NOTICE.meta",
-      "size": 152,
-      "sha256": "166689956473a50a011dee07086c12025e2f9383ab2c48fefcb5a13c7271281d"
-    },
-    {
       "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/Native-OMSDK-LICENSE",
       "size": 24673,
       "sha256": "8f475f6130f87e4394babe6f74a388d08a8a82abd492e7c96b0c5c783244c0ab"
@@ -92,6 +1142,16 @@
       "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/Native-OMSDK-LICENSE.meta",
       "size": 152,
       "sha256": "1819609a806a89e22df949912a4fa3644640da91a1dce11a4b49986ae55615e9"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/NOTICE",
+      "size": 907,
+      "sha256": "fb376aa0088b612531c26f4cdeeaecee42c8a4e8f0ea7575807351bec53ac8e8"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/NOTICE.meta",
+      "size": 152,
+      "sha256": "166689956473a50a011dee07086c12025e2f9383ab2c48fefcb5a13c7271281d"
     },
     {
       "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/Prebid-LICENSE",
@@ -104,16 +1164,6 @@
       "sha256": "bc35285b87f90aa0a643a8a409f225ab3176f29c7be62ee9f8f41da943ca757c"
     },
     {
-      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/THIRD_PARTY_NOTICES.txt",
-      "size": 2439,
-      "sha256": "6e4bc2373236b1faa629f2b915afbbdf7c5bb5bce7f8bfdf18cd9e4d277a6d7f"
-    },
-    {
-      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/THIRD_PARTY_NOTICES.txt.meta",
-      "size": 152,
-      "sha256": "a854fb99698744a0a438c903ead021af022f188bd848014132c863815fea75c7"
-    },
-    {
       "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/safeframe-LICENSE.txt",
       "size": 1301,
       "sha256": "98f13acb5563f5ae38d00f9742775b0ca2e6b2759e0d997dd02b5404cb884345"
@@ -122,6 +1172,16 @@
       "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/safeframe-LICENSE.txt.meta",
       "size": 152,
       "sha256": "d4e5eb733de05aff8ecca273b75a424bffafa1ec082f59af66f71bab36fd6c68"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/THIRD_PARTY_NOTICES.txt",
+      "size": 2439,
+      "sha256": "6e4bc2373236b1faa629f2b915afbbdf7c5bb5bce7f8bfdf18cd9e4d277a6d7f"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/THIRD_PARTY_NOTICES.txt.meta",
+      "size": 152,
+      "sha256": "a854fb99698744a0a438c903ead021af022f188bd848014132c863815fea75c7"
     },
     {
       "path": "Packages/com.melvad.ads/Licenses/Android/Licenses/vendor-OMID-LICENSE",
@@ -174,16 +1234,6 @@
       "sha256": "90f1be03187cf0e49590f04a1af5ef0826e0c8a6b2290f47a451b6a3abbd1f00"
     },
     {
-      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/NOTICE",
-      "size": 764,
-      "sha256": "f74e76630cbcc3b7e3443c202d718b760c85bb7b33f1260fcb809a9fe74e6219"
-    },
-    {
-      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/NOTICE.meta",
-      "size": 152,
-      "sha256": "111b0055c9be93d6d02cf1fa400eccaff04c3b2288ec78a267de0f94ba06f40a"
-    },
-    {
       "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/Native-OMSDK-LICENSE",
       "size": 24673,
       "sha256": "8f475f6130f87e4394babe6f74a388d08a8a82abd492e7c96b0c5c783244c0ab"
@@ -192,6 +1242,16 @@
       "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/Native-OMSDK-LICENSE.meta",
       "size": 152,
       "sha256": "74fab3b8f776f18ead49568c269026a8ec054913718764b79ba706fc047f1856"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/NOTICE",
+      "size": 764,
+      "sha256": "f74e76630cbcc3b7e3443c202d718b760c85bb7b33f1260fcb809a9fe74e6219"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/NOTICE.meta",
+      "size": 152,
+      "sha256": "111b0055c9be93d6d02cf1fa400eccaff04c3b2288ec78a267de0f94ba06f40a"
     },
     {
       "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/Prebid-LICENSE",
@@ -204,16 +1264,6 @@
       "sha256": "ad642c018609da0718c6e6a4bf9d4a415d15fdc262a8d47655b3346ae1c3bb0f"
     },
     {
-      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/THIRD_PARTY_NOTICES.txt",
-      "size": 2459,
-      "sha256": "1cef4418e08a5dc389f85afe54eb2a9aa7792cef1e4182e2a6d39930381755e4"
-    },
-    {
-      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/THIRD_PARTY_NOTICES.txt.meta",
-      "size": 152,
-      "sha256": "3051491c9552966ef1227768c648ddf07ebab58c613be58ec5399aea1b063cd7"
-    },
-    {
       "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/safeframe-LICENSE.txt",
       "size": 1301,
       "sha256": "98f13acb5563f5ae38d00f9742775b0ca2e6b2759e0d997dd02b5404cb884345"
@@ -222,6 +1272,16 @@
       "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/safeframe-LICENSE.txt.meta",
       "size": 152,
       "sha256": "0c16bff0468571cd53fbe2e31e7ff933b827ed3c688e115c560f35a3b27d19f3"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/THIRD_PARTY_NOTICES.txt",
+      "size": 2459,
+      "sha256": "1cef4418e08a5dc389f85afe54eb2a9aa7792cef1e4182e2a6d39930381755e4"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/THIRD_PARTY_NOTICES.txt.meta",
+      "size": 152,
+      "sha256": "3051491c9552966ef1227768c648ddf07ebab58c613be58ec5399aea1b063cd7"
     },
     {
       "path": "Packages/com.melvad.ads/Licenses/iOS/Licenses/vendor-SHAKA-LICENSE",
@@ -249,6 +1309,16 @@
       "sha256": "8b74257d79e954f1cb35ed9125a7a47cd7658a976c7ddc3ed93a54f75d23caa4"
     },
     {
+      "path": "Packages/com.melvad.ads/melvad-binary.json",
+      "size": 186,
+      "sha256": "5c726cdb80898d9f37edffdb0e4d0adf383f85a0eb403d17d2b10af2354ac5db"
+    },
+    {
+      "path": "Packages/com.melvad.ads/melvad-binary.json.meta",
+      "size": 152,
+      "sha256": "a511acb30035e83e5d943f1f4ef0c239a18fc2ef53cfd815c161410c2ed62bc6"
+    },
+    {
       "path": "Packages/com.melvad.ads/Native/Android.zip",
       "size": 799856,
       "sha256": "4b1c93e4dfdf9ea2b22b5bd4d0794a6c8bd9f5338751904ec9169f4feaad3544"
@@ -272,6 +1342,16 @@
       "path": "Packages/com.melvad.ads/Native.meta",
       "size": 169,
       "sha256": "a415a25b1e8dccc5f3a663413062e3f85c95e97eeb94ab38c9ff176c5cbb0002"
+    },
+    {
+      "path": "Packages/com.melvad.ads/package.json",
+      "size": 573,
+      "sha256": "80f5ff1cf49b623ef9b68964ebeef7bbfda9750336d19256e534583f68ce7f08"
+    },
+    {
+      "path": "Packages/com.melvad.ads/package.json.meta",
+      "size": 152,
+      "sha256": "b5359d74776bfac720416ffd570e8d16bd5985f91ab94cb9b65d480701dbc438"
     },
     {
       "path": "Packages/com.melvad.ads/Plugins/Android/MelvadUnityBridge.aar",
@@ -319,21 +1399,6 @@
       "sha256": "246dfb0b84492a55e997c80bb46f74de0bcc8799f31d10362cfe42f7bf809099"
     },
     {
-      "path": "Packages/com.melvad.ads/Runtime/Unity/Melvad.Ads.dll",
-      "size": 24576,
-      "sha256": "c58a3ca19f2b70bd09b1148c5d74a9571fa1c2e18662a1d4141723aa2c86d700"
-    },
-    {
-      "path": "Packages/com.melvad.ads/Runtime/Unity/Melvad.Ads.dll.meta",
-      "size": 734,
-      "sha256": "358285f7fd81343a7aed3b339e12921314a6b4da2235917dfb8a12c4f230d13d"
-    },
-    {
-      "path": "Packages/com.melvad.ads/Runtime/Unity.meta",
-      "size": 169,
-      "sha256": "7723b16b2724a9c30af1441003d5ab82cf6e22831d2a355d8679234148236bfc"
-    },
-    {
       "path": "Packages/com.melvad.ads/Runtime/iOS/Melvad.Ads.dll",
       "size": 23552,
       "sha256": "5aad5eefdb4eb53bc5568cb1994e5dd56f13cd6f4e41bdf19f51f9c439ef4a7c"
@@ -359,49 +1424,29 @@
       "sha256": "f12030a745b0f31bcaf00e8309c806fb564748828db92aa16c5dcd0e1bf39f02"
     },
     {
+      "path": "Packages/com.melvad.ads/Runtime/Unity/Melvad.Ads.dll",
+      "size": 24576,
+      "sha256": "c58a3ca19f2b70bd09b1148c5d74a9571fa1c2e18662a1d4141723aa2c86d700"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Runtime/Unity/Melvad.Ads.dll.meta",
+      "size": 734,
+      "sha256": "358285f7fd81343a7aed3b339e12921314a6b4da2235917dfb8a12c4f230d13d"
+    },
+    {
+      "path": "Packages/com.melvad.ads/Runtime/Unity.meta",
+      "size": 169,
+      "sha256": "7723b16b2724a9c30af1441003d5ab82cf6e22831d2a355d8679234148236bfc"
+    },
+    {
       "path": "Packages/com.melvad.ads/Runtime.meta",
       "size": 169,
       "sha256": "9d7c812660c54b048bbb63fce8bb7cfe0137caa112f64d80b3dd99ee977454ee"
     },
     {
-      "path": "Packages/com.melvad.ads/melvad-binary.json",
-      "size": 186,
-      "sha256": "5c726cdb80898d9f37edffdb0e4d0adf383f85a0eb403d17d2b10af2354ac5db"
-    },
-    {
-      "path": "Packages/com.melvad.ads/melvad-binary.json.meta",
-      "size": 152,
-      "sha256": "a511acb30035e83e5d943f1f4ef0c239a18fc2ef53cfd815c161410c2ed62bc6"
-    },
-    {
-      "path": "Packages/com.melvad.ads/package.json",
-      "size": 573,
-      "sha256": "80f5ff1cf49b623ef9b68964ebeef7bbfda9750336d19256e534583f68ce7f08"
-    },
-    {
-      "path": "Packages/com.melvad.ads/package.json.meta",
-      "size": 152,
-      "sha256": "b5359d74776bfac720416ffd570e8d16bd5985f91ab94cb9b65d480701dbc438"
-    },
-    {
-      "path": "LICENSE",
-      "size": 5078,
-      "sha256": "71bc820f26a46fefb18a0eb391671fd23b9a63fe9d3e6c6d22e9e2ff61368536"
-    },
-    {
       "path": "README.md",
-      "size": 1031,
-      "sha256": "7a1a4fab3a074f67239937e7b90aee3d2505c376abf6a3be980fc9dc59ac7e19"
-    },
-    {
-      "path": ".gitattributes",
-      "size": 178,
-      "sha256": "b7aa7a63c59dc2ae4b706e01dea1aa75a60c0d8bea0498b7383ee4699b65aef1"
-    },
-    {
-      "path": "api/Melvad.Ads.api",
-      "size": 2089,
-      "sha256": "138112cff3d5c0321592ce71fa5f71cbad6d9ec9433fa98e4d176ec646062951"
+      "size": 1098,
+      "sha256": "05180179255fdf0488eaf9e85e40169a6bf1e90f9cf3b45cb808657bf97daba1"
     }
   ]
 }
